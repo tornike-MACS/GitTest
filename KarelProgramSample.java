@@ -11,11 +11,15 @@ import stanford.karel.*;
 
 public class KarelProgramSample extends SuperKarel {
 
-	// You fill in this part
-
-	@Override
+	
 	public void run() {
 		move();
+		turnRight();
+		
 	}
-	
+	private void turnRight();{
+		turnLeft();
+		turnLeft();
+		turnLeft();
+	}
 }
