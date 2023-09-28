@@ -15,7 +15,9 @@ public class KarelProgramSample extends SuperKarel {
 	public void run() {
 		move();
 		turnRight();
-		
+		move();
+		move();
+
 	}
 	}
 
