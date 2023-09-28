@@ -17,9 +17,5 @@ public class KarelProgramSample extends SuperKarel {
 		turnRight();
 		
 	}
-	private void turnRight();{
-		turnLeft();
-		turnLeft();
-		turnLeft();
 	}
-}
+
