@@ -9,8 +9,10 @@ import stanford.karel.Karel;
 
 public class Problem01 extends Karel{
 	public void run(){
-		while (frontIsClear()){
+		move();
+		while(frontIsClear()){
 			move();
+			putBeeper();
 		}
 		
 	}
