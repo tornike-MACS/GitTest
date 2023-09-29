@@ -14,10 +14,14 @@ import stanford.karel.Karel;
 
 public class Problem01 extends Karel{
 	public void run(){
-		putBeeper();
+		if(noBeepersPresent()){
+			putBeeper();
+		}
 		while(frontIsClear()){
 			move();
-			putBeeper();
+			if(noBeepersPresent()){
+				putBeeper();
+			}
 		}
 		
 	}
