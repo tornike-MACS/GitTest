@@ -19,6 +19,7 @@ public class Problem01 extends Karel{
 				move();
 				turnLeft();
 				putBeeper();
+				}
 				while(frontIsClear()){
 					move();
 					if (noBeepersPresent()){
@@ -31,7 +32,7 @@ public class Problem01 extends Karel{
 						turnRight();
 					}
 				}
-			}
+			
 		}
 	}
 	private void turnRight(){
