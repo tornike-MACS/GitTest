@@ -14,7 +14,7 @@ public class Problem01 extends Karel{
 	public void run(){
 		for(int i = 0; i < 5; i++){
 			move();
-			if (beepersPresent()){
+			while (beepersPresent()){
 				pickBeeper();
 			}
 		}
