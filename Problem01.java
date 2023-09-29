@@ -1,7 +1,6 @@
 import stanford.karel.Karel;
 
-//კარელი დგას 1x1 უჯრაზე. 5x1 უჯრაზე დევს 10 ცალი ბრილიანტი, კარელმა ათივე
-//ბრილიანტი უნდა გადაიტანოს 6x1 უჯრაზე.
+
 //3. კარელი დგას 1x1 უჯრაზე, გაიყვანეთ იგი პირველი ქუჩის ბოლომდე. გაითვალისწინეთ, რომ
 //სამყაროს ზომა არ იცით. თქვენი პროგრამა უნდა მუშაობდეს ნებისმიერი ზომის
 //სამყაროსათვის.
@@ -12,15 +11,9 @@ import stanford.karel.Karel;
 
 public class Problem01 extends Karel{
 	public void run(){
-		for(int i = 0; i < 4; i++){
-			move();}
-			while (beepersPresent()){
-				pickBeeper();
-			}
+		while (frontIsClear()){
 			move();
-			while (beepersInBag()){
-				putBeeper();
-			}
+		}
 		
 	}
 }
