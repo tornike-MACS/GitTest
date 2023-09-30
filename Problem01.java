@@ -9,6 +9,10 @@ public class Problem01 extends Karel{
 		if (noBeepersPresent()){
 			putBeeper();
 		}
+		while(frontIsClear()){
+			move();
+			putBeeper();
+		}
 		
 				}
 	private void turnRight(){
