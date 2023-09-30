@@ -32,6 +32,8 @@ public class Problem01 extends Karel{
 			}
 			if (frontIsBlocked()){
 				turnRight();
+			}
+			if (rightIsClear()){
 				move();
 				}
 			if (noBeepersPresent()){
