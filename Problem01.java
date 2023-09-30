@@ -6,6 +6,7 @@
 import stanford.karel.Karel;
 public class Problem01 extends Karel{
 	public void run(){
+		while(frontIsClear()){
 		if (noBeepersPresent()){
 			putBeeper();
 		}
@@ -37,7 +38,8 @@ public class Problem01 extends Karel{
 				putBeeper();
 			}
 			turnRight();
-		}
+	}
+	}
 	private void turnRight(){
 		turnLeft();
 		turnLeft();
