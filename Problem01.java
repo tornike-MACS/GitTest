@@ -24,6 +24,7 @@ public class Problem01 extends SuperKarel{
 		}
 		}
 		
+		if(beepersInBag()){
 		turnLeft();
 		move();
 		putBeeper();
@@ -33,6 +34,7 @@ public class Problem01 extends SuperKarel{
 		turnRight();
 		move();
 		turnAround();
+		}
 		
 	}
 }
