@@ -10,7 +10,19 @@ public class Problem01 extends SuperKarel{
 	private void oneFromEach(){
 		pickBeeper();
 		move();
-		pickBeeper();
+		if(beepersPresent()){
+			pickBeeper();
+		}else {turnAround();
+		while(beepersPresent()){
+			pickBeeper();
+		}turnAround();
+		move();
+		move();
+		while(beepersInBag()){
+			putBeeper();
+		}
+		}
+		
 		turnLeft();
 		move();
 		putBeeper();
