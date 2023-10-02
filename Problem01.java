@@ -22,6 +22,7 @@ public class Problem01 extends SuperKarel{
 		while(beepersInBag()){
 			putBeeper();
 		}
+		move();
 		}
 		
 		if(beepersInBag()){
