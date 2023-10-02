@@ -13,6 +13,7 @@ public class Problem01 extends SuperKarel{
 		if(beepersPresent()){
 			pickBeeper();
 		}else {turnAround();
+		move();
 		while(beepersPresent()){
 			pickBeeper();
 		}turnAround();
