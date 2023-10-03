@@ -11,11 +11,11 @@ public class Problem01 extends SuperKarel{
 			if(leftIsClear()){
 				asvla1();
 				}
-			}
+			
 			xazisShevseba();
-			if(rightIsClear()){
 				asvla2();
 				}
+	
 		}
 	
 
