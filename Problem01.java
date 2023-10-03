@@ -4,35 +4,7 @@
 import stanford.karel.SuperKarel;
 public class Problem01 extends SuperKarel{
 	public void run(){
-		move();
-		meoredanGadatana();
-		move();
-		gamokleba();
-	}
-	private void meoredanGadatana(){
-		while(beepersPresent()){
-			pickBeeper();
-			move();
-			move();
-			putBeeper();
-			turnAround();
-			move();
-			move();
-			turnAround();
-		}
-	}
-	private void gamokleba(){
-		while(beepersPresent()){
-			satitaodGadatana();
-		}
-	}
-	private void satitaodGadatana(){
-		pickBeeper();
-		move();
-		pickBeeper();
-		turnAround();
-		move();
-		turnAround();
+		
 	}
 }
 
