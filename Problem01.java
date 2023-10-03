@@ -6,6 +6,19 @@
 import stanford.karel.SuperKarel;
 public class Problem01 extends SuperKarel{
 	public void run(){
-		
+		while(frontIsClear()){
+			xazisShevseba();
 		}
+		}
+	private void xazisShevseba(){
+		if(noBeepersPresent()){
+			putBeeper();
+		}
+		while(frontIsClear()){
+			move();
+			if(noBeepersPresent()){
+				putBeeper();
+			}
+		}
+	}
 }
