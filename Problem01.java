@@ -6,9 +6,21 @@ public class Problem01 extends SuperKarel{
 	public void run(){
 		move();
 		mesameshiGadatana();
+		move();
+		meotxeshiGadatana();
 		
 	}
 	private void mesameshiGadatana(){
+		while(beepersPresent()){
+			pickBeeper();
+			move();
+			putBeeper();
+			turnAround();
+			move();
+			turnAround();
+		}
+	}
+	private void meotxeshiGadatana(){
 		while(beepersPresent()){
 			pickBeeper();
 			move();
