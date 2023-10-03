@@ -4,7 +4,15 @@
 import stanford.karel.SuperKarel;
 public class Problem01 extends SuperKarel{
 	public void run(){
+		move();
+		mesameshiGadatana();
 		
-		
+	}
+	private void mesameshiGadatana(){
+		while(beepersPresent()){
+			pickBeeper();
+			move();
+			putBeeper();
+		}
 	}
 }
