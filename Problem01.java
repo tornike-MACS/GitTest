@@ -6,6 +6,8 @@ public class Problem01 extends SuperKarel{
 	public void run(){
 		move();
 		meoredanGadatana();
+		move();
+		gamokleba();
 	}
 	private void meoredanGadatana(){
 		while(beepersPresent()){
@@ -18,6 +20,19 @@ public class Problem01 extends SuperKarel{
 			move();
 			turnAround();
 		}
+	}
+	private void gamokleba(){
+		while(beepersPresent()){
+			satitaodGadatana();
+		}
+	}
+	private void satitaodGadatana(){
+		pickBeeper();
+		move();
+		pickBeeper();
+		turnAround();
+		move();
+		turnAround();
 	}
 }
 
