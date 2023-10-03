@@ -8,8 +8,17 @@ public class Problem01 extends SuperKarel{
 	public void run(){
 		while(frontIsClear()){
 			xazisShevseba();
+			if(leftIsClear()){
+				asvla1();
+				}
+			}
+			xazisShevseba();
+			if(rightIsClear()){
+				asvla2();
+				}
 		}
-		}
+	
+
 	private void xazisShevseba(){
 		if(noBeepersPresent()){
 			putBeeper();
@@ -21,4 +30,22 @@ public class Problem01 extends SuperKarel{
 			}
 		}
 	}
+	private void asvla1(){
+		turnLeft();
+		move();
+		if(noBeepersPresent()){
+			putBeeper();
+		}
+		turnLeft();
+	}
+	private void asvla2(){
+		turnRight();
+		move();
+		if(noBeepersPresent()){
+			putBeeper();
+		}
+		turnRight();
+	}
 }
+
+
