@@ -13,7 +13,9 @@ public class Problem01 extends SuperKarel{
 				}
 			
 			xazisShevseba();
-				asvla2();
+				if(rightIsClear()){
+					asvla2();
+				}
 				}
 	
 		}
