@@ -9,18 +9,17 @@ import stanford.karel.SuperKarel;
 public class problem02 extends SuperKarel{
 	public void run() {
 		while(frontIsClear()){
-			asheneba();
+			build();
 			if(frontIsClear()){
 				move();
 			}
 			if(frontIsClear()){
 				move();
-				asheneba();
-			}
+			}else build();
 		}
 	}
 
-	private void asheneba() {
+	private void build() {
 		turnLeft();
 		putBeeper();
 		move();
