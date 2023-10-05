@@ -17,6 +17,7 @@ public class problem02 extends SuperKarel{
 				move();
 			}
 		}
+		asheneba();
 	}
 
 	private void asheneba() {
