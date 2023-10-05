@@ -16,6 +16,29 @@ public class problem02 extends SuperKarel{
 			move();
 			turnAround();
 		}
+		deletSecond();
+		bringToFour();
+	}
+
+	private void bringToFour() {
+		move();
+		move();
+		while(beepersPresent()){
+			pickBeeper();
+			turnAround();
+			move();
+			putBeeper();
+			turnAround();
+			move();
+		}
+		
+	}
+
+	private void deletSecond() {
+		move();
+		while(beepersPresent()){
+			pickBeeper();
+		}
 	}
 
 	private void recoverSecond() {
