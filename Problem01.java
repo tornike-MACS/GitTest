@@ -10,21 +10,7 @@ public class Problem01 extends SuperKarel{
 //			count();
 		}
 	}
-
-	private void minus() {
-			pickBeeper();
-			move();
-			pickBeeper();
-			move();
-			putBeeper();
-			move();
-			putBeeper();
-			turnAround();
-			move();
-			move();
-			move();
-			turnAround();
 	}
-}
+
 
 
