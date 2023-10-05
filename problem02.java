@@ -15,9 +15,9 @@ public class problem02 extends SuperKarel{
 			}
 			if(frontIsClear()){
 				move();
+				asheneba();
 			}
 		}
-		asheneba();
 	}
 
 	private void asheneba() {
