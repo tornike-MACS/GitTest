@@ -9,8 +9,8 @@ import stanford.karel.SuperKarel;
 public class problem02 extends SuperKarel{
 	public void run() {
 		while(frontIsClear()){
-			if(noBeepersPresent())
-			{build();
+			if(noBeepersPresent()){
+				build();
 			}
 			if(frontIsClear()){
 				move();
