@@ -5,19 +5,6 @@ import stanford.karel.SuperKarel;
 public class Problem01 extends SuperKarel{
 	public void run(){
 		move();
-		while(beepersPresent()){
-			minusCopyAndCount();
-		}
-	}
-
-	private void minusCopyAndCount() {
-		minusAndCopy();
-		Count();
-	}
-
-	private void minusAndCopy() {
-		
-		
 	}
 }
 
