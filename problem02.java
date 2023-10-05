@@ -10,7 +10,21 @@ public class problem02 extends SuperKarel{
 			pickBeeper();
 			move();
 			double2();
+			recoverSecond();
 		}
+	}
+
+	private void recoverSecond() {
+		move();
+		while(beepersPresent()){
+			pickBeeper();
+			turnAround();
+			move();
+			putBeeper();
+			turnAround();
+			move();
+		}
+		
 	}
 
 	private void double2() {
