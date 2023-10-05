@@ -10,7 +10,8 @@ public class problem02 extends SuperKarel{
 	public void run() {
 		if(frontIsClear()){
 			move();
-		}else turnAround();
+		}else {turnAround();
 		move();
+		}
 	}
 }
