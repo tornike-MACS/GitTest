@@ -13,9 +13,9 @@ public class problem02 extends SuperKarel{
 		}
 		if(frontIsClear()){
 			move();
-		}
-		if(beepersInBag()){
-			putBeeper();
+			if(beepersInBag()){
+				putBeeper();
+			}
 		}
 		
 	}
