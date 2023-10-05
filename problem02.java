@@ -15,7 +15,7 @@ public class problem02 extends SuperKarel{
 			}
 			if(frontIsClear()){
 				move();
-			}else build();
+			}
 		}
 	}
 
