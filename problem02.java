@@ -11,6 +11,10 @@ public class problem02 extends SuperKarel{
 			move();
 			double2();
 			recoverSecond();
+			turnAround();
+			move();
+			move();
+			turnAround();
 		}
 	}
 
