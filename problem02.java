@@ -8,10 +8,16 @@ import stanford.karel.SuperKarel;
 
 public class problem02 extends SuperKarel{
 	public void run() {
+		if(beepersInBag()){
+			putBeeper();
+		}
 		if(frontIsClear()){
 			move();
-		}else {turnAround();
-		move();
 		}
+		if(beepersInBag()){
+			putBeeper();
+		}
+		
 	}
 }
+
