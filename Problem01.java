@@ -6,11 +6,20 @@ public class Problem01 extends SuperKarel{
 	public void run(){
 		move();
 		while(beepersPresent()){
-			minus();
-//			count();
+			minusCopyAndCount();
 		}
 	}
+
+	private void minusCopyAndCount() {
+		minusAndCopy();
+		Count();
 	}
+
+	private void minusAndCopy() {
+		
+		
+	}
+}
 
 
 
