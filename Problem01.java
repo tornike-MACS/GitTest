@@ -12,7 +12,6 @@ public class Problem01 extends SuperKarel{
 	}
 
 	private void minus() {
-		while(beepersPresent()){
 			pickBeeper();
 			move();
 			pickBeeper();
@@ -22,7 +21,6 @@ public class Problem01 extends SuperKarel{
 			move();
 			move();
 			turnAround();
-		}
 	}
 }
 
