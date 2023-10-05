@@ -29,7 +29,7 @@ public class problem02 extends SuperKarel{
 		turnAround();
 		move();
 		move();
-		turnRight();
+		turnLeft();
 	}
 }
 
