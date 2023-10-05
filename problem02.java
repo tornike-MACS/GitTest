@@ -5,7 +5,30 @@ import stanford.karel.SuperKarel;
 
 public class problem02 extends SuperKarel{
 	public void run() {
-		
+		move();
+		while(beepersPresent()){
+			pickBeeper();
+			move();
+			double2();
+		}
+	}
+
+	private void double2() {
+		while(beepersPresent()){
+			pickBeeper();
+			move();
+			putBeeper();
+			move();
+			putBeeper();
+			goBack();
+		}
+	}
+
+	private void goBack() {
+		turnAround();
+		move();
+		move();	
+		turnAround();
 	}
 }
 
