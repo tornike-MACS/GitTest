@@ -11,9 +11,11 @@ public class Problem01 extends SuperKarel{
 	}
 
 	private void subtractDoubleAndReturn() {
+		while(beepersPresent()){
 		subrtact();
 		doubleSecond();
 //		returnSecond();
+		}
 	}
 
 	private void doubleSecond() {
