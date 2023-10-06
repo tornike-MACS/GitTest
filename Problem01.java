@@ -4,12 +4,6 @@
 import stanford.karel.SuperKarel;
 public class Problem01 extends SuperKarel{
 	public void run(){
-		subtractAndReturnBeepers();
-	}
-
-	private void subtractAndReturnBeepers() {
-		// TODO Auto-generated method stub
-		
 	}
 }
 
