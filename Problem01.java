@@ -35,7 +35,17 @@ public class Problem01 extends SuperKarel{
 	private void subrtact() {
 			pickBeeper();
 			move();
-			pickBeeper();
+			if(beepersPresent()){
+				pickBeeper();
+			}else count();
+	}
+
+	private void count() {
+		move();
+		putBeeper();
+		turnAround();
+		move();
+		turnAround();
 	}
 }
 
