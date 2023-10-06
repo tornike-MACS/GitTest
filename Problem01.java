@@ -19,11 +19,10 @@ public class Problem01 extends SuperKarel{
 	}
 
 	private void doubleSecond() {
-		pickBeeper();
 		moveTwice();
+		putBeeper();
 		turnAround();
 		moveTwice();
-		move();
 		turnAround();
 	}
 
