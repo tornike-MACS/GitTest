@@ -54,7 +54,8 @@ public class Problem01 extends SuperKarel{
 			moveTwice();
 			turnAround();	
 		}
-		
+		moveTwice();
+		turnAround();
 	}
 
 	private void count() {
