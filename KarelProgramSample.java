@@ -9,12 +9,11 @@
 
 import stanford.karel.*;
 
-public class KarelProgramSample extends SuperKarel {
+public class KarelProgramSample extends Karel {
 
 	
 	public void run() {
 		move();
-		turnRight();
 		move();
 		move();
 
