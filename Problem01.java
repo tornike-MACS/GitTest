@@ -21,9 +21,6 @@ public class Problem01 extends SuperKarel{
 	private void doubleSecond() {
 		pickBeeper();
 		moveTwice();
-		putBeeper();
-		move();
-		putBeeper();
 		turnAround();
 		moveTwice();
 		move();
@@ -36,8 +33,9 @@ public class Problem01 extends SuperKarel{
 	}
 
 	private void subrtact() {
-		pickBeeper();
-		move();
+			pickBeeper();
+			move();
+			pickBeeper();
 	}
 }
 
