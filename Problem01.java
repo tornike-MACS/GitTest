@@ -23,6 +23,18 @@ public class Problem01 extends SuperKarel{
 				returnToFirstPos();
 				}
 		}
+		oneMore();
+		delete();
+	}
+	private void delete() {
+		move();
+		while(beepersPresent()){
+			pickBeeper();
+		}
+	}
+	private void oneMore() {
+		moveTwice();
+		putBeeper();
 	}
 	private void plusOne() {
 		turnAround();
