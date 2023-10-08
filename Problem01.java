@@ -17,7 +17,6 @@ public class Problem01 extends SuperKarel{
 				moveTwice();
 				turnAround();
 			}if(noBeepersPresent()){
-				turnAround();
 				move();
 				putBeeper();
 				turnAround();
