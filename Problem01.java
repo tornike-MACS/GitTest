@@ -22,6 +22,8 @@ public class Problem01 extends SuperKarel{
 			moveTwice();
 			putBeeper();
 			turnAround();
+			moveTwice();
+			turnAround();
 		}
 	}
 	private void returnToSecond() {
