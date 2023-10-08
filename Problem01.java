@@ -17,11 +17,16 @@ public class Problem01 extends SuperKarel{
 				moveTwice();
 				turnAround();
 			}else{
+				plusOne();
 				count();
 				recover();
 				returnToFirstPos();
 			}
 		}
+	}
+	private void plusOne() {
+		// TODO Auto-generated method stub
+		
 	}
 	private void returnToFirstPos() {
 		turnAround();
