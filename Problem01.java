@@ -15,11 +15,18 @@ public class Problem01 extends SuperKarel{
 		}
 	}
 	private void recover() {
-		
+		move();
+		while(beepersPresent()){
+			pickBeeper();
+			turnAround();
+			moveTwice();
+			putBeeper();
+			turnAround();
+		}
 	}
 	private void returnToSecond() {
 		turnAround();
-		moveTwice();
+		move();
 		turnAround();
 	}
 	private void count() {
