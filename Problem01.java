@@ -7,8 +7,7 @@ public class Problem01 extends SuperKarel{
 		move();
 		while(beepersPresent()){
 			subtract();
-			recover();
-			returnToFirstPos();
+			
 		}
 	}
 private void returnToFirstPos() {
@@ -43,7 +42,11 @@ private void subtract(){
 			moveTwice();
 			move();
 			turnAround();
-		}else count();
+		}else {
+			count();
+			recover();
+			returnToFirstPos();
+			}
 }
 	private void moveTwice() {
 		move();
