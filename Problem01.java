@@ -4,7 +4,17 @@
 import stanford.karel.SuperKarel;
 public class Problem01 extends SuperKarel{
 	public void run(){
-		
+		while(beepersPresent()){
+			pickBeeper();
+			move();
+			pickBeeper();
+			moveTwice();
+			putBeeper();
+			turnAround();
+			moveTwice();
+			move();
+			turnAround();
+		}
 	
 	}
 	private void subtract() {
