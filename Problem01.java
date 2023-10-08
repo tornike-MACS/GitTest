@@ -17,14 +17,14 @@ public class Problem01 extends SuperKarel{
 				moveTwice();
 				turnAround();
 			}else{
-				plusOne();
+				plus();
 				count();
 				recover();
 				returnToFirstPos();
 			}
 		}
 	}
-	private void plusOne() {
+	private void plus() {
 		turnAround();
 		move();
 		putBeeper();
