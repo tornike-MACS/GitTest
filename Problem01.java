@@ -16,7 +16,11 @@ public class Problem01 extends SuperKarel{
 				move();
 				moveTwice();
 				turnAround();
-			}else count();
+			}else{ 
+				count();
+				recover();
+				returnToFirstPos();
+				}
 		}
 	}
 	private void returnToFirstPos() {
