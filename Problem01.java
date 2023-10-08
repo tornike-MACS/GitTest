@@ -17,14 +17,14 @@ public class Problem01 extends SuperKarel{
 		}
 	
 	}
-	private void subtract() {
-			pickBeeper();
-			moveTwice();
-			putBeeper();
-			turnAround();
-			moveTwice();
-			turnAround();
-	}
+//	private void subtract() {
+//			pickBeeper();
+//			moveTwice();
+//			putBeeper();
+//			turnAround();
+//			moveTwice();
+//			turnAround();
+//	}
 	private void moveTwice() {
 		move();
 		move();
