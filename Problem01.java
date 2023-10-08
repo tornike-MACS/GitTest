@@ -9,7 +9,18 @@ public class Problem01 extends SuperKarel{
 			pickBeeper();
 			move();
 			subtract();
+			count();
+			returnToSecond();
 		}
+	}
+	private void returnToSecond() {
+		turnAround();
+		moveTwice();
+		turnAround();
+	}
+	private void count() {
+		move();
+		putBeeper();
 	}
 	private void subtract() {
 		while(beepersPresent()){
