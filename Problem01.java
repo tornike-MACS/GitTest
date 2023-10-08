@@ -28,6 +28,7 @@ public class Problem01 extends SuperKarel{
 	private void returnToSecond() {
 		turnAround();
 		move();
+		moveTwice();
 		turnAround();
 	}
 	private void count() {
