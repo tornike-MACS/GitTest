@@ -10,8 +10,12 @@ public class Problem01 extends SuperKarel{
 			move();
 			subtract();
 			count();
+			recover();
 			returnToSecond();
 		}
+	}
+	private void recover() {
+		
 	}
 	private void returnToSecond() {
 		turnAround();
