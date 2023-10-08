@@ -6,49 +6,39 @@ public class Problem01 extends SuperKarel{
 	public void run(){
 		move();
 		while(beepersPresent()){
-			subtract();
-			
-		}
-	}
-private void returnToFirstPos() {
-		turnAround();
-		moveTwice();
-		move();
-		turnAround();
-	}
-private void recover() {
-		move();
-		while(beepersPresent()){
 			pickBeeper();
-			turnAround();
-			moveTwice();
-			putBeeper();
-			turnAround();
-			moveTwice();
+			move();
+			if(beepersPresent()){
+				pickBeeper();
+				moveTwice();
+				putBeeper();
+				turnAround();
+				move();
+				moveTwice();
+				turnAround();
+			}else{
+				count();
+				recover();
+				returnToFirstPos();
+			}
 		}
 	}
-private void count() {
+	private void recover() {
+			move();
+			while(beepersPresent()){
+				pickBeeper();
+				turnAround();
+				moveTwice();
+				putBeeper();
+				turnAround();
+				moveTwice();
+			}
+	}
+	private void count() {
 		move();
 		putBeeper();
 	}
-private void subtract(){
-		pickBeeper();
-		move();
-		if(beepersPresent()){
-			pickBeeper();
-			moveTwice();
-			putBeeper();
-			turnAround();
-			moveTwice();
-			move();
-			turnAround();
-		}else {
-			count();
-			recover();
-			returnToFirstPos();
-			}
-}
-	private void moveTwice() {
+	private void moveTwice(){
 		move();
 		move();
 	}
