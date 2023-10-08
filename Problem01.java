@@ -4,10 +4,9 @@
 import stanford.karel.SuperKarel;
 public class Problem01 extends SuperKarel{
 	public void run(){
-		moveTwice();
+		move();
 		while(beepersPresent()){
 			subtract();
-			count();
 			recover();
 			returnToFirstPos();
 		}
@@ -15,6 +14,7 @@ public class Problem01 extends SuperKarel{
 private void returnToFirstPos() {
 		turnAround();
 		moveTwice();
+		move();
 		turnAround();
 	}
 private void recover() {
@@ -33,19 +33,17 @@ private void count() {
 		putBeeper();
 	}
 private void subtract(){
-	while(beepersPresent()){
 		pickBeeper();
-		turnAround();
 		move();
-		pickBeeper();
-		turnAround();
-		moveTwice();
-		move();
-		putBeeper();
-		turnAround();
-		moveTwice();
-		turnAround();
-		}
+		if(beepersPresent()){
+			pickBeeper();
+			moveTwice();
+			putBeeper();
+			turnAround();
+			moveTwice();
+			move();
+			turnAround();
+		}else count();
 }
 	private void moveTwice() {
 		move();
