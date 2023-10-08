@@ -25,8 +25,11 @@ public class Problem01 extends SuperKarel{
 		}
 	}
 	private void plusOne() {
-		// TODO Auto-generated method stub
-		
+		turnAround();
+		move();
+		putBeeper();
+		turnAround();
+		move();
 	}
 	private void returnToFirstPos() {
 		turnAround();
