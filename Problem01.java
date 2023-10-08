@@ -17,19 +17,16 @@ public class Problem01 extends SuperKarel{
 				moveTwice();
 				turnAround();
 			}else{
-				damateba();
+				turnAround();
+				move();
+				putBeeper();
+				turnAround();
+				move();
 				count();
 				recover();
 				returnToFirstPos();
 			}
 		}
-	}
-	private void damateba() {
-		turnAround();
-		move();
-		putBeeper();
-		turnAround();
-		move();
 	}
 	private void returnToFirstPos() {
 		turnAround();
