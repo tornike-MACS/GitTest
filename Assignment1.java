@@ -6,7 +6,7 @@ public class Assignment1 extends Karel {
 		pickBeeper();
 		returnToFirstPos();
 	}
-
+// karel goes to its first position
 	private void returnToFirstPos() {
 		turnAround();
 		move();
@@ -21,7 +21,7 @@ public class Assignment1 extends Karel {
 		turnLeft();
 		turnLeft();
 	}
-karel goes to beeper
+// karel goes to beeper
 	private void goToBeeper() {
 		moveTwice();
 		turnRight();
