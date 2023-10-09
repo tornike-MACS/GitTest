@@ -4,7 +4,7 @@ public class Assignment1 extends Karel {
 	public void run() {
 		goOut();
 		pickBeeper();
-		goIn();
+//		goIn();
 	}
 
 	private void goOut() {
