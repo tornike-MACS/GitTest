@@ -20,7 +20,9 @@ public class Ass1_p2 extends SuperKarel {
 		}
 		while(frontIsClear()){
 			move();
-			putBeeper();
+			if(noBeepersPresent()){
+				putBeeper();
+			}
 		}
 	}
 
