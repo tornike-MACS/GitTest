@@ -4,7 +4,22 @@ public class Assignment1 extends Karel {
 	public void run() {
 		goOut();
 		pickBeeper();
-//		goIn();
+		goIn();
+	}
+
+	private void goIn() {
+		turnAround();
+		move();
+		turnRight();
+		move();
+		turnLeft();
+		moveTwice();
+		turnAround();
+	}
+
+	private void turnAround() {
+		turnLeft();
+		turnLeft();
 	}
 
 	private void goOut() {
