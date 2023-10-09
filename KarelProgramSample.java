@@ -13,9 +13,7 @@ public class KarelProgramSample extends Karel {
 
 	
 	public void run() {
-		move();
-		move();
-		move();
+		m
 
 	}
 	}
