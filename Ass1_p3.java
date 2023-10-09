@@ -40,8 +40,10 @@ public class Ass1_p3 extends SuperKarel {
 
 	private void fillLine2() {
 		turnRight();
-		move();
-		putBeeper();
+		if(frontIsClear()){
+			move();
+			putBeeper();
+		}
 		if(frontIsClear()){
 			move();
 		}
