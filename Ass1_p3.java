@@ -42,7 +42,9 @@ public class Ass1_p3 extends SuperKarel {
 		turnRight();
 		move();
 		putBeeper();
-		move();
+		if(frontIsClear()){
+			move();
+		}
 		while(frontIsClear()){
 			move();
 			putBeeper();
@@ -66,7 +68,9 @@ public class Ass1_p3 extends SuperKarel {
 	private void fillLine1() {
 		turnRight();
 		putBeeper();
-		move();
+		if(frontIsClear()){
+			move();
+		}
 		while(frontIsClear()){
 			move();
 			putBeeper();
