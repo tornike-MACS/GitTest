@@ -8,8 +8,10 @@ public class Ass1_p3 extends SuperKarel {
 		while(frontIsClear()){
 			fillLine1();
 			moveToNextLine1();
-			fillLine2();
-			moveToNextLine1();
+			if(frontIsClear()){
+				fillLine2();
+				moveToNextLine1();
+			}
 		}
 	}
 
