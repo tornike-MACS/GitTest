@@ -2,12 +2,12 @@ import stanford.karel.Karel;
 
 public class Assignment1 extends Karel {
 	public void run() {
-		goOut();
+		goToBeeper();
 		pickBeeper();
-		goIn();
+		returnToFirstPos();
 	}
 
-	private void goIn() {
+	private void returnToFirstPos() {
 		turnAround();
 		move();
 		turnRight();
@@ -22,7 +22,7 @@ public class Assignment1 extends Karel {
 		turnLeft();
 	}
 
-	private void goOut() {
+	private void goToBeeper() {
 		moveTwice();
 		turnRight();
 		move();
