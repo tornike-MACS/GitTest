@@ -9,6 +9,19 @@ public class Ass1_p2 extends SuperKarel {
 			returnToFirstPos();
 			moveToNextColumn();
 		}
+		fillLastColumn();
+		returnToFirstPos();
+	}
+
+	private void fillLastColumn() {
+		turnLeft();
+		if(noBeepersPresent()){
+			putBeeper();
+		}
+		while(frontIsClear()){
+			move();
+			putBeeper();
+		}
 	}
 
 	private void moveToNextColumn() {
