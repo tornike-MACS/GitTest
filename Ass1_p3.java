@@ -17,7 +17,6 @@ public class Ass1_p3 extends SuperKarel {
 	}
 
 	private void fillTheLastLine() {
-		// TODO Auto-generated method stub
 		
 	}
 
