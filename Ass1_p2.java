@@ -1,10 +1,23 @@
-import stanford.karel.Karel;
+import stanford.karel.SuperKarel;
 
-public class Ass1_p2 extends Karel {
+public class Ass1_p2 extends SuperKarel {
 
 	
 	public void run() {
-		
+		fixColumn();
+//		moveToNextColumn();
+	}
 
+	private void fixColumn() {
+		turnLeft();
+		if(noBeepersPresent()){
+			putBeeper();
+		}
+		while(frontIsClear()){
+			move();
+			if(noBeepersPresent()){
+				putBeeper();
+			}
+		}
 	}
-	}
+}
