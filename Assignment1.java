@@ -21,7 +21,7 @@ public class Assignment1 extends Karel {
 		turnLeft();
 		turnLeft();
 	}
-
+karel goes to beeper
 	private void goToBeeper() {
 		moveTwice();
 		turnRight();
