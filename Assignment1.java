@@ -8,7 +8,7 @@ public class Assignment1 extends Karel {
 	}
 
 	private void goOut() {
-		moveThreeTimes();
+		moveTwice();
 		turnRight();
 		move();
 		turnLeft();
@@ -21,8 +21,7 @@ public class Assignment1 extends Karel {
 		turnLeft();
 	}
 
-	private void moveThreeTimes() {
-		move();
+	private void moveTwice() {
 		move();
 		move();
 	}
