@@ -17,25 +17,30 @@ public class Ass1_p3 extends SuperKarel {
 	}
 
 	private void fillTheLastLine() {
-		checkPreviusLine();
-		if(beepersPresent()){
-			returnToCurrentLine();
-			fillLine2();
-		}else{
-			returnToCurrentLine();
-			fillLine1();
+				checkPreviusLine();
+			if(beepersPresent()){
+				returnToCurrentLine();
+				fillLine2();
+			}else{
+				returnToCurrentLine();
+				fillLine1();
 		}
+		
 		
 	}
 
 	private void returnToCurrentLine() {
 		turnAround();
-		move();
+		if(frontIsClear()){
+			move();
+		}
 	}
 
 	private void checkPreviusLine() {
 		turnAround();
-		move();
+		if(frontIsClear()){
+			move();
+		}
 	}
 
 	private void fillLine2() {
