@@ -4,9 +4,18 @@ public class Ass1_p2 extends SuperKarel {
 
 	
 	public void run() {
-		fixColumn();
-		returnToFirstPos();
-//		moveToNextColumn();
+		while(frontIsClear()){
+			fixColumn();
+			returnToFirstPos();
+			moveToNextColumn();
+		}
+	}
+
+	private void moveToNextColumn() {
+		move();
+		move();
+		move();
+		move();
 	}
 
 	private void returnToFirstPos() {
