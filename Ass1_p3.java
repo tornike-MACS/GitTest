@@ -4,11 +4,25 @@ public class Ass1_p3 extends SuperKarel {
 
 	
 	public void run() {
-		fillLine1();
-	//	moveToNextLine();
+		turnLeft();
+		while(frontIsClear()){
+			fillLine1();
+			moveToNextLine1();
+		}
 	}
 
+	private void moveToNextLine1() {
+			move();
+			turnLeft();
+			while(frontIsClear()){
+				move();
+			}
+			turnRight();
+		}
+	
+
 	private void fillLine1() {
+		turnRight();
 		putBeeper();
 		move();
 		while(frontIsClear()){
@@ -18,5 +32,6 @@ public class Ass1_p3 extends SuperKarel {
 				move();
 			}
 		}
+		turnLeft();
 	}
 }
