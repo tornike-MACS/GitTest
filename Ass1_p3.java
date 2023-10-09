@@ -13,6 +13,12 @@ public class Ass1_p3 extends SuperKarel {
 				moveToNextLine1();
 			}
 		}
+		fillTheLastLine();
+	}
+
+	private void fillTheLastLine() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private void fillLine2() {
