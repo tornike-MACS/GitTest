@@ -2,18 +2,17 @@ import stanford.karel.SuperKarel;
 
 public class Ass1_p2 extends SuperKarel {
 
-	
 	public void run() {
 		while(frontIsClear()){
 			fixColumn();
 			returnToFirstPos();
 			moveToNextColumn();
 		}
-		fillLastColumn();
+		fixLastColumn();
 		returnToFirstPos();
 	}
-
-	private void fillLastColumn() {
+// we need this to fix last column
+	private void fixLastColumn() {
 		turnLeft();
 		if(noBeepersPresent()){
 			putBeeper();
@@ -25,7 +24,7 @@ public class Ass1_p2 extends SuperKarel {
 			}
 		}
 	}
-
+//karel goes to next column
 	private void moveToNextColumn() {
 		move();
 		move();
@@ -40,6 +39,10 @@ public class Ass1_p2 extends SuperKarel {
 		}
 		turnLeft();
 	}
+/*
+ *    karel puts beepers on empty places in column
+ *   
+ */
 
 	private void fixColumn() {
 		turnLeft();
