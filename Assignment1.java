@@ -1,6 +1,5 @@
-import stanford.karel.Karel;
-
-public class Assignment1 extends Karel {
+import stanford.karel.SuperKarel;
+public class Assignment1 extends SuperKarel {
 	public void run() {
 		goToBeeper();
 		pickBeeper();
@@ -16,7 +15,6 @@ public class Assignment1 extends Karel {
 		moveTwice();
 		turnAround();
 	}
-
 	private void turnAround() {
 		turnLeft();
 		turnLeft();
@@ -29,13 +27,6 @@ public class Assignment1 extends Karel {
 		turnLeft();
 		move();
 	}
-
-	private void turnRight() {
-		turnLeft();
-		turnLeft();
-		turnLeft();
-	}
-
 	private void moveTwice() {
 		move();
 		move();
