@@ -7,5 +7,6 @@ public class Graphics extends GraphicsProgram {
 		add(myOval, 100, 100);
 		GOval newOval = new GOval(100, 200);
 		add(newOval, 200, 200);
+		newOval.setFilled(true);
 	}
 }
