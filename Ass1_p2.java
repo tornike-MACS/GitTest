@@ -11,19 +11,17 @@ public class Ass1_p2 extends SuperKarel {
 		fixLastColumn();
 		returnToFirstPos();
 	}
+	
 // we need this to fix last column
 	private void fixLastColumn() {
 		turnLeft();
-		if(noBeepersPresent()){
-			putBeeper();
-		}
+		safePut();
 		while(frontIsClear()){
 			move();
-			if(noBeepersPresent()){
-				putBeeper();
-			}
+			safePut();
 		}
 	}
+	
 //karel goes to next column
 	private void moveToNextColumn() {
 		move();
@@ -39,21 +37,21 @@ public class Ass1_p2 extends SuperKarel {
 		}
 		turnLeft();
 	}
-/*
- *    karel puts beepers on empty places in column
- *   
- */
 
+   //  karel puts beepers on empty places in column 
 	private void fixColumn() {
 		turnLeft();
-		if(noBeepersPresent()){
-			putBeeper();
-		}
+		safePut();
 		while(frontIsClear()){
 			move();
-			if(noBeepersPresent()){
-				putBeeper();
-			}
+			safePut();
+		}
+	}
+	
+	// karel puts beeper only if the beeper is not present
+	private void safePut(){
+		if(noBeepersPresent()){
+			putBeeper();
 		}
 	}
 }
