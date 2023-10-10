@@ -3,6 +3,9 @@ import acm.program.GraphicsProgram;
 
 public class Graphics extends GraphicsProgram {
 	public void run() {
-		add(new GOval(100, 200), 100, 100);
+		GOval myOval = new GOval(100, 200);
+		add(myOval, 100, 100);
+		GOval newOval = new GOval(100, 200);
+		add(myOval, 100, 200);
 	}
 }
