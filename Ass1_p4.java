@@ -14,7 +14,9 @@ public class Ass1_p4 extends SuperKarel {
 	
 	private void goToFinalDest() {
 		turnAround();
-		safeMove();
+		while(frontIsClear()){
+			move();
+		}
 		turnLeft();
 		while(noBeepersPresent()){
 			move();
