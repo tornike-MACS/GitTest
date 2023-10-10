@@ -11,7 +11,8 @@ public class Ass1_p4 extends SuperKarel {
 		deleteOthers();
 		goToFinalDest();
 	}
-	
+
+// goes to answer
 	private void goToFinalDest() {
 		turnAround();
 		while(frontIsClear()){
@@ -23,6 +24,7 @@ public class Ass1_p4 extends SuperKarel {
 		}
 	}
 
+// deletes everything except the answer
 	private void deleteOthers() {
 		while(frontIsClear()){
 			move();
@@ -35,6 +37,7 @@ public class Ass1_p4 extends SuperKarel {
 		}
 	}
 
+// karel goes to the answer destination
 	private void goToAnswer() {
 		returnToFirstPos();
 		turnRight();
@@ -58,6 +61,7 @@ public class Ass1_p4 extends SuperKarel {
 		}
 	}
 
+// karel puts two beepers on the first vertical line and one on the first horizontal line
 	private void putTwoAndOne() {
 		while(frontIsClear()){
 			putTwo();
@@ -67,6 +71,7 @@ public class Ass1_p4 extends SuperKarel {
 		}
 	}
 
+// this helps cycle to work correctly 
 	private void continueCycle() {
 		returnToFirstPos();
 		turnLeft();
@@ -78,13 +83,15 @@ public class Ass1_p4 extends SuperKarel {
 			}
 		}
 	}
-
+	
+// karel picks a beeper only if it is present
 	private void safePick() {
 		if(beepersPresent()){
 			pickBeeper();
 		}
 	}
 
+// puts one beeper on the first horizontal line
 	private void putOne() {
 		turnRight();
 		while(beepersPresent()){
@@ -93,6 +100,7 @@ public class Ass1_p4 extends SuperKarel {
 		putBeeper();
 	}
 
+//puts two beepers on the  first vertical line
 	private void putTwo() {
 		while(beepersPresent()){
 			move();
@@ -102,12 +110,14 @@ public class Ass1_p4 extends SuperKarel {
 			safePut();
 	}
 
+// karel makes a move only when front is clear
 	private void safeMove() {
 		if(frontIsClear()){
 			move();
 		}
 	}
 
+// karel puts a beeper only when no beepers present
 	private void safePut() {
 		if(noBeepersPresent()){
 			putBeeper();
