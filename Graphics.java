@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import acm.graphics.*;
 import acm.program.GraphicsProgram;
 
@@ -8,5 +10,6 @@ public class Graphics extends GraphicsProgram {
 		GOval newOval = new GOval(100, 200);
 		add(newOval, 200, 200);
 		newOval.setFilled(true);
+		newOval.setColor(Color.RED);
 	}
 }
