@@ -47,7 +47,17 @@ public class Ass1_p4 extends SuperKarel {
 		returnToFirstPos();
 		turnLeft();
 		while(beepersPresent()){
-			safeMove();
+			if(frontIsClear()){
+				move();
+			}else{
+				safePick();
+			}
+		}
+	}
+
+	private void safePick() {
+		if(beepersPresent()){
+			pickBeeper();
 		}
 	}
 
