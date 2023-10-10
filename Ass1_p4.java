@@ -8,9 +8,21 @@ public class Ass1_p4 extends SuperKarel {
 		putTwoAndOne();
 		returnToFirstPos();
 		goToAnswer();
-//		deleteOthers();
+		deleteOthers();
 	}
 	
+	private void deleteOthers() {
+		while(frontIsClear()){
+			move();
+			pickBeeper();
+		}
+		turnRight();
+		while(frontIsClear()){
+			move();
+			pickBeeper();
+		}
+	}
+
 	private void goToAnswer() {
 		returnToFirstPos();
 		turnRight();
