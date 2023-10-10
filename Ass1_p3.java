@@ -7,15 +7,16 @@ public class Ass1_p3 extends SuperKarel {
 		turnLeft();
 		while(frontIsClear()){
 			fillLine1();
-			moveToNextLine1();
+			moveToNextLine();
 			if(frontIsClear()){
 				fillLine2();
-				moveToNextLine1();
+				moveToNextLine();
 			}
 		}
 		fillTheLastLine();
 	}
 
+// fills the last line and it depends one the previous line
 	private void fillTheLastLine() {
 				checkPreviusLine();
 			if(beepersPresent()){
@@ -33,11 +34,13 @@ public class Ass1_p3 extends SuperKarel {
 		safeMove();
 	}
 
+// karel checks whether the previous line has the beeper on the first space or not
 	private void checkPreviusLine() {
 		turnAround();
 		safeMove();
 	}
 
+// karel puts beepers by omitting one space
 	private void fillLine2() {
 		turnRight();
 		if(frontIsClear()){
@@ -52,8 +55,9 @@ public class Ass1_p3 extends SuperKarel {
 		}
 		turnLeft();
 	}
-
-	private void moveToNextLine1() {
+	
+// Karel goes to next line's west-end
+	private void moveToNextLine() {
 			move();
 			turnLeft();
 			while(frontIsClear()){
@@ -62,7 +66,7 @@ public class Ass1_p3 extends SuperKarel {
 			turnRight();
 		}
 	
-
+//  puts beepers by omitting one space
 	private void fillLine1() {
 		turnRight();
 		putBeeper();
@@ -75,6 +79,7 @@ public class Ass1_p3 extends SuperKarel {
 		turnLeft();
 	}
 	
+// Karel moves forward only if front is clear
 	private void safeMove(){
 		if(frontIsClear()){
 			move();
