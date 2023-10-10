@@ -6,6 +6,6 @@ public class Graphics extends GraphicsProgram {
 		GOval myOval = new GOval(100, 200);
 		add(myOval, 100, 100);
 		GOval newOval = new GOval(100, 200);
-		add(myOval, 100, 200);
+		add(newOval, 100, 200);
 	}
 }
