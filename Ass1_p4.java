@@ -7,10 +7,20 @@ public class Ass1_p4 extends SuperKarel {
 		turnLeft();
 		putTwoAndOne();
 		returnToFirstPos();
-//		goToAnswer();
+		goToAnswer();
 //		deleteOthers();
 	}
 	
+	private void goToAnswer() {
+		returnToFirstPos();
+		turnRight();
+		while(beepersPresent()){
+			move();
+		}
+		turnAround();
+		move();
+	}
+
 //final position: 1*1 facing north
 	private void returnToFirstPos() {
 		turnAround();
