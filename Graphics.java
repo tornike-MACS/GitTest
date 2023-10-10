@@ -3,7 +3,7 @@ import acm.program.GraphicsProgram;
 
 public class Graphics extends GraphicsProgram {
 	public void run() {
-		add(new GRect(100, 200));
+		add(new GOval(100, 200));
 		
 	}
 }
