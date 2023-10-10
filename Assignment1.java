@@ -5,6 +5,7 @@ public class Assignment1 extends SuperKarel {
 		pickBeeper();
 		returnToFirstPos();
 	}
+	
 // karel goes to its first position
 	private void returnToFirstPos() {
 		turnAround();
@@ -15,10 +16,7 @@ public class Assignment1 extends SuperKarel {
 		moveTwice();
 		turnAround();
 	}
-	private void turnAround() {
-		turnLeft();
-		turnLeft();
-	}
+	
 // karel goes to beeper
 	private void goToBeeper() {
 		moveTwice();
@@ -27,6 +25,7 @@ public class Assignment1 extends SuperKarel {
 		turnLeft();
 		move();
 	}
+	
 	private void moveTwice() {
 		move();
 		move();
