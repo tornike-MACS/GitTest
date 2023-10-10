@@ -29,7 +29,15 @@ public class Ass1_p4 extends SuperKarel {
 			putTwo();
 			returnToFirstPos();
 			putOne();
-	//		continueCycle();
+			continueCycle();
+		}
+	}
+
+	private void continueCycle() {
+		returnToFirstPos();
+		turnLeft();
+		while(beepersPresent()){
+			safeMove();
 		}
 	}
 
