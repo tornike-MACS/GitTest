@@ -26,21 +26,16 @@ public class Ass1_p3 extends SuperKarel {
 				fillLine1();
 		}
 		
-		
 	}
 
 	private void returnToCurrentLine() {
 		turnAround();
-		if(frontIsClear()){
-			move();
-		}
+		safeMove();
 	}
 
 	private void checkPreviusLine() {
 		turnAround();
-		if(frontIsClear()){
-			move();
-		}
+		safeMove();
 	}
 
 	private void fillLine2() {
@@ -49,15 +44,11 @@ public class Ass1_p3 extends SuperKarel {
 			move();
 			putBeeper();
 		}
-		if(frontIsClear()){
-			move();
-		}
+		safeMove();
 		while(frontIsClear()){
 			move();
 			putBeeper();
-			if(frontIsClear()){
-				move();
-			}
+			safeMove();
 		}
 		turnLeft();
 	}
@@ -75,16 +66,18 @@ public class Ass1_p3 extends SuperKarel {
 	private void fillLine1() {
 		turnRight();
 		putBeeper();
-		if(frontIsClear()){
-			move();
-		}
+		safeMove();
 		while(frontIsClear()){
 			move();
 			putBeeper();
-			if(frontIsClear()){
-				move();
-			}
+			safeMove();
 		}
 		turnLeft();
+	}
+	
+	private void safeMove(){
+		if(frontIsClear()){
+			move();
+		}
 	}
 }
