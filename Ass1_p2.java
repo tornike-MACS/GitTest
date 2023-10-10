@@ -24,10 +24,9 @@ public class Ass1_p2 extends SuperKarel {
 	
 //karel goes to next column
 	private void moveToNextColumn() {
-		move();
-		move();
-		move();
-		move();
+		for(int i = 0; i < 3; i++){
+			move();
+		}
 	}
 
 	private void returnToFirstPos() {
