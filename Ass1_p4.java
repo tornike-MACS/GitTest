@@ -6,27 +6,48 @@ public class Ass1_p4 extends SuperKarel {
 		putBeeper();
 		turnLeft();
 		putTwoAndOne();
-//		returnToFirstPos();
+		returnToFirstPos();
 //		goToAnswer();
 //		deleteOthers();
+	}
+	
+//final position: 1*1 facing north
+	private void returnToFirstPos() {
+		turnAround();
+		moveToWall();
+		turnAround();
+	}
+
+	private void moveToWall() {
+		while(frontIsClear()){
+			move();
+		}
 	}
 
 	private void putTwoAndOne() {
 		while(frontIsClear()){
 			putTwo();
-//			returnToFirstPos();
-//			putOne();
-//			continueCycle();
+			returnToFirstPos();
+			putOne();
+	//		continueCycle();
 		}
 	}
 
-	private void putTwo() {
-		while(frontIsClear()){
-			safeMove();
-			safePut();
-			safeMove();
-			safePut();
+	private void putOne() {
+		turnRight();
+		while(beepersPresent()){
+			move();
 		}
+		putBeeper();
+	}
+
+	private void putTwo() {
+		while(beepersPresent()){
+			move();
+		}
+			safePut();
+			safeMove();
+			safePut();
 	}
 
 	private void safeMove() {
