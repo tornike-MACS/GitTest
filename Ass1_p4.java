@@ -9,8 +9,18 @@ public class Ass1_p4 extends SuperKarel {
 		returnToFirstPos();
 		goToAnswer();
 		deleteOthers();
+		goToFinalDest();
 	}
 	
+	private void goToFinalDest() {
+		turnAround();
+		safeMove();
+		turnLeft();
+		while(noBeepersPresent()){
+			move();
+		}
+	}
+
 	private void deleteOthers() {
 		while(frontIsClear()){
 			move();
@@ -19,7 +29,7 @@ public class Ass1_p4 extends SuperKarel {
 		turnRight();
 		while(frontIsClear()){
 			move();
-			pickBeeper();
+			safePick();
 		}
 	}
 
