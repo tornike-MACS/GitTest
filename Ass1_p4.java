@@ -67,7 +67,8 @@ public class Ass1_p4 extends SuperKarel {
 			putTwo();
 			returnToFirstPos();
 			putOne();
-			continueCycle();
+			returnToFirstPos();
+	//		continueCycle();
 		}
 	}
 
