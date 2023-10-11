@@ -68,8 +68,7 @@ public class Ass1_p4 extends SuperKarel {
 			returnToFirstPos();
 			putOne();
 			returnToFirstPos();
-			turnLeft();
-	//		continueCycle();
+			continueCycle();
 		}
 	}
 
@@ -105,7 +104,7 @@ public class Ass1_p4 extends SuperKarel {
 //puts two beepers on the  first vertical line
 	private void putTwo() {
 		while(beepersPresent()){
-			safeMove();
+			move();
 		}
 			safePut();
 			safeMove();
