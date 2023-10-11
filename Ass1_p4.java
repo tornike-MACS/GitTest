@@ -5,6 +5,7 @@ public class Ass1_p4 extends SuperKarel {
 	public void run() {
 		putBeeper();
 		turnLeft();
+		move();
 		putTwoAndOne();
 		returnToFirstPos();
 		goToAnswer();
@@ -102,7 +103,7 @@ public class Ass1_p4 extends SuperKarel {
 
 //puts two beepers on the  first vertical line
 	private void putTwo() {
-		safeMove();	
+			
 		safePut();
 		safeMove();
 		safePut();
