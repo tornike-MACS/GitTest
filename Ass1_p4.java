@@ -105,7 +105,7 @@ public class Ass1_p4 extends SuperKarel {
 //puts two beepers on the  first vertical line
 	private void putTwo() {
 		while(beepersPresent()){
-			move();
+			safeMove();
 		}
 			safePut();
 			safeMove();
