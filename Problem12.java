@@ -10,11 +10,11 @@ public class Problem12 extends GraphicsProgram {
 		add(myLine);
 		myLine = new GLine (380, 100, 580, 200);
 		add(myLine);
-		GRect window = new GRect(80, 80);
-		add(window, 220, 240);
-		window = new GRect(80, 80);
-		add(window, 460, 240);
-		GRect door = new GRect(60, 120);
-		add(door, 350, 280 );
+		GRect myWindow = new GRect(80, 80);
+		add(myWindow, 220, 240);
+		myWindow = new GRect(80, 80);
+		add(myWindow, 460, 240);
+		GRect myDoor = new GRect(60, 120);
+		add(myDoor, 350, 280 );
 	}
 }
