@@ -20,6 +20,6 @@ public class Graphics extends GraphicsProgram {
 		GRect window = new GRect(80, 80);
 		add(window, 220, 240);
 		window = new GRect(80, 80);
-		add(window, 540, 240);
+		add(window, 480, 240);
 	}
 }
