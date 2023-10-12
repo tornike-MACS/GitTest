@@ -13,5 +13,7 @@ public class Graphics extends GraphicsProgram {
 //		newOval.setColor(Color.RED);
 		GRect myRect = new GRect (400, 200);
 		add(myRect, 180, 200);
+		GLine myLine = new GLine (400, 200, 490, 100);
+		add(myLine);
 	}
 }
