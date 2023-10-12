@@ -15,5 +15,7 @@ public class Graphics extends GraphicsProgram {
 		add(myRect, 180, 200);
 		GLine myLine = new GLine (180, 200, 380, 100);
 		add(myLine);
+		myLine = new GLine (380, 100, 580, 200);
+		add(myLine);
 	}
 }
