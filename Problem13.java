@@ -4,7 +4,7 @@ import acm.program.GraphicsProgram;
 
 public class Problem13 extends GraphicsProgram {
 	public void run() {
-		GLine myLine = new GLine(0, 400, 1000, 400);
+		GLine myLine = new GLine(0, 200, 1000, 200);
 		add(myLine);
 	}
 }
