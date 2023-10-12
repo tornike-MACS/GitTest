@@ -18,6 +18,6 @@ public class Graphics extends GraphicsProgram {
 		myLine = new GLine (380, 100, 580, 200);
 		add(myLine);
 		GRect window = new GRect(80, 80);
-		add(window, 200, 220);
+		add(window, 220, 240);
 	}
 }
