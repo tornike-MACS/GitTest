@@ -5,11 +5,13 @@ import acm.program.GraphicsProgram;
 
 public class Graphics extends GraphicsProgram {
 	public void run() {
-		GOval myOval = new GOval(100, 200);
+//		GOval myOval = new GOval(100, 200);
+//		add(myOval, 100, 100);
+//		GOval newOval = new GOval(100, 200);
+//		add(newOval, 200, 200);
+//		newOval.setFilled(true);
+//		newOval.setColor(Color.RED);
+		GOval myOval = new GOval (100, 200);
 		add(myOval, 100, 100);
-		GOval newOval = new GOval(100, 200);
-		add(newOval, 200, 200);
-		newOval.setFilled(true);
-		newOval.setColor(Color.RED);
 	}
 }
