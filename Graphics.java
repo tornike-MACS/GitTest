@@ -21,5 +21,7 @@ public class Graphics extends GraphicsProgram {
 		add(window, 220, 240);
 		window = new GRect(80, 80);
 		add(window, 460, 240);
+		GRect door = new GRect(60, 120);
+		add(door, 350, 280 );
 	}
 }
