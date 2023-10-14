@@ -1,5 +1,4 @@
 import acm.graphics.GLine;
-import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 import java.awt.*;
 
