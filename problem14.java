@@ -8,7 +8,8 @@ public class problem14 extends GraphicsProgram {
 		head.setFilled(true);
 		head.setColor(Color.RED);
 		int x = getWidth()/2 - 120;
-		add(head, x, 100);
+		int y = getHeight()/2 - 160;
+		add(head, x, y);
 		
 	}
 }
