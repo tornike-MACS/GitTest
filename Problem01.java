@@ -26,16 +26,19 @@ public class Problem01 extends SuperKarel{
 		oneMore();
 		delete();
 	}
+	
 	private void delete() {
 		move();
 		while(beepersPresent()){
 			pickBeeper();
 		}
 	}
+	
 	private void oneMore() {
 		moveTwice();
 		putBeeper();
 	}
+	
 	private void plusOne() {
 		turnAround();
 		move();
@@ -43,12 +46,14 @@ public class Problem01 extends SuperKarel{
 		turnAround();
 		move();
 	}
+	
 	private void returnToFirstPos() {
 		turnAround();
 		move();
 		moveTwice();
 		turnAround();
 	}
+	
 	private void recover() {
 			move();
 			while(beepersPresent()){
@@ -60,10 +65,12 @@ public class Problem01 extends SuperKarel{
 				moveTwice();
 			}
 	}
+	
 	private void count() {
 		move();
 		putBeeper();
 	}
+	
 	private void moveTwice(){
 		move();
 		move();
