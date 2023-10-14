@@ -5,6 +5,6 @@ public class problem17 extends ConsoleProgram {
 		double n1 = readDouble("Enter your number: ");
 		double n2 = n1 + 1; 
 		
-		println(n1%n2 + "and" + n1 - n1%n2);
+		println(n1%n2 + "and");
 	}
 }
