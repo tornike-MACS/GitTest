@@ -10,7 +10,7 @@ public class problem14 extends GraphicsProgram {
 		int x = getWidth()/2 - 120;
 		int y = getHeight()/2 - 160;
 		add(head, x, y);
-		GRect eye1 = new GRect(70, 70);
+		GRect eye1 = new GRect(60, 90);
 		eye1.setFilled(true);
 		eye1.setColor(Color.BLACK );
 		add(eye1, x + 20, y + 20);
