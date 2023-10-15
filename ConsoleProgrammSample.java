@@ -10,7 +10,8 @@ import acm.program.*;
 public class ConsoleProgrammSample extends ConsoleProgram {
 
 	public void run() {
-		println("Hello World!");
+		int n1 = readInt("how many ");
+		println((n1==1) ? "item found" : "items found");
 	}
 
 }
