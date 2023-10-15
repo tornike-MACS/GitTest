@@ -11,7 +11,7 @@ public class ConsoleProgrammSample extends ConsoleProgram {
 
 	public void run() {
 		int n1 = readInt("how many ");
-		println((n1==1) ? n1 + " item found" : n1 + " items found");
+		println(n1 + "item" + ((n1==1) ? "" : "s" + "found"));
 	}
 
 }
