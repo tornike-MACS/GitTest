@@ -14,5 +14,6 @@ public class problem14 extends GraphicsProgram {
 		eye1.setFilled(true);
 		eye1.setColor(Color.BLACK );
 		add(eye1, x + 30, y + 30);
+		
 	}
 }
