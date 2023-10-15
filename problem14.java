@@ -13,6 +13,6 @@ public class problem14 extends GraphicsProgram {
 		GRect eye1 = new GRect(60, 90);
 		eye1.setFilled(true);
 		eye1.setColor(Color.BLACK );
-		add(eye1, x + 20, y + 20);
+		add(eye1, x + 30, y + 30);
 	}
 }
