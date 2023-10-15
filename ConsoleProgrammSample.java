@@ -20,6 +20,5 @@ public class ConsoleProgrammSample extends ConsoleProgram {
 		}
 		println(total);
 	}
-	
 	private static final int SENTINEL = 0;
 }
