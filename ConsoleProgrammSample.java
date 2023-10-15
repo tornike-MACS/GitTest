@@ -10,13 +10,16 @@ import acm.program.*;
 public class ConsoleProgrammSample extends ConsoleProgram {
 
 	public void run() {
-		int n1 = readInt("your number ");
+		println("This program adds several integers ");
+		println("add numbers and inorder to stop add " + SENTINEL);
 		int total = 0;
-		while(n1>0){
-			int remainder = n1%10;
-			total += remainder;
-			n1 = n1/10;
+		int number = readInt();
+		while(number != 0){
+			total += number;
+			number = readInt();
 		}
-		println("Digit sum is " + total);
+		println(total);
 	}
+	
+	private static final int SENTINEL = 0;
 }
