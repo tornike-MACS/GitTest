@@ -10,7 +10,13 @@ import acm.program.*;
 public class ConsoleProgrammSample extends ConsoleProgram {
 
 	public void run() {
-		int n1 = readInt("how many ");
-		println(n1 + " item" + ((n1==1) ? "" : "s") + " found");
+		int n1 = readInt("your number ");
+		int total = 0;
+		while(n1>0){
+			int remainder = n1%10;
+			total += remainder;
+			n1 = n1/10;
+		}
+		println("Digit sum is " + total);
 	}
 }
