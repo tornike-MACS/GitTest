@@ -12,7 +12,7 @@ public class Graphics extends GraphicsProgram {
 		double dy = (getHeight() - SQUARE_SIZE)/N_STEPS;
 		for(int i = 0; i < N_STEPS; i++){
 			rect.move(dx, dy);
-			pause(PAUSE_TIME);
+//			pause(PAUSE_TIME);
 		}
 	}
 	private static final int SQUARE_SIZE = 50;
