@@ -5,23 +5,9 @@ import acm.program.GraphicsProgram;
 
 public class Graphics extends GraphicsProgram {
 	public void run() {
-//		GOval myOval = new GOval(100, 200);
-//		add(myOval, 100, 100);
-//		GOval newOval = new GOval(100, 200);
-//		add(newOval, 200, 200);
-//		newOval.setFilled(true);
-//		newOval.setColor(Color.RED);
-		GRect myRect = new GRect (400, 200);
-		add(myRect, 180, 200);
-		GLine myLine = new GLine (180, 200, 380, 100);
-		add(myLine);
-		myLine = new GLine (380, 100, 580, 200);
-		add(myLine);
-		GRect window = new GRect(80, 80);
-		add(window, 220, 240);
-		window = new GRect(80, 80);
-		add(window, 460, 240);
-		GRect door = new GRect(60, 120);
-		add(door, 350, 280 );
+		GRect myRect = new GRect(0, 0, SQUARE_SIZE, SQUARE_SIZE);
+		myRect.setFilled(true);
+		
 	}
+	private static final int SQUARE_SIZE = 50;
 }
