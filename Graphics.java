@@ -16,6 +16,6 @@ public class Graphics extends GraphicsProgram {
 		}
 	}
 	private static final int SQUARE_SIZE = 50;
-	private static final int N_STEPS = 100;
+	private static final int N_STEPS = 200;
 	private static final int PAUSE_TIME = 20;
 }
