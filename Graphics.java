@@ -1,7 +1,7 @@
 import java.awt.Color;
 
 import acm.graphics.*;
-import acm.program.GraphicsProgram;
+import acm.program.*;
 
 public class Graphics extends GraphicsProgram {
 	public void run() {
