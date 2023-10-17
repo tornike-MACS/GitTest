@@ -8,3 +8,5 @@ public class problem18 extends ConsoleProgram {
 			println(max + " is the biggest");
 	}
 }
+
+//println(Math.max(a, b)); ამითაც შეიძლება
