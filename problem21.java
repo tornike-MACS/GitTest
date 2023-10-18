@@ -4,7 +4,6 @@ import acm.program.*;
 public class problem21 extends GraphicsProgram{
 	public void run(){
 		double h = getHeight();
-		double y22 = h;
 		for(int i = 0; i < 11; i++){
 		GLine hLine = new GLine(0, i * h / 10, 0, i * h / 10);
 		add(hLine);
