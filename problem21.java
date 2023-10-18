@@ -13,7 +13,7 @@ public class problem21 extends GraphicsProgram{
 		int x11 = 0;
 		int y11 = 0;
 		for(int i = 0; i < 11; i++){
-		GLine hLine = new GLine(x1,i * h,x2,i * h);
+		GLine hLine = new GLine(x1,i * h/10,x2,i * h/10);
 		add(hLine);
 //		GLine vLine = new GLine (x11, y11, x22, y22);
 //		add(vLine);
