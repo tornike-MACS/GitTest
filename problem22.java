@@ -7,8 +7,8 @@ public class problem22 extends GraphicsProgram{
 		int x = 0;
 		int sizeOfSquare = getHeight()/SIZE_OF_TABLE;
 		GRect square = new GRect(x, y, sizeOfSquare, sizeOfSquare);
-		for(int i = 0; i < SIZE_OF_TABLE; i++){
-			for(int j = 0; j < SIZE_OF_TABLE; j++){
+		for(int i = 0; i < 8; i++){
+			for(int j = 0; j < 8; j++){
 				add(square);
 				square.setFilled((i+j) % 2 != 0);
 				x += sizeOfSquare;
