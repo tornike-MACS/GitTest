@@ -4,7 +4,7 @@ import acm.program.*;
 public class problem22 extends GraphicsProgram{
 	public void run(){
 		int y = 0;
-		int x = 0;
+		double x = 0;
 		double sizeOfSquare = getHeight()/SIZE_OF_TABLE;
 		GRect square = new GRect(y, x, sizeOfSquare, sizeOfSquare);
 		for(int i = 0; i < 8; i++){
