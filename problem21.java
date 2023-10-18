@@ -13,5 +13,5 @@ public class problem21 extends GraphicsProgram{
 		add(vLine);
 		}
 	}
-	private static final int RESOLUTION = 11; 
+	private static final int RESOLUTION = 20; 
 }
