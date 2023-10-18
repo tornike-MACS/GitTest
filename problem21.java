@@ -3,9 +3,9 @@ import acm.program.*;
 
 public class problem21 extends GraphicsProgram{
 	public void run(){
-		int h = getHeight();
+		double h = getHeight();
 		int x1 = 0;
-		int x2 = h;
+		double x2 = h;
 		int y1 = 0;
 		int y2 = 0;
 		int x22 = 0;
