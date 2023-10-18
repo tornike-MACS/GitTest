@@ -9,7 +9,7 @@ public class problem22 extends GraphicsProgram{
 		GRect square = new GRect(sizeOfSquare, sizeOfSquare);
 		for(int i = 0; i < SIZE_OF_TABLE; i++){
 			for(int j = 0; j < SIZE_OF_TABLE; j++){
-				add(square, 10, 10);
+				add(square, x, y);
 				square.setFilled((i+j) % 2 != 0);
 				x += sizeOfSquare;
 			}
