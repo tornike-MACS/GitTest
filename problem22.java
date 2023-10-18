@@ -6,10 +6,10 @@ public class problem22 extends GraphicsProgram{
 		double y = 0;
 		double x = 0;
 		double sizeOfSquare = getHeight()/SIZE_OF_TABLE;
-		GRect square = new GRect(0, 0);
+		GRect square = new GRect(10, 10);
 		for(int i = 0; i < 8; i++){
 			for(int j = 0; j < 8; j++){
-				add(square, sizeOfSquare, sizeOfSquare);
+				add(square, 0, 0);
 				square.setFilled((i+j) % 2 != 0);
 				x += sizeOfSquare;
 			}
