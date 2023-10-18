@@ -4,7 +4,7 @@ public class problem23 extends ConsoleProgram{
 	public void run() {
 		int total = 0;
 		int n = readInt("Enter the number of integers: ");
-		for(int i =0; i < n; i++) {
+		for(int i =0; i < n + 1; i++) {
 			total += i;
 		}
 		println("The sum is: " + total);
