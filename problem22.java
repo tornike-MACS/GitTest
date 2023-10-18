@@ -5,7 +5,7 @@ public class problem22 extends GraphicsProgram{
 	public void run(){
 		double y = 0;
 		double x = 0;
-		int sizeOfSquare = getHeight()/SIZE_OF_TABLE;
+		double sizeOfSquare = getHeight()/SIZE_OF_TABLE;
 		GRect square = new GRect(sizeOfSquare, sizeOfSquare);
 		for(int i = 0; i < 8; i++){
 			for(int j = 0; j < 8; j++){
