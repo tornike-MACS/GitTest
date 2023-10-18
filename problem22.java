@@ -11,7 +11,7 @@ public class problem22 extends GraphicsProgram{
 			for(int j = 0; j < 8; j++){
 				add(square);
 				square.setFilled((i+j) % 2 != 0);
-				x += sizeOfSquare;
+				x = x + sizeOfSquare;
 			}
 			y += sizeOfSquare;
 		}
