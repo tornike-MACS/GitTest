@@ -9,7 +9,7 @@ public class problem21 extends GraphicsProgram{
 		int y1 = 0;
 		int y2 = 0;
 		int x22 = 0;
-		int y22 = h;
+		double y22 = h;
 		int x11 = 0;
 		int y11 = 0;
 		for(int i = 0; i < 11; i++){
