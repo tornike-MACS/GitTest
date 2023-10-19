@@ -4,7 +4,7 @@ import acm.program.*;
 
 public class ConsoleProgrammSample extends ConsoleProgram {
 	public void run() {
-		println(celsiousToFahrenheit(2) + "fahrenheit");
+		println(celsiousToFahrenheit(5) + "fahrenheit");
 		
 	}
 	private double celsiousToFahrenheit(double c){
