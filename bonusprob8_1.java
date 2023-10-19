@@ -1,3 +1,5 @@
+import java.awt.*;
+
 import acm.graphics.*;
 import acm.program.*;
 
@@ -7,6 +9,7 @@ public class bonusprob8_1 extends GraphicsProgram {
 		int y = x;
 		GLabel label = new GLabel("width: " + x + ", height: " + y,100, 100);
 		label.setFont("London");
+		label.setColor(Color.RED);
 		add(label);
 	}
 }
