@@ -8,6 +8,6 @@ public class ConsoleProgrammSample extends ConsoleProgram {
 		
 	}
 	private double celsiousToFahrenheit(double c){
-		return 9.0 / 5 * c + 32;
+		return 9.0 / 5.0 * c + 32;
 	}
 }
