@@ -7,7 +7,7 @@ public class bonusprob8_1 extends GraphicsProgram {
 	public void run() {
 		int x = getHeight();
 		int y = x;
-		GLabel label = new GLabel("width: " + x + ", height: " + y, 200, 120);
+		GLabel label = new GLabel("width: " + x + ", height: " + y, 180, 200);
 		label.setFont("London-42");
 		label.setColor(Color.RED);
 		add(label);
