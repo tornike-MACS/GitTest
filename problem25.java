@@ -6,8 +6,8 @@ public class problem25 extends ConsoleProgram {
 	public void run() {
 		int a = readInt ("Enter first number:" );
 		int b = readInt ("Enter second number: ");
-		for(int i = a; true; i += a){
-			if(i % b == 0){
+		for(int i = a; true; i += a) {
+			if(i % b == 0) {
 				println(i);
 				break;
 			}
