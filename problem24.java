@@ -4,8 +4,13 @@ import acm.program.*;
 
 public class problem24 extends ConsoleProgram{
 	public void run() {
-		int a = readInt("Enter number; ");
-		int answer = a/2;
+		int a = readInt("Enter number ");
+		int answer = 0;
+		for(int i = 1; i <= a; i++) {
+			if(a % i == 0) {
+				answer += 1;
+			}
+		}
 		println(answer);
 	}
 }
