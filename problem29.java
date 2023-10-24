@@ -6,7 +6,6 @@ public class problem29 extends ConsoleProgram{
 		int answer = 0;
 		int n = readInt();
 		for(int i = 0; i < n; i++) {
-			answer += i;
 		}
 	}
 }
