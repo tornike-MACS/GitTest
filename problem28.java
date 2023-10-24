@@ -7,10 +7,12 @@ public class problem28 extends ConsoleProgram {
 		int answer = 0;
 		while(true) {
 			int a = readInt();
-			if(a == -1){
+			if(a == STOP){
 				println(answer);
 			}else {
-				
+				if(a % 2 == 0) {
+					answer++;
+				}
 			}
 		}
 	}
