@@ -9,6 +9,7 @@ public class problem28 extends ConsoleProgram {
 			int a = readInt();
 			if(a == STOP){
 				println(answer);
+				break;
 			}else {
 				if(a % 2 == 0) {
 					answer++;
