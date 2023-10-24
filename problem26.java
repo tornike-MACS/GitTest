@@ -14,3 +14,4 @@ public class problem26 extends ConsoleProgram {
 		}
 	}
 }
+//arasworiiaa
