@@ -3,7 +3,10 @@ import acm.program.ConsoleProgram;
 //მე n წევრი
 public class problem29 extends ConsoleProgram{
 	public void run() {
+		int answer = 0;
 		int n = readInt();
-		for()
+		for(int i = 0; i < n; i++) {
+			answer += i;
+		}
 	}
 }
