@@ -15,3 +15,6 @@ public class problem26 extends ConsoleProgram {
 	}
 }
 //arasworiiaa
+while(a != 0 && b != 0) {
+	
+}
