@@ -17,7 +17,7 @@ public class problem29 extends ConsoleProgram {
 			a = b - a;
 			b = a + b;
 		}
-		if(n != 1 || n != 2) {
+		if(n != 1 && n != 2) {
 			println(b);
 		}
 	}
