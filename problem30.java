@@ -1,4 +1,15 @@
+import acm.program.*;
 
-public class problem30 {
-
+//მომხმარებელს შეყავს მთელი რიცხვი, დაბეჭდეთ რიცხვი რომელიც მიიღება ციფრების
+//შებრუნებით, 1256 -> 6521
+public class problem30 extends ConsoleProgram {
+	public void run() {
+		int digits = 0;
+		int n = readInt();
+		while(n > 0) {
+			n = n / 10;
+			digits++;
+		}
+		println(digits);
+	}
 }
