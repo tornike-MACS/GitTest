@@ -11,7 +11,7 @@ public class problem30 extends ConsoleProgram {
 			a = n / 10;
 			digits++;
 		}
-		println(a);
+		println(digits);
 //		for(int i = 0; i < digits; i++) {
 //			
 //		}
