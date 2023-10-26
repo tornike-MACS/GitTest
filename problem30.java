@@ -5,18 +5,22 @@ import acm.program.*;
 public class problem30 extends ConsoleProgram {
 	public void run() {
 		int answer = 0;
-		int digits = 0;
 		int n = readInt();
+		int digits = countDigits(n);
 		int s = n;
-		while(n > 0) {
-			n = n / 10;
-			digits++;
-		}
 		for(int i = digits; i > 0; i--) {
 			int a = s % 10;
 			answer += (int)Math.pow(10,i - 1) * a;
 			s = s / 10;
 		}
 		println(answer);
+	}
+	private int countDigits(int n) {
+		int digits = 0;
+		while(n > 0) {
+			n = n / 10;
+			digits++;
+		}
+		return digits;
 	}
 }
