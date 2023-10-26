@@ -8,8 +8,8 @@ public class problem29 extends ConsoleProgram {
 		int b = 2;
 		b = a + b;
 		for(int i = 3; i < n; i++) {
-			b = a + b;
 			a = b - a;
+			b = a + b;
 		}
 		println(b);
 	}
