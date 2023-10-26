@@ -14,12 +14,11 @@ public class problem29 extends ConsoleProgram {
 			println("2");
 		}
 		for(int i = 3; i < n; i++) {
-			if(n == 1 || n== 2) {
-				break;
-			}
 			a = b - a;
 			b = a + b;
 		}
-		println(b);
+		if(n != 1 || n != 2) {
+			println(b);
+		}
 	}
 }
