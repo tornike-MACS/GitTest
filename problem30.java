@@ -12,8 +12,8 @@ public class problem30 extends ConsoleProgram {
 			digits++;
 		}
 		println(a);
-		for(int i = 0; i < digits; i++) {
-			
-		}
+//		for(int i = 0; i < digits; i++) {
+//			
+//		}
 	}
 }
