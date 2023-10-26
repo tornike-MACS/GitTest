@@ -4,6 +4,7 @@ import acm.program.*;
 //შებრუნებით, 1256 -> 6521
 public class problem30 extends ConsoleProgram {
 	public void run() {
+		int answer = 0;
 		int digits = 0;
 		int n = readInt();
 		int s = n;
@@ -15,7 +16,9 @@ public class problem30 extends ConsoleProgram {
 		println(s);
 		for(int i = digits; i > 0; i--) {
 			int a = s % 10;
-			println(Math.pow(5,4));
+			answer += (int)Math.pow(10,digits) * a;
+			s = s / 10;
 		}
+		println(answer);
 	}
 }
