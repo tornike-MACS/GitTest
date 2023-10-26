@@ -1,11 +1,16 @@
 import acm.program.ConsoleProgram;
 //ოხმარებელს შეყავს მთელი რიცხვი n, პროგრამამ უნდა დაბეჭდოს ფიბონაჩის მიმდევრობის
 //მე n წევრი
-public class problem29 extends ConsoleProgram{
+public class problem29 extends ConsoleProgram {
 	public void run() {
-		int answer = 0;
 		int n = readInt();
-		for(int i = 0; i < n; i++) {
+		int a = 1;
+		int b = 2;
+		b = a + b;
+		for(int i = 3; i < n; i++) {
+			b = a + b;
+			a = b - a;
 		}
+		println(b);
 	}
 }
