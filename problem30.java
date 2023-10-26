@@ -13,8 +13,8 @@ public class problem30 extends ConsoleProgram {
 		}
 		println(digits);
 		println(s);
-//		for(int i = 0; i < digits; i++) {
-//			
-//		}
+		for(int i = 0; i < digits; i++) {
+			
+		}
 	}
 }
