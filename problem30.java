@@ -16,7 +16,7 @@ public class problem30 extends ConsoleProgram {
 		println(s);
 		for(int i = digits; i > 0; i--) {
 			int a = s % 10;
-			answer += (int)Math.pow(10,digits - 1) * a;
+			answer += (int)Math.pow(10,i - 1) * a;
 			s = s / 10;
 		}
 		println(answer);
