@@ -8,7 +8,8 @@ public class problem30 extends ConsoleProgram {
 		int a = 1;
 		int n = readInt();
 		while(a > 0) {
-			a = n / 10;
+			a = n;
+			a = a / 10;
 			digits++;
 		}
 		println(digits);
