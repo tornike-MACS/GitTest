@@ -7,7 +7,6 @@ public class problem30 extends ConsoleProgram {
 		int answer = 0;
 		int n = readInt();
 		int digits = countDigits(n);
-//		int s = n;
 		for(int i = digits; i > 0; i--) {
 			int a = n % 10;
 			answer += (int)Math.pow(10,i - 1) * a;
