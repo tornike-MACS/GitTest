@@ -5,9 +5,9 @@ import acm.program.*;
 public class problem30 extends ConsoleProgram {
 	public void run() {
 		int digits = 0;
-		int a = 0;
+		int a = 1;
 		int n = readInt();
-		while(n > 0) {
+		while(a > 0) {
 			a = n / 10;
 			digits++;
 		}
