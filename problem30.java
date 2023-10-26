@@ -13,7 +13,9 @@ public class problem30 extends ConsoleProgram {
 		}
 		println(digits);
 		println(s);
-		for(int i = 0; i < digits; i++) {
+		for(int i = digits; i > 0; i--) {
+			int a = s % 10;
+			println(Math.pow(5,4));
 		}
 	}
 }
