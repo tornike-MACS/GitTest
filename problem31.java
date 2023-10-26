@@ -7,8 +7,6 @@ public class problem31 extends ConsoleProgram {
 			if(n % i == 0) {
 				println("This number is not prime.");
 				break;
-			}else {
-				println("This numbes is prime.");
 			}
 		}
 	}
