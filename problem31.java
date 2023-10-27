@@ -4,7 +4,7 @@ public class problem31 extends ConsoleProgram {
 	public void run() {
 		int n = readInt();
 	}
-	private boolean primeORNot() {
+	private boolean primeORNot(int n) {
 		
 	}
 }
