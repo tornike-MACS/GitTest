@@ -11,7 +11,7 @@ public class problem32 extends ConsoleProgram {
 	}
 	private boolean primeOrNot(int i) {
 		int divisors = 0;
-		for(int j = 0; j * j < i; j++) {
+		for(int j = 1; j * j <= i; j++) {
 			if(i % j == 0) {
 				divisors++;
 			}
