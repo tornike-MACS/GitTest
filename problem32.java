@@ -15,9 +15,9 @@ public class problem32 extends ConsoleProgram {
 			if(i % j == 0) {
 				divisors++;
 			}
-			if(divisors > 2) {
-				break;
-			}
+//			if(divisors > 2) {
+//				break;
+//			}
 		}
 		return divisors;
 	}
