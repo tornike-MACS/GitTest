@@ -4,7 +4,7 @@ import acm.program.ConsoleProgram;
 public class problem32 extends ConsoleProgram {
 	public void run() {
 		for(int i = 2; i <= 1000; i++) {
-			if(primeOrNot(i) == 3) {
+			if(primeOrNot(i) == 2) {
 				println(i);
 			}
 		}
