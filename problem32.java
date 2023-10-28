@@ -16,10 +16,9 @@ public class problem32 extends ConsoleProgram {
 				divisors++;
 			}
 			if(divisors > 2) {
-				divisors--;
 				break;
 			}
 		}
-		return divisors == 2;
+		return divisors == 3;
 	}
 }
