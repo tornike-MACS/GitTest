@@ -13,7 +13,7 @@ public class problem33  extends GraphicsProgram{
 		int w = getWidth();
 		GOval circle = new GOval(w / 2 - r / 2, h / 2 - r / 2, r, r);
 		circle.setFilled(true);
-		circle.setFillColor(Color.RED);
+		circle.setColor(rgen.nextColor());
 		add(circle);
 	}
 	RandomGenerator rgen = new RandomGenerator();
