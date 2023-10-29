@@ -11,7 +11,7 @@ public class problem34 extends GraphicsProgram {
 	public void run() {
 		int w = getWidth();
 		int h = getHeight();
-		for(int i = 0; i < 100; i++) {
+		for(int i = 0; i < 1000; i++) {
 			int r = rgen.nextInt(1, 150);
 			int x = rgen.nextInt(0, w - r);
 			int y = rgen.nextInt(0, h - r);
