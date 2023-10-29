@@ -12,7 +12,7 @@ public class problem34 extends GraphicsProgram {
 		int w = getWidth();
 		int h = getHeight();
 		for(int i = 0; i < 100; i++) {
-			int r = rgen.nextInt(10, 400);
+			int r = rgen.nextInt(10, 200);
 			int x = rgen.nextInt(0, w - r);
 			int y = rgen.nextInt(0, h - r);
 			Color color = rgen.nextColor();
