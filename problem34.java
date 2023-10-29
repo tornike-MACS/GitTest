@@ -11,8 +11,8 @@ public class problem34 extends GraphicsProgram {
 	public void run() {
 		for(int i = 0; i < 10; i++) {
 			int r = rgen.nextInt();
-			int x = rgen.nextInt();
-			int y = rgen.nextInt();
+			int x = rgen.nextInt(10, 100);
+			int y = rgen.nextInt(10, 100);
 			Color color = rgen.nextColor();
 			GOval circle = new GOval(x, y, r, r);
 			circle.setFilled(true);
