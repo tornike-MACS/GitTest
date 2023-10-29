@@ -6,7 +6,7 @@ import acm.util.*;
 //რაიდიუსიც შემთხვევით აირჩეით შეზღუდული რეინჯიდან
 public class problem33  extends GraphicsProgram{
 	public void run() {
-		GOval circle = new GOval(0, 0, rgen.nextInt(30, 50), rgen.nextInt(30, 50));
+		GOval circle = new GOval(getWidth() / 2, getHeight() / 2, rgen.nextInt(40, 100), rgen.nextInt(50, 110));
 		circle.setFilled(true);
 		add(circle);
 	}
