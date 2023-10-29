@@ -10,7 +10,7 @@ import acm.util.*;
 public class problem34 extends GraphicsProgram {
 	public void run() {
 		for(int i = 0; i < 10; i++) {
-			int r = rgen.nextInt();
+			int r = rgen.nextInt(10, 100);
 			int x = rgen.nextInt(10, 100);
 			int y = rgen.nextInt(10, 100);
 			Color color = rgen.nextColor();
