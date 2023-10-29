@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import acm.graphics.*;
 import acm.program.*;
 import acm.util.*;
@@ -6,8 +8,12 @@ import acm.util.*;
 //რაიდიუსიც შემთხვევით აირჩეით შეზღუდული რეინჯიდან
 public class problem33  extends GraphicsProgram{
 	public void run() {
-		GOval circle = new GOval(getWidth() / 2, getHeight() / 2, rgen.nextInt(40, 100), rgen.nextInt(50, 110));
-		circle.setFilled(true);
+		int r = rgen.nextInt(150, 200);
+		int h = getHeight();
+		int w = getWidth();
+		GOval circle = new GOval(w / 2 - r / 2, h / 2 - r / 2, r, r);
+//		circle.setFilled(true);
+		circle.setFillColor(Color.RED);
 		add(circle);
 	}
 	RandomGenerator rgen = new RandomGenerator();
