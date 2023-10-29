@@ -13,7 +13,7 @@ public class bonusprob8_2 extends GraphicsProgram {
 		addrect(30, Color.RED,true);
 	}
 	private GRect addrect(int a, Color color, boolean fillOrNot) {
-		GRect rect = new GRect(a, a);
+		GRect rect = new GRect(30, 30, a, a);
 		rect.setFilled(fillOrNot);
 		rect.setColor(color);
 		return rect;
