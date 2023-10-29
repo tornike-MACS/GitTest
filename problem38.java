@@ -10,7 +10,7 @@ import acm.util.*;
 public class problem38 extends ConsoleProgram { 
 	public void run() {
 		int balance = 1000;
-		while(balance > 0) {
+		while(true) {
 			int bet = readInt("Enter how much do you bet: ");
 			int number = readInt("Enter the number you bet on: ");
 			int roulette = rgen.nextInt(0, 36);
@@ -24,6 +24,7 @@ public class problem38 extends ConsoleProgram {
 				println("YOu lost");
 				println("Yor balance is: " + balance);
 			}
+			if(balance == 0)break;
 		}
 	}
 	RandomGenerator rgen = new RandomGenerator();
