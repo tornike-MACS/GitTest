@@ -3,9 +3,9 @@ import acm.program.ConsoleProgram;
 public class bonusprob8_3 extends ConsoleProgram {
 	public void run() {
 		int n = readInt();
-		println(fibonachi(n));
+		println(fibonacci(n));
 	}
-	private int fibonachi(int n) {
+	public int fibonacci(int n) {
 		int a = 0;
 		int b = 1;
 		if(n == 1) {
