@@ -10,11 +10,14 @@ import acm.program.GraphicsProgram;
 //გამოაჩინეთ ფანჯრის ცენტრში.
 public class bonusprob8_2 extends GraphicsProgram {
 	public void run() {
-		GRect rect = addrect(30, Color.RED,true);
-		add(rect);
+		int h = getHeight();
+		int w = getWidth();
+		int a = 50;
+		GRect rect = addrect(a, Color.RED,true);
+		add(rect, w / 2 - a / 2, h / 2 - a / 2);
 	}
 	private GRect addrect(int a, Color color, boolean fillOrNot) {
-		GRect rect = new GRect(30, 30, a, a);
+		GRect rect = new GRect(a, a);
 		rect.setFilled(fillOrNot);
 		rect.setColor(color);
 		return rect;
