@@ -12,7 +12,7 @@ public class problem33  extends GraphicsProgram{
 		int h = getHeight();
 		int w = getWidth();
 		GOval circle = new GOval(w / 2 - r / 2, h / 2 - r / 2, r, r);
-//		circle.setFilled(true);
+		circle.setFilled(true);
 		circle.setFillColor(Color.RED);
 		add(circle);
 	}
