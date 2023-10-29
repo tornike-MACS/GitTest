@@ -8,8 +8,8 @@ public class bonusprob8_3 extends ConsoleProgram {
 	private int fibonachi(int n) {
 		int a = 0;
 		int b = 1;
-		if(n == 1) {
-			return 1;
+		if(n == 0) {
+			return 0;
 		}
 		int answer = 0;
 		for(int i = 1; i < n; i++) {
