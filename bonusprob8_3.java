@@ -11,8 +11,11 @@ public class bonusprob8_3 extends ConsoleProgram {
 		if(n == 1) {
 			return 0;
 		}
+		if(n == 2 || n== 3) {
+			return 1;
+		}
 		int answer = 0;
-		for(int i = 1; i < n; i++) {
+		for(int i = 4; i <= n; i++) {
 			answer = a + b;
 			a = b;
 			b = answer;
