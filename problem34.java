@@ -9,10 +9,12 @@ import acm.util.*;
 
 public class problem34 extends GraphicsProgram {
 	public void run() {
-		for(int i = 0; i < 10; i++) {
-			int r = rgen.nextInt(10, 100);
-			int x = rgen.nextInt(10, 100);
-			int y = rgen.nextInt(10, 100);
+		int w = getWidth();
+		int h = getHeight();
+		for(int i = 0; i < 100; i++) {
+			int r = rgen.nextInt(10, 400);
+			int x = rgen.nextInt(0, w - r);
+			int y = rgen.nextInt(0, h - r);
 			Color color = rgen.nextColor();
 			GOval circle = new GOval(x, y, r, r);
 			circle.setFilled(true);
