@@ -10,7 +10,7 @@ public class problem37 extends ConsoleProgram {
 		if(n == a) {
 			println(a + " Congratulations!! You won!");
 		}else {
-			println(a + "You lost. :(");
+			println(a + " You lost. :(");
 		}
 	}
 	RandomGenerator rgen = new RandomGenerator();
