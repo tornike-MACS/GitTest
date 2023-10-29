@@ -8,7 +8,7 @@ import acm.util.*;
 //რაიდიუსიც შემთხვევით აირჩეით შეზღუდული რეინჯიდან
 public class problem33  extends GraphicsProgram{
 	public void run() {
-		int r = rgen.nextInt(150, 200);
+		int r = rgen.nextInt(10, 200);
 		int h = getHeight();
 		int w = getWidth();
 		Color color = rgen.nextColor();
