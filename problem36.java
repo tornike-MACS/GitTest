@@ -19,7 +19,7 @@ public class problem36 extends ConsoleProgram{
 			count++;
 			if(bcount == 3) break;
 		}
-		println(count + "tosses");
+		println(count + " tosses");
 	}
 	RandomGenerator rgen = new RandomGenerator();
 }
