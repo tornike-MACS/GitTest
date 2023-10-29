@@ -13,6 +13,5 @@ public class problem37 extends ConsoleProgram {
 			println(a + " You lost. :(");
 		}
 	}
-	RandomGenerator rgen = new RandomGenerator();
-	
+	RandomGenerator rgen = new RandomGenerator();	
 }
