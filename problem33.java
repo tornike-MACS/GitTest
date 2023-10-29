@@ -11,9 +11,10 @@ public class problem33  extends GraphicsProgram{
 		int r = rgen.nextInt(150, 200);
 		int h = getHeight();
 		int w = getWidth();
+		Color color = rgen.nextColor();
 		GOval circle = new GOval(w / 2 - r / 2, h / 2 - r / 2, r, r);
 		circle.setFilled(true);
-		circle.setColor(rgen.nextColor());
+		circle.setColor(color);
 		add(circle);
 	}
 	RandomGenerator rgen = new RandomGenerator();
