@@ -6,15 +6,12 @@ public class problem26 extends ConsoleProgram {
 	public void run() {
 		int a = readInt("Enter first number: ");
 		int b = readInt("Enter second number: ");
-		for(int i = a; i >= 0; i--) {
-			if(b % i == 0 && a % i == 0) {
-				println(i);
-				break;
-			}
+		if(a > b) {
+			a -= b;
+		}else {
+			b -= a;
 		}
 	}
 }
-//arasworiiaa
-while(a != 0 && b != 0) {
+
 	
-}
