@@ -5,26 +5,6 @@ import acm.util.*;
 //რამდენჯერ უნდა ავაგდოთ მონეტა რათა 3-ჯერ ზედიზედ ამოვიდეს ბორჯღალო
 public class problem36 extends ConsoleProgram{
 	public void run() {
-		int total = 0;
-		for(int i = 0; i < 100; i++) {
-			total += experiment();
-		}
-		println(total / 100);
-	}
-	RandomGenerator rgen = new RandomGenerator();
-	private int experiment() {
-		int count = 0;
-		boolean b = rgen.nextBoolean();
-		while(true) {
-			if(b) {
-				count++;
-				if(count == 3) {
-					break;
-				}else {
-					count++;
-				}
-			}
-		}
-		return count;
+	
 	}
 }
