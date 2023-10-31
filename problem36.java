@@ -5,21 +5,24 @@ import acm.util.*;
 //რამდენჯერ უნდა ავაგდოთ მონეტა რათა 3-ჯერ ზედიზედ ამოვიდეს ბორჯღალო
 public class problem36 extends ConsoleProgram{
 	public void run() {
-		int bcount = 0;
-		int count = 0;
-		while(true) {
-			boolean b = rgen.nextBoolean();
-			if(b) {
-				println("borjgalo");
-				bcount++;
-			}else {
-				println("safasuri");
-				bcount = 0;
-			}
-			count++;
-			if(bcount == 3) break;
+		int total = 0;
+		for(int i = 0; i < 100; i++) {
+			total += experiment();
 		}
-		println(count + " tosses");
+		println(total / 100);
 	}
 	RandomGenerator rgen = new RandomGenerator();
+	private int experiment() {
+		int bcount = 0;
+		boolean b = rgen.nextBoolean();
+		while(true) {
+			if(b) {
+				bcount++;
+				if(bcount == 3) {
+					break;
+				}
+			}
+		}
+		return bcount;
+	}
 }

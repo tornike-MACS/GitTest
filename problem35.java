@@ -20,5 +20,6 @@ public class problem35 extends ConsoleProgram {
 		}
 		println("we need " + count + " tosses to get a tail");
 	}
-	RandomGenerator rgen = new RandomGenerator();
+	RandomGenerator rgen = new RandomGenerator()
+			//თავიდაააან!!!!!!
 }
