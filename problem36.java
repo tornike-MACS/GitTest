@@ -18,7 +18,7 @@ public class problem36 extends ConsoleProgram{
 		while(true) {
 			if(b) {
 				count++;
-				if(bcount == 3) {
+				if(count == 3) {
 					break;
 				}else {
 					count++;
