@@ -3,11 +3,14 @@ import acm.program.ConsoleProgram;
 //დაწერეთ პროგრამა რომელიც იპოვის და დაბეჭდავს 1000000 მდე ყველა მერტივ რიცხვს
 public class problem32 extends ConsoleProgram {
 	public void run() {
+		int k = 0;
 		for(int i = 1; i <= 1000000; i++) {
 			if(isPrime(i)) {
-				println(i);
+				k = i;
 			}
 		}
+		
+		println(k);
 	}
 	private boolean isPrime(int n) {
 		if(n == 2) return true;
