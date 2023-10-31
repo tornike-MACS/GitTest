@@ -20,8 +20,7 @@ public class problem34 extends GraphicsProgram {
 			circle.setFilled(true);
 			circle.setColor(color);
 			add(circle);
-		}
-		
+		}	
 	}
 	RandomGenerator rgen = new RandomGenerator();
 }
