@@ -5,7 +5,7 @@ public class problem32 extends ConsoleProgram {
 	public void run() {
 		int k = 0;
 		for(int i = 1; i <= 1000000; i++) {
-			if(numberOfDivisors(i) == 2) {
+			if(isPrime(i)) {
 				k = i;
 			}
 		}
