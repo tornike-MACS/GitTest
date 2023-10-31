@@ -13,16 +13,18 @@ public class problem36 extends ConsoleProgram{
 	}
 	RandomGenerator rgen = new RandomGenerator();
 	private int experiment() {
-		int bcount = 0;
+		int count = 0;
 		boolean b = rgen.nextBoolean();
 		while(true) {
 			if(b) {
-				bcount++;
+				count++;
 				if(bcount == 3) {
 					break;
+				}else {
+					count++;
 				}
 			}
 		}
-		return bcount;
+		return count;
 	}
 }
