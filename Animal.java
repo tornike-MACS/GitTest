@@ -4,7 +4,7 @@ public class Animal {
 	private int weight;
 	
 	public void eat() {
-		System.out.println("dog eating ");
+		System.out.println("unknown animal eating ");
 		helper();
 	}
 	
