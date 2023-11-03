@@ -4,7 +4,6 @@ import acm.program.*;
 //უდიდესი საერთო გამყოფი
 public class problem26 extends ConsoleProgram {
 	public void run() {
-		int remainder;
 		int a = readInt("Enter first number: ");
 		int b = readInt("Enter second number: ");
 		while(true) {
