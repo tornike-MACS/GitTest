@@ -8,7 +8,7 @@ public class AnimalSample extends ConsoleProgram{
 		
 		a.eat();
 		c.meww();
-		d.eat();
+		d.bark();
 		
 	}
 }
