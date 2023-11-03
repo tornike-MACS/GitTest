@@ -7,5 +7,6 @@ public class AnimalSample extends ConsoleProgram{
 		Cat c = new Cat();
 		
 		a.eat();
+		c.meww();
 	}
 }
