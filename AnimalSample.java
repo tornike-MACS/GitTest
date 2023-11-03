@@ -2,10 +2,10 @@ import acm.program.ConsoleProgram;
 
 public class AnimalSample extends ConsoleProgram{
 	public void run() {
-		Animal a = new Animal();
+		Animal a = new Cat();
 		Dog d = new Dog();
-		Cat c = new Cat();
+//		Cat c = new Cat();
 		
-		c.meww();
+		a.eat();
 	}
 }
