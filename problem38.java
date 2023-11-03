@@ -16,7 +16,7 @@ public class problem38 extends ConsoleProgram {
 			int roulette = rgen.nextInt(0, 36);
 			println("Ball stopped at: " + roulette);
 			if(number == roulette) {
-				balance += bet;
+				balance += 35 * bet;
 				println("Congratulations! You won!");
 				println("Your balance is: " + balance);
 			}else {
