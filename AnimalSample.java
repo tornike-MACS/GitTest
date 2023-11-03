@@ -6,6 +6,6 @@ public class AnimalSample extends ConsoleProgram{
 		Dog d = new Dog();
 		Cat c = new Cat();
 		
-		c.eat();
+		c.meww();
 	}
 }
