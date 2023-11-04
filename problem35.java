@@ -6,20 +6,16 @@ import acm.util.*;
 
 public class problem35 extends ConsoleProgram {
 	public void run() {
-		int count = 0;
-		while(true) {
-			boolean b = rgen.nextBoolean();
+		double bcount = 0;
+		double count = 0;
+		boolean b = rgen.nextBoolean();
+		for(int i = 0; i < 1000; i++) {
 			if(b) {
-				println("borjgalo");
-				count++;
-				break;
-			}else {
-				println("safasuri");
-				count++;
+				bcount++;
 			}
+			count++;
 		}
-		println("we need " + count + " tosses to get a tail");
+		println(count / bcount);
 	}
-	RandomGenerator rgen = new RandomGenerator()
-			//თავიდაააან!!!!!!
+	RandomGenerator rgen = RandomGenerator.getInstance();
 }
