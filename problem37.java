@@ -5,12 +5,14 @@ import acm.util.*;
 //დადებულმა რიცხვმა
 public class problem37 extends ConsoleProgram {
 	public void run() {
-		int n = readInt();
+		int n = readInt("Enter the number you want to bet on: ");
 		int a = rgen.nextInt(0, 36);
 		if(n == a) {
-			println(a + " Congratulations!! You won!");
+			println(" . . . " + a);
+			println("Congratulations you won!!");
 		}else {
-			println(a + " You lost. :(");
+			println(" . . . " + a);
+			println("You lost :(");
 		}
 	}
 	RandomGenerator rgen = new RandomGenerator();	
