@@ -15,6 +15,9 @@ public class problem31 extends ConsoleProgram {
 			if(n % i == 0) {
 				divisors++;
 			}
+			if(divisors > 2){
+				return false;
+			}
 		}
 		return divisors == 2;
 	}
