@@ -17,11 +17,11 @@ public class problem38 extends ConsoleProgram {
 			println("Ball stopped at: " + roulette);
 			if(number == roulette) {
 				balance += 35 * bet;
-				println("Congratulations! You won " + 35 * bet);
+				println("Congratulations! You won: " + 35 * bet);
 				println("Your balance is: " + balance);
 			}else {
 				balance -= bet;
-				println("You lost " + bet);
+				println("You lost: " + bet);
 				println("Yor balance is: " + balance);
 			}
 			if(balance == 0)break;
