@@ -21,5 +21,5 @@ public class problem36 extends ConsoleProgram{
 		}
 		println(count / b3count);
 	}
-	RandomGenerator rgen = RandomGenerator.getInstance(); 
+	RandomGenerator rgen = RandomGenerator.getInstance() 
 }
