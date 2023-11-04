@@ -10,10 +10,9 @@ public class problem28 extends ConsoleProgram {
 			if(a == STOP){
 				println(answer);
 				break;
-			}else {
-				if(a % 2 == 0) {
-					answer++;
-				}
+			}
+			if(a % 2 == 0) {
+				answer++;
 			}
 		}
 	}
