@@ -8,7 +8,7 @@ public class problem35 extends ConsoleProgram {
 	public void run() {
 		double bcount = 0;
 		double count = 0;
-		for(int i = 0; i < 1000; i++) {
+		for(int i = 0; i < 10000; i++) {
 			boolean b = rgen.nextBoolean();
 			if(b) {
 				bcount++;
