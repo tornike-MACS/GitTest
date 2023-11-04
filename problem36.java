@@ -5,9 +5,9 @@ import acm.util.*;
 //რამდენჯერ უნდა ავაგდოთ მონეტა რათა 3-ჯერ ზედიზედ ამოვიდეს ბორჯღალო
 public class problem36 extends ConsoleProgram{
 	public void run() {
-		int bcount = 0;
-		int b3count = 0;
-		int count = 0;
+		double bcount = 0;
+		double b3count = 0;
+		double count = 0;
 		for(int i = 0; i < 10000; i++) {
 			boolean b = rgen.nextBoolean();
 			if(b) {
