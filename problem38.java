@@ -13,6 +13,10 @@ public class problem38 extends ConsoleProgram {
 		while(true) {
 			int bet = readInt("Enter how much do you bet: ");
 			int number = readInt("Enter the number you bet on: ");
+			if(bet > balance) {
+				println("You do not have enough money!");
+				continue;
+			}
 			int roulette = rgen.nextInt(0, 36);
 			println("Ball stopped at: " + roulette);
 			if(number == roulette) {
