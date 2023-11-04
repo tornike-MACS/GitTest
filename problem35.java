@@ -17,5 +17,5 @@ public class problem35 extends ConsoleProgram {
 		}
 		println(count / bcount);
 	}
-	RandomGenerator rgen = RandomGenerator.getInstance();
+	RandomGenerator rgen = new RandomGenerator();
 }
