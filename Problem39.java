@@ -3,12 +3,13 @@ import acm.program.GraphicsProgram;
 
 public class Problem39 extends GraphicsProgram{
 	public void run() {
-		GRect rect = new GRect(0, getHeight() / 2 - 25, 50, 50);
+		int x = 0;
+		GRect rect = new GRect(x, getHeight() / 2 - 25, 50, 50);
 		rect.setFilled(true);
 		add(rect);
-		while(true) {
+		while(x < getWidth() - 50) {
 			rect.move(1, 0);
-			rect.pause(0.5);
+			rect.pause(1);
 		}
 	}
 }
