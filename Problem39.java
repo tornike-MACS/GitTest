@@ -6,5 +6,9 @@ public class Problem39 extends GraphicsProgram{
 		GRect rect = new GRect(0, getHeight() / 2 - 25, 50, 50);
 		rect.setFilled(true);
 		add(rect);
+		while(true) {
+			rect.move(1, 0);
+			rect.pause(0.5);
+		}
 	}
 }
