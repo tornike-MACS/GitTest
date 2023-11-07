@@ -12,6 +12,8 @@ public class spinning extends GraphicsProgram {
 		sun.setColor(Color.YELLOW);
 		add(sun);
 		GOval earth = new GOval(x, y, 50, 50);
+		earth.setFilled(true);
+		earth.setColor(Color.GREEN);
 		add(earth);
 	}
 }
