@@ -16,6 +16,7 @@ public class spinning extends GraphicsProgram {
 		earth.setColor(Color.GREEN);
 		add(earth);
 		while(true) {
+			earth.setLocation(x, y)
 			
 		}
 	}
