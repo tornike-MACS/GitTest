@@ -13,6 +13,9 @@ public class Problem39 extends GraphicsProgram{
 			if(rect.getX() == getWidth() - 50) {
 				x *= -1;
 			}
+			if(rect.getX() == 0) {
+				x *= -1;
+			}
 		}
 	}
 }
