@@ -20,6 +20,9 @@ public class problem40 extends GraphicsProgram {
 			if(oval.getX() == getWidth() - 40) {
 				move *= -1;
 			}
+			if(oval.getX() == 0) {
+				move *= -1;
+			}
 		}
 		
 	}
