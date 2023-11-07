@@ -17,12 +17,12 @@ public class problem40 extends GraphicsProgram {
 		while(true) {
 			oval.move(move, 0);
 			pause(1);
-			if(oval.getX() == getWidth() - 40) {
+			if(oval.getX() == getWidth() - 40 || oval.getX() == 0) {
 				move *= -1;
 			}
-			if(oval.getX() == 0) {
-				move *= -1;
-			}
+//			if(oval.getX() == 0) {
+//				move *= -1;
+//			}
 		}
 		
 	}
