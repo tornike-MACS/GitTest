@@ -2,16 +2,18 @@ import java.awt.Color;
 
 import acm.graphics.*;
 import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
 public class Problem39 extends GraphicsProgram{
 	public void run() {
-		int x = 1;
+		int x = rgen.nextInt(1,2);
+		int y = rgen.nextInt(1, 2);
 		GOval oval = new GOval(x, getHeight() / 2 - 25, 50, 50);
 		oval.setFilled(true);
 		oval.setColor(Color.RED);
 		add(oval);
 		while(true) {
-			oval.move(x, 0);
+			oval.move(x, y);
 			oval.pause(2);
 			if(oval.getX() == getWidth() - 50) {
 				x *= -1;
@@ -21,4 +23,6 @@ public class Problem39 extends GraphicsProgram{
 			}
 		}
 	}
+	RandomGenerator rgen = new RandomGenerator();
+	
 }
