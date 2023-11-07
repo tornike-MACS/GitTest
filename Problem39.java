@@ -24,7 +24,7 @@ public class Problem39 extends GraphicsProgram{
 			if(oval.getY() == getHeight() - 50) {
 				y *= -1;
 			}
-			if(oval.getY() == 0) {
+			if(oval.getY() == 50) {
 				y *= -1;
 			}
 		}
