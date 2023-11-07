@@ -13,7 +13,7 @@ public class Problem39 extends GraphicsProgram{
 		while(true) {
 			oval.move(1, 0);
 			oval.pause(1);
-			if(oval.getX() == getWidth() - 100) {
+			if(oval.getX() == getWidth() - 50) {
 				break;
 			}
 		}
