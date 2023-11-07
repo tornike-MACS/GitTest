@@ -8,7 +8,7 @@ public class Problem39 extends GraphicsProgram{
 		int x = 1;
 		GOval oval = new GOval(x, getHeight() / 2 - 25, 50, 50);
 		oval.setFilled(true);
-		oval.setFillColor(Color.RED);
+		oval.setColor(Color.RED);
 		add(oval);
 		while(true) {
 			oval.move(x, 0);
