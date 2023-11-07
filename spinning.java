@@ -6,7 +6,7 @@ import acm.program.GraphicsProgram;
 public class spinning extends GraphicsProgram {
 	public void run() {
 		int x = 0;
-		int y = 0;
+		int y = getHeight() - 25;
 		GOval sun = new GOval(getWidth() / 2 - 50, getHeight() / 2 - 50, 100, 100);
 		sun.setFilled(true);
 		sun.setColor(Color.YELLOW);
@@ -15,5 +15,8 @@ public class spinning extends GraphicsProgram {
 		earth.setFilled(true);
 		earth.setColor(Color.GREEN);
 		add(earth);
+		while(true) {
+			
+		}
 	}
 }
