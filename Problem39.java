@@ -5,7 +5,7 @@ public class Problem39 extends GraphicsProgram{
 	public void run() {
 		int x = 1;
 		GOval oval = new GOval(x, getHeight() / 2 - 25, 50, 50);
-		rect.setFilled(true);
+		oval.setFilled(true);
 		add(rect);
 		while(true) {
 			oval.move(x, 0);
