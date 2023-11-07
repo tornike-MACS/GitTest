@@ -21,6 +21,12 @@ public class Problem39 extends GraphicsProgram{
 			if(oval.getX() == 0) {
 				x *= -1;
 			}
+			if(oval.getY() == getHeight()) {
+				y *= -1;
+			}
+			if(oval.getY() == 0) {
+				y *= -1;
+			}
 		}
 	}
 	RandomGenerator rgen = new RandomGenerator();
