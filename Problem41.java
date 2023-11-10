@@ -10,7 +10,7 @@ public class Problem41  extends GraphicsProgram{
 	public void run() {
 		addMouseListeners();
 	}
-	public void mouseMoved(MouseEvent e) {
+	public void mouseClicked(MouseEvent e) {
 		GOval oval = new GOval(40, 40);
 		oval.setColor(Color.RED);
 		oval.setFilled(true);
