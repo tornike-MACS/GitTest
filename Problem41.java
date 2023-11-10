@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.event.MouseEvent;
 
 import acm.graphics.GOval;
@@ -11,6 +12,7 @@ public class Problem41  extends GraphicsProgram{
 	}
 	public void mouseMoved(MouseEvent e) {
 		GOval oval = new GOval(40, 40);
+		oval.setColor(Color.RED);
 		add(oval, e.getX(), e.getY());
 	}
 }
