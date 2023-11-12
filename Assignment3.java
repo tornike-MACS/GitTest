@@ -106,9 +106,9 @@ public class Assignment3 extends GraphicsProgram {
 				dy = -dy;
 				remove(collider1);
 				countBricks++;
+				points++;
 				point = new GLabel("You have " + points + " points");
 				add(point, 10, 12);
-				points++;
 				continue;
 			}
 			if(collider2 != null && collider2 != paddle) {
@@ -116,6 +116,8 @@ public class Assignment3 extends GraphicsProgram {
 				remove(collider2);
 				countBricks++;
 				points++;
+				point = new GLabel("You have " + points + " points");
+				add(point, 10, 12);
 				continue;
 			}
 			if(collider3 != null && collider3 != paddle) {
@@ -123,9 +125,9 @@ public class Assignment3 extends GraphicsProgram {
 				remove(collider3);
 				countBricks++;
 				remove(point);
+				points++;
 				point = new GLabel("You have " + points + " points");
 				add(point, 10, 12);
-				points++;
 				continue;
 			}
 			if(collider4 != null && collider4 != paddle) {
