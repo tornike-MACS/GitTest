@@ -107,6 +107,7 @@ public class Assignment3 extends GraphicsProgram {
 				remove(collider1);
 				countBricks++;
 				points++;
+				remove(point);
 				point = new GLabel("You have " + points + " points");
 				add(point, 10, 12);
 				continue;
@@ -116,6 +117,7 @@ public class Assignment3 extends GraphicsProgram {
 				remove(collider2);
 				countBricks++;
 				points++;
+				remove(point);
 				point = new GLabel("You have " + points + " points");
 				add(point, 10, 12);
 				continue;
@@ -126,6 +128,7 @@ public class Assignment3 extends GraphicsProgram {
 				countBricks++;
 				remove(point);
 				points++;
+				remove(point);
 				point = new GLabel("You have " + points + " points");
 				add(point, 10, 12);
 				continue;
