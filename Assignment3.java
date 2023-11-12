@@ -76,13 +76,11 @@ public class Assignment3 extends GraphicsProgram {
 		addBall();
 	}
 
-private void addPoints() {
-	GLabel point = new GLabel("You have " + points + " points");
-	add(point, 10, 12);
-}
 
 	// adds moving ball that collides bricks
 	private void addBall() {
+		GLabel point = new GLabel("You have " + points + " points");
+		add(point, 10, 12);
 		GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
 		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS); 
@@ -109,6 +107,8 @@ private void addPoints() {
 				dy = -dy;
 				remove(collider1);
 				countBricks++;
+				point = new GLabel("You have " + points + " points");
+				add(point, 10, 12);
 				points++;
 				continue;
 			}
@@ -123,6 +123,9 @@ private void addPoints() {
 				dy = -dy;
 				remove(collider3);
 				countBricks++;
+				remove(point);
+				point = new GLabel("You have " + points + " points");
+				add(point, 10, 12);
 				points++;
 				continue;
 			}
