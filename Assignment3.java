@@ -135,7 +135,9 @@ public class Assignment3 extends GraphicsProgram {
 			if(ball.getY() >= getHeight() - 2 * BALL_RADIUS) {
 				ball.setLocation(getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
 				countTrials++;
-				pause(1500);
+				if(countTrials < 3) {
+					pause(1500);
+				}
 				dx = rgen.nextDouble(1.0,3.0);
 				if(rgen.nextBoolean(0.5)) {
 					dx = -dx;
