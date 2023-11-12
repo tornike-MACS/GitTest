@@ -61,6 +61,8 @@ public class Assignment3 extends GraphicsProgram {
 	
 	private GRect brick;
 	
+	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
+	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 /* Method: run() */
 /** Runs the Breakout program. */
