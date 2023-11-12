@@ -63,6 +63,8 @@ public class Assignment3 extends GraphicsProgram {
 	
 	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
 	
+	private int points = 0;
+	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 /* Method: run() */
 /** Runs the Breakout program. */
@@ -71,9 +73,15 @@ public class Assignment3 extends GraphicsProgram {
 		addPaddle();
 		addMouseListeners();
 		addBall();
+		addPoints();
 	}
 
-// adds moving ball that collides bricks
+private void addPoints() {
+	GLabel point = new GLabel("You have " + points + " points");
+	add(point, 10, 10);
+}
+
+	// adds moving ball that collides bricks
 	private void addBall() {
 		GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
@@ -101,18 +109,21 @@ public class Assignment3 extends GraphicsProgram {
 				dy = -dy;
 				remove(collider1);
 				countBricks++;
+				points++;
 				continue;
 			}
 			if(collider2 != null && collider2 != paddle) {
 				dy = -dy;
 				remove(collider2);
 				countBricks++;
+				points++;
 				continue;
 			}
 			if(collider3 != null && collider3 != paddle) {
 				dy = -dy;
 				remove(collider3);
 				countBricks++;
+				points++;
 				continue;
 			}
 			if(collider4 != null && collider4 != paddle) {
