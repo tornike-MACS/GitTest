@@ -93,7 +93,7 @@ public class Assignment3 extends GraphicsProgram {
 			GObject collider3 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY());
 			GObject collider4 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);
 			if(collider1 == paddle || collider2 == paddle || collider3 == paddle || collider4 == paddle) {
-				play("bounce.au");
+				bounceClip.play();
 				ball.setLocation(ball.getX(), paddle.getY() - 2 * BALL_RADIUS);
 				dy = -dy;
 			}
