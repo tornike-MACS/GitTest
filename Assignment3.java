@@ -69,11 +69,11 @@ public class Assignment3 extends GraphicsProgram {
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
+		addPoints();
 		addBricks();
 		addPaddle();
 		addMouseListeners();
 		addBall();
-		addPoints();
 	}
 
 private void addPoints() {
