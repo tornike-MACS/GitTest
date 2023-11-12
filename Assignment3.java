@@ -101,18 +101,27 @@ public class Assignment3 extends GraphicsProgram {
 				dy = -dy;
 				remove(collider1);
 				countBricks++;
+				GLabel points = new GLabel("er" + countBricks);
+				points.setFont("MONOSPACED-30");
+				add(points, 100, 100);
 				continue;
 			}
 			if(collider2 != null && collider2 != paddle) {
 				dy = -dy;
 				remove(collider2);
 				countBricks++;
+				GLabel points = new GLabel("ererere" + countBricks);
+				points.setFont(Font.MONOSPACED);
+				add(points, 10, 10);
 				continue;
 			}
 			if(collider3 != null && collider3 != paddle) {
 				dy = -dy;
 				remove(collider3);
 				countBricks++;
+				GLabel points = new GLabel("ttr" + countBricks);
+				points.setFont(Font.MONOSPACED);
+				add(points, 10, 10);
 				continue;
 			}
 			if(collider4 != null && collider4 != paddle) {
