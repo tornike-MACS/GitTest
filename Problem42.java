@@ -17,16 +17,12 @@ public class Problem42 extends GraphicsProgram {
 	public void run() {
 		addMouseListeners();
 		line = new GLine(x1, y1, x2, y2);
-//		add(line);
 	}
 	public void mouseMoved(MouseEvent e) {
 
 	}
 	public void mouseClicked(MouseEvent e) {
-		x1 = e.getX();
-		y1 = e.getY();
-		x2 = e.getX() + 20;
-		y2 = e.getY() + 20;
+		line = new GLine(20, 20, 200, 200);
 		add(line);
 		
 	}
