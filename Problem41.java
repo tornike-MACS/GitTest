@@ -14,6 +14,6 @@ public class Problem41  extends GraphicsProgram{
 	public void mouseMoved(MouseEvent e) {
 		oval.setColor(Color.RED);
 		oval.setFilled(true);
-		add(ball, e.getX(), e.getY());
+		add(oval, e.getX(), e.getY());
 	}
 }
