@@ -22,7 +22,7 @@ public class Problem42 extends GraphicsProgram {
 
 	}
 	public void mouseClicked(MouseEvent e) {
-		line = new GLine(20, 20, 200, 200);
+		line = new GLine(e.getX(), e.getY(), 200, 200);
 		add(line);
 		
 	}
