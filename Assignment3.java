@@ -171,10 +171,6 @@ public class Assignment3 extends GraphicsProgram {
 				remove(ball);
 				break;
 			}
-			if((countBricks + 1)% 7 == 0) {
-				dy += 0.001;
-			}
-			
 		}
 	}
 
