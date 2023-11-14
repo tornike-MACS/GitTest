@@ -64,6 +64,9 @@ public class Assignment3 extends GraphicsProgram {
 	private double vx;
 	private double vy;
 	
+	int countTrials = 0;
+	int countBricks = 0;
+	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
 	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
@@ -84,8 +87,6 @@ public class Assignment3 extends GraphicsProgram {
 		vy = 3;
 		vx = rgen.nextDouble(1.0, 3.0);
 		if(rgen.nextBoolean(0.5))vx = -vx;
-		int countTrials = 0;
-		int countBricks = 0;
 		while(true){
 			ball.move(vx, vy);
 			pause(7);
@@ -233,6 +234,5 @@ public class Assignment3 extends GraphicsProgram {
 
 
 
-//პადლი+
-//აგურები
-//ბურთი
+//ხმა +
+//ქულები
