@@ -8,10 +8,9 @@ public class Problem43 extends GraphicsProgram{
 	GLine line;
 	GOval circle;
 	public void run() {
-		addMouseListeners();
-		circle = new GOval(100,100);
-		circle.setFilled(true);
-		add(circle);
+//		circle = new GOval(100,100);
+//		circle.setFilled(true);
+//		add(circle);
 		addMouseListeners();
 	}
 	
