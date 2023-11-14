@@ -234,6 +234,7 @@ public class Assignment3 extends GraphicsProgram {
 		private void addPaddle() {
 			paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
 			paddle.setFilled(true);
+			paddle.setColor(Color.RED);
 			add(paddle, getWidth() / 2 - paddle.getWidth() / 2, getHeight() - PADDLE_Y_OFFSET);
 		}
 	
