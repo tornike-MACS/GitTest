@@ -61,7 +61,7 @@ public class Assignment3 extends GraphicsProgram {
 	
 	private GRect brick;
 	
-	private GLabel countPoints;
+	private GOval trialsLeft;
 	
 	private double vx;
 	private double vy;
@@ -80,7 +80,18 @@ public class Assignment3 extends GraphicsProgram {
 		addPaddle();
 		addMouseListeners();
 		addBall();
+		addTrialsLeft();
 	}
+
+
+	private void addTrialsLeft() {
+		trialsLeft = new GOval(20, 20);
+		trialsLeft.setFilled(true);
+		trialsLeft.setColor(Color.RED);
+		for(int i = 0; i < 3; i++) {
+			add(trialsLeft, i * 40 + 10, 5);
+		}
+}
 
 
 	// adds moving ball that collides bricks
@@ -170,10 +181,7 @@ public class Assignment3 extends GraphicsProgram {
 				remove(ball);
 				break;
 			}
-			countPoints = new GLabel("Points: " + countBricks);
-			add(countPoints, 30, 30);
-			remove(countPoints);
-			add(countPoints,30,30);
+			
 		}
 	}
 
