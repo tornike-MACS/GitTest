@@ -79,13 +79,8 @@ public class Assignment3 extends GraphicsProgram {
 		addPaddle();
 		addMouseListeners();
 		addBall();
-		countPoints();
 	}
 
-	private void countPoints() {
-		GLabel countPoints = new GLabel("Points: " + points);
-		add(countPoints, 20, 20);
-	}
 
 	// adds moving ball that collides bricks
 	private void addBall() {
@@ -178,7 +173,8 @@ public class Assignment3 extends GraphicsProgram {
 				remove(ball);
 				break;
 			}
-			
+			GLabel countPoints = new GLabel("points");
+			add(countPoints);
 		}
 	}
 
