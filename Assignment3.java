@@ -174,7 +174,7 @@ public class Assignment3 extends GraphicsProgram {
 				break;
 			}
 			GLabel countPoints = new GLabel("points");
-			add(countPoints);
+			add(countPoints, 30, 30);
 		}
 	}
 
