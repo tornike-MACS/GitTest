@@ -9,7 +9,7 @@ public class Problem43 extends GraphicsProgram{
 	GOval circle;
 	public void run() {
 		addMouseListeners();
-		circle = new GOval(20,20);
+		circle = new GOval(50,50);
 		circle.setFilled(true);
 		add(circle);
 		addMouseListeners();
