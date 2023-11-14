@@ -99,6 +99,7 @@ public class Assignment3 extends GraphicsProgram {
 	private void addBall() {
 		GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
+		ball.setColor(Color.RED);
 		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS); 
 		vy = 3;
 		vx = rgen.nextDouble(1.0, 3.0);
