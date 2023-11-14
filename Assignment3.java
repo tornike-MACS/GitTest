@@ -61,6 +61,8 @@ public class Assignment3 extends GraphicsProgram {
 	
 	private GRect brick;
 	
+	private GLabel countPoints;
+	
 	private double vx;
 	private double vy;
 	
@@ -173,7 +175,7 @@ public class Assignment3 extends GraphicsProgram {
 				remove(ball);
 				break;
 			}
-			GLabel countPoints = new GLabel("points: " + points);
+			countPoints = new GLabel("points: " + points);
 			add(countPoints, 30, 30);
 		}
 	}
