@@ -82,9 +82,10 @@ public class Assignment3 extends GraphicsProgram {
 		countPoints();
 	}
 
-private void countPoints() {
-	println("Points");
-}
+	private void countPoints() {
+		GLabel countPoints = new GLabel("Points: " + points);
+		add(countPoints);
+	}
 
 	// adds moving ball that collides bricks
 	private void addBall() {
