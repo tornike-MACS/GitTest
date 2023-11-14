@@ -94,7 +94,7 @@ public class Assignment3 extends GraphicsProgram {
 			trialsLeft = new GOval(17, 17);
 			trialsLeft.setFilled(true);
 			trialsLeft.setColor(Color.magenta);
-			add(trialsLeft, i * 23 + 5, 25);
+			add(trialsLeft, i * 23 + 5, 22);
 		}
 }
 
@@ -163,7 +163,7 @@ public class Assignment3 extends GraphicsProgram {
 			if(ball.getY() >= getHeight() - 2 * BALL_RADIUS) {
 				ball.setLocation(getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
 				countTrials++;
-				remove(getElementAt((countTrials - 1) * 23 + 8, 30));// removes pink circles after each trial
+				remove(getElementAt((countTrials - 1) * 23 + 8, 28));// removes pink circles after each trial
 				if(countTrials < NTURNS) {// on the last try we do not need pause
 					pause(1500);
 				}
