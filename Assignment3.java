@@ -170,9 +170,7 @@ public class Assignment3 extends GraphicsProgram {
 				remove(ball);
 				break;
 			}
-			countPoints = new GLabel("Points: " + countBricks);
-			add(countPoints, 30, 30);
-			remove(countPoints);
+			countPoints.sendToBack();
 			countPoints = new GLabel("Points: " + countBricks);
 			add(countPoints, 30, 30);
 		}
