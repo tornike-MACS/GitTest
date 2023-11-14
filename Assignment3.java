@@ -103,7 +103,7 @@ public class Assignment3 extends GraphicsProgram {
 	private void addBall() {
 		GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
-		ball.setColor(Color.RED);
+		ball.setColor(Color.MAGENTA);
 		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS); 
 		vy = 3;
 		vx = rgen.nextDouble(1.0, 3.0);
@@ -238,7 +238,7 @@ public class Assignment3 extends GraphicsProgram {
 		private void addPaddle() {
 			paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
 			paddle.setFilled(true);
-			paddle.setColor(Color.RED);
+			paddle.setColor(Color.MAGENTA);
 			add(paddle, getWidth() / 2 - paddle.getWidth() / 2, getHeight() - PADDLE_Y_OFFSET);
 		}
 	
