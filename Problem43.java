@@ -21,6 +21,8 @@ public class Problem43 extends GraphicsProgram{
 	}
 	
 	public void mouseDragged(MouseEvent e) {
+		if(getElementAt(e.getX(), e.getY()) == circle) {
 		circle.setLocation(e.getX() - 10, e.getY() - 10);
+		}
 	}
 }
