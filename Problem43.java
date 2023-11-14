@@ -4,6 +4,8 @@ import acm.graphics.GLine;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
+//43. წრეწირის drag ით გადაადგილება
+
 public class Problem43 extends GraphicsProgram{
 	GLine line;
 	GOval circle;
