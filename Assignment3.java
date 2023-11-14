@@ -89,7 +89,7 @@ public class Assignment3 extends GraphicsProgram {
 			trialsLeft = new GOval(17, 17);
 			trialsLeft.setFilled(true);
 			trialsLeft.setColor(Color.magenta);
-			add(trialsLeft, i * 25 + 5, 5);
+			add(trialsLeft, i * 23 + 5, 5);
 		}
 }
 
