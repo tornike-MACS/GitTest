@@ -16,8 +16,8 @@ public class Problem43 extends GraphicsProgram{
 	}
 	
 	public void mousePressed(MouseEvent e) {
-		line = new GLine(e.getX(), e.getY(), e.getX(), e.getY());
-		add(line);
+//		line = new GLine(e.getX(), e.getY(), e.getX(), e.getY());
+//		add(line);
 	}
 	
 	public void mouseDragged(MouseEvent e) {
