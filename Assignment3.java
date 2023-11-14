@@ -157,6 +157,7 @@ public class Assignment3 extends GraphicsProgram {
 			if(ball.getY() >= getHeight() - 2 * BALL_RADIUS) {
 				ball.setLocation(getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
 				countTrials++;
+				remove(getElementAt(countTrials * 23 + 6, 6));
 				if(countTrials < NTURNS) {// on the last try we do not need pause
 					pause(1500);
 				}
