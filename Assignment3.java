@@ -65,6 +65,8 @@ public class Assignment3 extends GraphicsProgram {
 	private double vy;
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
+	
+	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
@@ -94,6 +96,7 @@ public class Assignment3 extends GraphicsProgram {
 			if(collider2 == paddle || collider4 == paddle) { // bottom points of the ball
 				ball.setLocation(ball.getX(), paddle.getY() - 2 * BALL_RADIUS);
 				vy = -vy;
+				bounceClip.play();
 			}
 			if(collider1 != null && collider1 != paddle) {
 				remove(collider1);
