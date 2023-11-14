@@ -69,7 +69,6 @@ public class Assignment3 extends GraphicsProgram {
 	int countTrials = 0;
 	int countBricks = 0;
 	
-	int points = 0;
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
@@ -109,7 +108,6 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
-				points++;
 				continue;
 			}
 			if(collider2 != null && collider2 != paddle) {
@@ -117,7 +115,6 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
-				points++;
 				continue;
 			}
 			if(collider4 != null && collider4 != paddle) {
@@ -125,7 +122,6 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
-				points++;
 				continue;
 			}
 			if(collider3 != null && collider3 != paddle) {
@@ -133,7 +129,6 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
-				points++;
 				continue;
 			}
 			if(ball.getX() >= getWidth() - 2 * BALL_RADIUS) {
@@ -175,7 +170,8 @@ public class Assignment3 extends GraphicsProgram {
 				remove(ball);
 				break;
 			}
-			countPoints = new GLabel("points: " + points);
+			remove(countPoints);
+			countPoints = new GLabel("Points: " + countBricks);
 			add(countPoints, 30, 30);
 		}
 	}
