@@ -85,10 +85,10 @@ public class Assignment3 extends GraphicsProgram {
 
 
 	private void addTrialsLeft() {
-		trialsLeft = new GOval(20, 20);
-		trialsLeft.setFilled(true);
-		trialsLeft.setColor(Color.RED);
 		for(int i = 0; i < 3; i++) {
+			trialsLeft = new GOval(20, 20);
+			trialsLeft.setFilled(true);
+			trialsLeft.setColor(Color.RED);
 			add(trialsLeft, i * 40 + 10, 5);
 		}
 }
