@@ -1,12 +1,17 @@
 import java.awt.event.MouseEvent;
 
 import acm.graphics.GLine;
+import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
 public class Problem43 extends GraphicsProgram{
 	GLine line;
-	
+	GOval circle;
 	public void run() {
+		addMouseListeners();
+		circle = new GOval(20,20);
+		circle.setFilled(true);
+		add(circle);
 		addMouseListeners();
 	}
 	
@@ -16,6 +21,6 @@ public class Problem43 extends GraphicsProgram{
 	}
 	
 	public void mouseDragged(MouseEvent e) {
-		line.setEndPoint(e.getX(), e.getY());
+		circle.setLocation(e.getX() - 10, e.getY() - 10);
 	}
 }
