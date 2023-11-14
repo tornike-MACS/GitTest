@@ -67,6 +67,8 @@ public class Assignment3 extends GraphicsProgram {
 	int countTrials = 0;
 	int countBricks = 0;
 	
+	int points = 0;
+	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
 	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
@@ -77,9 +79,14 @@ public class Assignment3 extends GraphicsProgram {
 		addPaddle();
 		addMouseListeners();
 		addBall();
+		countPoints();
 	}
 
-// adds moving ball that collides bricks
+private void countPoints() {
+	println("Points");
+}
+
+	// adds moving ball that collides bricks
 	private void addBall() {
 		GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
@@ -104,6 +111,7 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
+				points++;
 				continue;
 			}
 			if(collider2 != null && collider2 != paddle) {
@@ -111,6 +119,7 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
+				points++;
 				continue;
 			}
 			if(collider4 != null && collider4 != paddle) {
@@ -118,6 +127,7 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
+				points++;
 				continue;
 			}
 			if(collider3 != null && collider3 != paddle) {
@@ -125,6 +135,7 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
+				points++;
 				continue;
 			}
 			if(ball.getX() >= getWidth() - 2 * BALL_RADIUS) {
@@ -166,7 +177,7 @@ public class Assignment3 extends GraphicsProgram {
 				remove(ball);
 				break;
 			}
-//			
+			
 		}
 	}
 
