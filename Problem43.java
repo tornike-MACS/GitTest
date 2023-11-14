@@ -8,15 +8,14 @@ public class Problem43 extends GraphicsProgram{
 	GLine line;
 	GOval circle;
 	public void run() {
-//		circle = new GOval(100,100);
-//		circle.setFilled(true);
-//		add(circle);
+		circle = new GOval(100,100);
+		circle.setFilled(true);
+		add(circle);
 		addMouseListeners();
 	}
 	
 	public void mousePressed(MouseEvent e) {
-		circle = new GOval(100, 100, e.getX(), e.getY());
-		add(circle);
+		circle.setLocation(e.getX()- 50, e.getY() - 50);
 	}
 	
 	public void mouseDragged(MouseEvent e) {
