@@ -73,6 +73,7 @@ public class Assignment3 extends GraphicsProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
 	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
+	
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
