@@ -84,7 +84,7 @@ public class Assignment3 extends GraphicsProgram {
 
 	private void countPoints() {
 		GLabel countPoints = new GLabel("Points: " + points);
-		add(countPoints);
+		add(countPoints, 20, 20);
 	}
 
 	// adds moving ball that collides bricks
