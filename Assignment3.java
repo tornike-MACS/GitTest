@@ -87,7 +87,7 @@ public class Assignment3 extends GraphicsProgram {
 
 	private void addTrialsLeft() {
 		GLabel healthLeft = new GLabel("HEALTH:");
-		healthLeft.setColor(Color.CYAN);
+		healthLeft.setColor(Color.MAGENTA);
 		add(healthLeft, 5, 15);
 		for(int i = 0; i < 3; i++) {
 			trialsLeft = new GOval(17, 17);
