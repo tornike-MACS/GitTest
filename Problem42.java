@@ -17,7 +17,6 @@ public class Problem42 extends GraphicsProgram {
 	public void run() {
 		addMouseListeners();
 	}
-	@override
 	public void mouseMoved(MouseEvent e) {
 		if(line != null) {
 			line.setEndPoint(e.getX(), e.getY());
@@ -25,7 +24,7 @@ public class Problem42 extends GraphicsProgram {
 	}
 	public void mouseClicked(MouseEvent e) {
 		if(line == null) {
-			line = new GLine(e.getX(), e.getY(), e.getX(), e);
+			line = new GLine(e.getX(), e.getY(), e.getX(), e.getX());
 		}else {
 			line = null;
 		}
