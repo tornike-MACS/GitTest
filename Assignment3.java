@@ -86,6 +86,8 @@ public class Assignment3 extends GraphicsProgram {
 
 
 	private void addTrialsLeft() {
+		GLabel healthLeft = new GLabel("HEALTH:");
+		add(healthLeft, 5, 5);
 		for(int i = 0; i < 3; i++) {
 			trialsLeft = new GOval(17, 17);
 			trialsLeft.setFilled(true);
