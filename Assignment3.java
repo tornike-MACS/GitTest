@@ -74,6 +74,8 @@ public class Assignment3 extends GraphicsProgram {
 	
 	AudioClip bounceClip = MediaTools.loadAudioClip("sound1.au");
 	AudioClip gameOverClip1 = MediaTools.loadAudioClip("gameover.au");
+	AudioClip fallingClip = MediaTools.loadAudioClip("fallingSound.au");
+
 
 	
 
@@ -168,6 +170,7 @@ public class Assignment3 extends GraphicsProgram {
 			if(ball.getY() >= getHeight() - 2 * BALL_RADIUS) {
 				ball.setLocation(getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
 				countTrials++;
+				fallingClip.play();
 				remove(getElementAt((countTrials - 1) * 23 + 8, 28));// removes pink circles after each trial
 				if(countTrials < NTURNS) {// on the last try we do not need pause
 					pause(1500);
