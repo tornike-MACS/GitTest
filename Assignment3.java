@@ -182,7 +182,7 @@ public class Assignment3 extends GraphicsProgram {
 				}
 			}
 			if(countTrials == NTURNS) {
-				GLabel LLabel = new GLabel("!GAME OVER!");
+				GLabel LLabel = new GLabel("GAME OVER!");
 				LLabel.setFont("MONOSPACED-45");
 				LLabel.setColor(Color.MAGENTA);
 				add(LLabel, getWidth() / 2 - LLabel.getWidth() / 2, getHeight() / 2 + LLabel.getAscent());
