@@ -128,6 +128,9 @@ public class Assignment3 extends GraphicsProgram {
 				if(ball.getX() + BALL_RADIUS < paddle.getX() + PADDLE_WIDTH / 2 && vx > 0) {
 					vx = -vx;
 				}
+				if(ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH / 2 && vx < 0) {
+					vx = -vx;
+				}
 				vy = -vy;
 				bounceClip.play();
 			}
