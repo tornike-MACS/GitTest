@@ -189,7 +189,7 @@ public class Assignment3 extends GraphicsProgram {
 				gameOverClip1.play();
 				break;
 			}
-			if(countBricks == 10) {
+			if(countBricks == 100) {
 				GLabel WLabel = new GLabel("You won! :)");
 				WLabel.setFont("MONOSPACED-45");
 				WLabel.setColor(Color.MAGENTA);
