@@ -74,7 +74,6 @@ public class Assignment3 extends GraphicsProgram {
 	
 	AudioClip bounceClip = MediaTools.loadAudioClip("sound1.au");
 	AudioClip gameOverClip1 = MediaTools.loadAudioClip("gameover.au");
-//	AudioClip collideClip2 = MediaTools.loadAudioClip("sound1.au");
 
 	
 
