@@ -87,7 +87,7 @@ public class Assignment3 extends GraphicsProgram {
 /** Runs the Breakout program. */
 	public void run() {
 		setBackground(Color.DARK_GRAY);
-		addBricks();
+//		addBricks();
 		addTrialsLeft();
 		addPaddle();
 		addMouseListeners();
