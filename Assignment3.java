@@ -72,8 +72,9 @@ public class Assignment3 extends GraphicsProgram {
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
-	AudioClip gameOverClip = MediaTools.loadAudioClip("gameover.au");
-	AudioClip bounceClip = MediaTools.loadAudioClip("sound1.au");
+	AudioClip bounceClip = MediaTools.loadAudioClip("Bouncesound.au");
+	AudioClip gameOverClip1 = MediaTools.loadAudioClip("gameover.au");
+	AudioClip collideClip2 = MediaTools.loadAudioClip("sound1.au");
 
 	
 
@@ -123,34 +124,34 @@ public class Assignment3 extends GraphicsProgram {
 			if(collider2 == paddle || collider4 == paddle) { // bottom points of the ball
 				ball.setLocation(ball.getX(), paddle.getY() - 2 * BALL_RADIUS);
 				vy = -vy;
-				bounceClip.play();
+				collideClip2.play();
 			}
 			if(collider1 != null && collider1 != paddle) {
 				remove(collider1);
 				vy = -vy;
 				countBricks++;
-				bounceClip.play();
+				collideClip2.play();
 				continue;
 			}
 			if(collider2 != null && collider2 != paddle) {
 				remove(collider2);
 				vy = -vy;
 				countBricks++;
-				bounceClip.play();
+				collideClip2.play();
 				continue;
 			}
 			if(collider4 != null && collider4 != paddle) {
 				remove(collider4);
 				vy = -vy;
 				countBricks++;
-				bounceClip.play();
+				collideClip2.play();
 				continue;
 			}
 			if(collider3 != null && collider3 != paddle) {
 				remove(collider3);
 				vy = -vy;
 				countBricks++;
-				bounceClip.play();
+				collideClip2.play();
 				continue;
 			}
 			if(ball.getX() >= getWidth() - 2 * BALL_RADIUS) {
