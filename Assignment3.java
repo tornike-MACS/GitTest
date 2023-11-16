@@ -125,6 +125,9 @@ public class Assignment3 extends GraphicsProgram {
 			GObject collider4 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);
 			if(collider2 == paddle || collider4 == paddle) { // bottom points of the ball
 				ball.setLocation(ball.getX(), paddle.getY() - 2 * BALL_RADIUS);
+				if(ball.getX() + BALL_RADIUS < paddle.getX() + PADDLE_WIDTH / 2 && vx > 0) {
+					vx = -vx;
+				}
 				vy = -vy;
 				bounceClip.play();
 			}
