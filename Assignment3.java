@@ -72,7 +72,7 @@ public class Assignment3 extends GraphicsProgram {
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
-//	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
+	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
 	AudioClip gameOverClip1 = MediaTools.loadAudioClip("gameover.au");
 
 	
@@ -127,28 +127,28 @@ public class Assignment3 extends GraphicsProgram {
 				remove(collider1);
 				vy = -vy;
 				countBricks++;
-//				bounceClip.play();
+				bounceClip.play();
 				continue;
 			}
 			if(collider2 != null && collider2 != paddle) {
 				remove(collider2);
 				vy = -vy;
 				countBricks++;
-//				bounceClip.play();
+				bounceClip.play();
 				continue;
 			}
 			if(collider4 != null && collider4 != paddle) {
 				remove(collider4);
 				vy = -vy;
 				countBricks++;
-//				bounceClip.play();
+				bounceClip.play();
 				continue;
 			}
 			if(collider3 != null && collider3 != paddle) {
 				remove(collider3);
 				vy = -vy;
 				countBricks++;
-//				bounceClip.play();
+				bounceClip.play();
 				continue;
 			}
 			if(ball.getX() >= getWidth() - 2 * BALL_RADIUS) {
