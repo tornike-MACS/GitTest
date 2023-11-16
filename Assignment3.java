@@ -73,7 +73,7 @@ public class Assignment3 extends GraphicsProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
 	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
-	AudioClip bounceClip1 = MediaTools.loadAudioClip("20231116-1524-26.0573651.au");
+	AudioClip bounceClip1 = MediaTools.loadAudioClip("gameoversound.au");
 
 	
 /* Method: run() */
