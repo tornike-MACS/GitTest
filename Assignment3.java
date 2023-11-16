@@ -75,6 +75,7 @@ public class Assignment3 extends GraphicsProgram {
 	AudioClip bounceClip = MediaTools.loadAudioClip("sound1.au");
 	AudioClip gameOverClip1 = MediaTools.loadAudioClip("gameover.au");
 	AudioClip fallingClip = MediaTools.loadAudioClip("fallingSound.au");
+	AudioClip winningClip = MediaTools.loadAudioClip("winningsound.au");
 
 
 	
@@ -189,12 +190,13 @@ public class Assignment3 extends GraphicsProgram {
 				gameOverClip1.play();
 				break;
 			}
-			if(countBricks == 100) {
+			if(countBricks == 10) {
 				GLabel WLabel = new GLabel("You won! :)");
 				WLabel.setFont("MONOSPACED-45");
 				WLabel.setColor(Color.MAGENTA);
 				add(WLabel, getWidth() / 2 - WLabel.getWidth() / 2, getHeight() / 2 + WLabel.getAscent() / 2);
 				remove(ball);
+				winningClip.play();
 				break;
 			}
 			
