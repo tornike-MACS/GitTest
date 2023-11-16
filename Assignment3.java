@@ -141,21 +141,21 @@ public class Assignment3 extends GraphicsProgram {
 				bounceClip.play();
 				continue;
 			}
-			if(collider2 != null && collider2 != paddle) {
+			if(collider2 != null && collider2 != paddle && collider2 != trialsLeft) {
 				remove(collider2);
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
 				continue;
 			}
-			if(collider4 != null && collider4 != paddle) {
+			if(collider4 != null && collider4 != paddle && collider4 != trialsLeft) {
 				remove(collider4);
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
 				continue;
 			}
-			if(collider3 != null && collider3 != paddle) {
+			if(collider3 != null && collider3 != paddle && collider3 != trialsLeft) {
 				remove(collider3);
 				vy = -vy;
 				countBricks++;
