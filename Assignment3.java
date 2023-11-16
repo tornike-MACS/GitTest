@@ -182,7 +182,7 @@ public class Assignment3 extends GraphicsProgram {
 				}
 			}
 			if(countTrials == NTURNS) {
-				GLabel LLabel = new GLabel("GAME OVER :(");
+				GLabel LLabel = new GLabel("!GAME OVER!");
 				LLabel.setFont("MONOSPACED-45");
 				LLabel.setColor(Color.MAGENTA);
 				add(LLabel, getWidth() / 2 - LLabel.getWidth() / 2, getHeight() / 2 + LLabel.getAscent());
@@ -191,7 +191,7 @@ public class Assignment3 extends GraphicsProgram {
 				break;
 			}
 			if(countBricks == 10) {
-				GLabel WLabel = new GLabel("You won! :)");
+				GLabel WLabel = new GLabel("!YOU WIN! :)");
 				WLabel.setFont("MONOSPACED-45");
 				WLabel.setColor(Color.MAGENTA);
 				add(WLabel, getWidth() / 2 - WLabel.getWidth() / 2, getHeight() / 2 + WLabel.getAscent() / 2);
