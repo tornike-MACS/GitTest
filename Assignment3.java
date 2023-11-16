@@ -72,7 +72,7 @@ public class Assignment3 extends GraphicsProgram {
 	
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
-//	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
+	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
 	AudioClip bounceClip1 = MediaTools.loadAudioClip("gameoversound.au");
 
 	
@@ -181,7 +181,7 @@ public class Assignment3 extends GraphicsProgram {
 				LLabel.setColor(Color.MAGENTA);
 				add(LLabel, getWidth() / 2 - LLabel.getWidth() / 2, getHeight() / 2 + LLabel.getAscent());
 				remove(ball);
-				bounceClip1.play();
+				bounceClip.play();
 				break;
 			}
 			if(countBricks == 10) {
