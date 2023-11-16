@@ -124,34 +124,34 @@ public class Assignment3 extends GraphicsProgram {
 			if(collider2 == paddle || collider4 == paddle) { // bottom points of the ball
 				ball.setLocation(ball.getX(), paddle.getY() - 2 * BALL_RADIUS);
 				vy = -vy;
-				collideClip2.play();
+				bounceClip.play();
 			}
 			if(collider1 != null && collider1 != paddle) {
 				remove(collider1);
 				vy = -vy;
 				countBricks++;
-				collideClip2.play();
+				bounceClip.play();
 				continue;
 			}
 			if(collider2 != null && collider2 != paddle) {
 				remove(collider2);
 				vy = -vy;
 				countBricks++;
-				collideClip2.play();
+				bounceClip.play();
 				continue;
 			}
 			if(collider4 != null && collider4 != paddle) {
 				remove(collider4);
 				vy = -vy;
 				countBricks++;
-				collideClip2.play();
+				bounceClip.play();
 				continue;
 			}
 			if(collider3 != null && collider3 != paddle) {
 				remove(collider3);
 				vy = -vy;
 				countBricks++;
-				collideClip2.play();
+				bounceClip.play();
 				continue;
 			}
 			if(ball.getX() >= getWidth() - 2 * BALL_RADIUS) {
