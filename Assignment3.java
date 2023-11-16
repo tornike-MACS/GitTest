@@ -134,7 +134,7 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				bounceClip.play();
 			}
-			if(collider1 != null && collider1 != paddle) {
+			if(collider1 != null && collider1 != paddle && collider1 != trialsLeft) {
 				remove(collider1);
 				vy = -vy;
 				countBricks++;
