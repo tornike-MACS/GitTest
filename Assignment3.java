@@ -73,6 +73,8 @@ public class Assignment3 extends GraphicsProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
 	AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
+	AudioClip bounceClip1 = MediaTools.loadAudioClip("20231116-1524-26.0573651.au");
+
 	
 /* Method: run() */
 /** Runs the Breakout program. */
@@ -174,11 +176,12 @@ public class Assignment3 extends GraphicsProgram {
 				}
 			}
 			if(countTrials == NTURNS) {
-				GLabel LLabel = new GLabel("You lost :(");
+				GLabel LLabel = new GLabel("GAME OVER :(");
 				LLabel.setFont("MONOSPACED-45");
 				LLabel.setColor(Color.MAGENTA);
 				add(LLabel, getWidth() / 2 - LLabel.getWidth() / 2, getHeight() / 2 + LLabel.getAscent());
 				remove(ball);
+				bounceClip1.play();
 				break;
 			}
 			if(countBricks == 10) {
