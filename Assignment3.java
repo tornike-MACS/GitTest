@@ -267,7 +267,7 @@ public class Assignment3 extends GraphicsProgram {
 	private void addPoints() {
 		countPoints = new GLabel("" + countBricks);
 		countPoints.setColor(Color.MAGENTA);
-		countPoints.setFont("MONOSPACED-16");
+		countPoints.setFont("MONOSPACED-19");
 		add(countPoints);
 	}
 	
@@ -281,7 +281,7 @@ public class Assignment3 extends GraphicsProgram {
 				paddleX = 0;
 			}
 			paddle.setLocation(paddleX, getHeight() - PADDLE_HEIGHT - PADDLE_Y_OFFSET);
-			countPoints.setLocation(paddleX + PADDLE_WIDTH / 2 - countPoints.getWidth() / 2, getHeight() - PADDLE_Y_OFFSET + PADDLE_HEIGHT - 3);
+			countPoints.setLocation(paddleX + PADDLE_WIDTH / 2 - countPoints.getWidth() / 2, getHeight() - PADDLE_Y_OFFSET + PADDLE_HEIGHT - 10);
 	}
 }
 
