@@ -123,7 +123,7 @@ public class Assignment3 extends GraphicsProgram {
 		while(true){
 			ball.move(vx, vy);
 			pause(p);
-			if(ball.getY() > BRICK_Y_OFFSET) {
+			if(ball.getY() >= BRICK_Y_OFFSET - 2 * BALL_RADIUS) {
 				GObject collider1 = getCollidingObject(ball.getX(), ball.getY());
 				GObject collider2 = getCollidingObject(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
 				GObject collider3 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY());
@@ -219,7 +219,7 @@ public class Assignment3 extends GraphicsProgram {
 				winningClip.play();
 				break;
 			}
-			if((countBricks + 1) % 3 == 0) {
+			if((countBricks + 1) % 7 == 0) {
 				p *= 0.999;
 			}
 			
