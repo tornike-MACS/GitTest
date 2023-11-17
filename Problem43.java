@@ -19,10 +19,8 @@ public class Problem43 extends GraphicsProgram{
 	}
 	
 	public void mousePressed(MouseEvent e) {
-		if(getElementAt(e.getX(), e.getY()) == circle) {
 			x= e.getX() - circle.getX();
 			y = e.getY() - circle.getY();
-		}
 	}
 	
 	public void mouseDragged(MouseEvent e) {
