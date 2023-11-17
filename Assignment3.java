@@ -112,7 +112,7 @@ public class Assignment3 extends GraphicsProgram {
 
 	// adds moving ball that collides bricks
 	private void addBall() {
-		double p = 7;
+		double p = 8.0;
 		GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
 		ball.setColor(Color.MAGENTA);
@@ -210,7 +210,7 @@ public class Assignment3 extends GraphicsProgram {
 				break;
 			}
 			if((countBricks + 1) % 3 == 0) {
-				p *= 0.98;
+				p *= 0.99;
 			}
 			
 			
