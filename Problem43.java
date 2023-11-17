@@ -9,6 +9,8 @@ import acm.program.GraphicsProgram;
 public class Problem43 extends GraphicsProgram{
 	GLine line;
 	GOval circle;
+	double x;
+	double y;
 	public void run() {
 		circle = new GOval(100,100);
 		circle.setFilled(true);
@@ -19,12 +21,14 @@ public class Problem43 extends GraphicsProgram{
 	public void mousePressed(MouseEvent e) {
 		if(getElementAt(e.getX(), e.getY()) == circle) {
 			circle.setLocation(e.getX()- 50, e.getY() - 50);
+			x= e.getX() - circle.getX();
+			y = e.getX() - circle.getX();
 		}
 	}
 	
 	public void mouseDragged(MouseEvent e) {
 		if(getElementAt(e.getX(), e.getY()) == circle) {
-		circle.setLocation(e.getX() - 50, e.getY() - 50);
+		circle.setLocation(e.getX() - x, e.getY() - y);
 		}
 	}
 }
