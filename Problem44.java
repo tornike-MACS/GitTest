@@ -22,3 +22,5 @@ public class Problem44 extends GraphicsProgram{
 		ball.setLocation(e.getX(), e.getY());
 	}
 }
+
+//რანაირააად??
