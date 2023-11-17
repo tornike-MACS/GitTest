@@ -4,6 +4,7 @@ import acm.program.ConsoleProgram;
 //ყველაზე ხშირ სიმბოლოს.
 public class Problem46 extends ConsoleProgram{
 	public void run() {
+		String text = readLine("Enter text: ");
 		
 	}
 }
