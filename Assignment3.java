@@ -265,7 +265,7 @@ public class Assignment3 extends GraphicsProgram {
 	}
 	
 	private void addPoints() {
-		countPoints = new GLabel("" + countBricks);
+		countPoints = new GLabel(" sdcvs" + countBricks);
 		add(countPoints);
 	}
 	
