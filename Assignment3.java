@@ -279,7 +279,7 @@ public class Assignment3 extends GraphicsProgram {
 				paddleX = 0;
 			}
 			paddle.setLocation(paddleX, getHeight() - PADDLE_HEIGHT - PADDLE_Y_OFFSET);
-			countPoints.setLocation(paddleX, getHeight() - PADDLE_Y_OFFSET);
+			countPoints.setLocation(paddleX, getHeight() - PADDLE_Y_OFFSET + PADDLE_HEIGHT);
 	}
 }
 
