@@ -27,3 +27,4 @@ public class Problem46 extends ConsoleProgram{
 		return count;
 	}
 }
+//47
