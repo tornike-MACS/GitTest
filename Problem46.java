@@ -6,5 +6,8 @@ public class Problem46 extends ConsoleProgram{
 	public void run() {
 		String text = readLine("Enter text: ");
 		
+		for (char c = 'a'; c <= 'z'; c++) {
+			println(c);
+		}
 	}
 }
