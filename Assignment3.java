@@ -123,56 +123,58 @@ public class Assignment3 extends GraphicsProgram {
 		while(true){
 			ball.move(vx, vy);
 			pause(p);
-			GObject collider1 = getCollidingObject(ball.getX(), ball.getY());
-			GObject collider2 = getCollidingObject(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
-			GObject collider3 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY());
-			GObject collider4 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);
-			if(collider2 == paddle || collider4 == paddle) { // bottom points of the ball
-				ball.setLocation(ball.getX(), paddle.getY() - 2 * BALL_RADIUS);
-				if(ball.getX() + BALL_RADIUS < paddle.getX() + PADDLE_WIDTH / 2 && vx > 0) {
-					vx = -vx;
+			if(ball.getY() > BRICK_Y_OFFSET) {
+				GObject collider1 = getCollidingObject(ball.getX(), ball.getY());
+				GObject collider2 = getCollidingObject(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
+				GObject collider3 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY());
+				GObject collider4 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);
+				if(collider2 == paddle || collider4 == paddle) { // bottom points of the ball
+					ball.setLocation(ball.getX(), paddle.getY() - 2 * BALL_RADIUS);
+					if(ball.getX() + BALL_RADIUS < paddle.getX() + PADDLE_WIDTH / 2 && vx > 0) {
+						vx = -vx;
+					}
+					if(ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH / 2 && vx < 0) {
+						vx = -vx;
+					}
+					vy = -vy;
+					bounceClip.play();
 				}
-				if(ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH / 2 && vx < 0) {
-					vx = -vx;
+				if(collider1 != null && collider1 != paddle ) {
+					remove(collider1);
+					if(vx < 0 && ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH) {
+						vx = -vx;
+					}else vy = -vy;
+					countBricks++;
+					bounceClip.play();
+					continue;
 				}
-				vy = -vy;
-				bounceClip.play();
-			}
-			if(collider1 != null && collider1 != paddle ) {
-				remove(collider1);
-				if(vx < 0 && ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH) {
-					vx = -vx;
-				}else vy = -vy;
-				countBricks++;
-				bounceClip.play();
-				continue;
-			}
-			if(collider2 != null && collider2 != paddle) {
-				remove(collider2);
-				if(vx > 0 && ball.getX() + BALL_RADIUS < paddle.getX()) {
-					vx = -vx;
-				}else vy = -vy;
-				countBricks++;
-				bounceClip.play();
-				continue;
-			}
-			if(collider4 != null && collider4 != paddle ) {
-				remove(collider4);
-				if(vx > 0 && ball.getX() + BALL_RADIUS < paddle.getX()) {
-					vx = -vx;
-				}else vy = -vy;
-				countBricks++;
-				bounceClip.play();
-				continue;
-			}
-			if(collider3 != null && collider3 != paddle) {
-				remove(collider3);
-				if(vx < 0 && ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH) {
-					vx = -vx;
-				}else vy = -vy;
-				countBricks++;
-				bounceClip.play();
-				continue;
+				if(collider2 != null && collider2 != paddle) {
+					remove(collider2);
+					if(vx > 0 && ball.getX() + BALL_RADIUS < paddle.getX()) {
+						vx = -vx;
+					}else vy = -vy;
+					countBricks++;
+					bounceClip.play();
+					continue;
+				}
+				if(collider4 != null && collider4 != paddle ) {
+					remove(collider4);
+					if(vx > 0 && ball.getX() + BALL_RADIUS < paddle.getX()) {
+						vx = -vx;
+					}else vy = -vy;
+					countBricks++;
+					bounceClip.play();
+					continue;
+				}
+				if(collider3 != null && collider3 != paddle) {
+					remove(collider3);
+					if(vx < 0 && ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH) {
+						vx = -vx;
+					}else vy = -vy;
+					countBricks++;
+					bounceClip.play();
+					continue;
+				}
 			}
 			if(ball.getX() >= getWidth() - 2 * BALL_RADIUS) {
 				ball.setLocation(getWidth() - 2 * BALL_RADIUS, ball.getY());
