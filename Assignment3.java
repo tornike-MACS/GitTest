@@ -111,7 +111,7 @@ public class Assignment3 extends GraphicsProgram {
 		}
 }
 	private void addPoints() {
-		countPoints = new GLabel("" + countBricks);
+		countPoints = new GLabel(" " + countBricks);
 		countPoints.setColor(Color.MAGENTA);
 		countPoints.setFont("MONOSPACED-19");
 		add(countPoints);
@@ -146,7 +146,6 @@ public class Assignment3 extends GraphicsProgram {
 			}
 			if(collider1 != null && collider1 != paddle && collider1 != trialsLeft && collider1 != getElementAt(8, 28) && collider1 != getElementAt(31, 28) && collider1 != healthLeft) {
 				remove(collider1);
-				remove(countPoints);
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
@@ -155,7 +154,6 @@ public class Assignment3 extends GraphicsProgram {
 			}
 			if(collider2 != null && collider2 != paddle && collider2 != trialsLeft && collider2 != getElementAt(8, 28) && collider2 != getElementAt(31, 28) && collider2 != healthLeft) {
 				remove(collider2);
-				remove(countPoints);
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
@@ -164,7 +162,6 @@ public class Assignment3 extends GraphicsProgram {
 			}
 			if(collider4 != null && collider4 != paddle && collider4 != trialsLeft && collider4 != getElementAt(8, 28) && collider4 != getElementAt(31, 28) && collider4 != healthLeft) {
 				remove(collider4);
-				remove(countPoints);
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
@@ -173,7 +170,6 @@ public class Assignment3 extends GraphicsProgram {
 			}
 			if(collider3 != null && collider3 != paddle && collider3 != trialsLeft && collider3 != getElementAt(8, 28) && collider3 != getElementAt(31, 28) && collider3 != healthLeft) {
 				remove(collider3);
-				remove(countPoints);
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
