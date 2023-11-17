@@ -112,6 +112,7 @@ public class Assignment3 extends GraphicsProgram {
 
 	// adds moving ball that collides bricks
 	private void addBall() {
+		double p = 7;
 		GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
 		ball.setColor(Color.MAGENTA);
@@ -121,7 +122,7 @@ public class Assignment3 extends GraphicsProgram {
 		if(rgen.nextBoolean(0.5))vx = -vx;
 		while(true){
 			ball.move(vx, vy);
-			pause(7);
+			pause(p);
 			GObject collider1 = getCollidingObject(ball.getX(), ball.getY());
 			GObject collider2 = getCollidingObject(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
 			GObject collider3 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY());
@@ -209,8 +210,9 @@ public class Assignment3 extends GraphicsProgram {
 				break;
 			}
 			if((countBricks + 1) % 3 == 0) {
-				vy += 0.02;
+				p *= 1.2;
 			}
+			
 			
 		}
 	}
