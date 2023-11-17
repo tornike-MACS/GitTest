@@ -101,7 +101,7 @@ public class Assignment3 extends GraphicsProgram {
 		healthLeft.setColor(Color.MAGENTA);
 		healthLeft.setFont("MONOSPACED-15");
 		add(healthLeft, 5, 15);
-		for(int i = 0; i < 3; i++) {
+		for(int i = 0; i < 2; i++) {
 			trialsLeft = new GOval(17, 17);
 			trialsLeft.setFilled(true);
 			trialsLeft.setColor(Color.magenta);
