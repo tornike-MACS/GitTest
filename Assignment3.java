@@ -131,10 +131,10 @@ public class Assignment3 extends GraphicsProgram {
 				if(collider2 == paddle || collider4 == paddle) { // bottom points of the ball
 					ball.setLocation(ball.getX(), paddle.getY() - 2 * BALL_RADIUS);
 					if(ball.getX() + BALL_RADIUS < paddle.getX() + PADDLE_WIDTH / 2 && vx > 0) {
-						vx = -vx;
+						vx = - (paddle.getX() + PADDLE_WIDTH / 2 - ball.getX()) / 10 * vx;
 					}
 					if(ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH / 2 && vx < 0) {
-						vx = -vx;
+						vx = -(ball.getX() - (paddle.getX() + PADDLE_WIDTH / 2) / 10 * vx;
 					}
 					vy = -vy;
 					bounceClip.play();
