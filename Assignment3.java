@@ -266,6 +266,8 @@ public class Assignment3 extends GraphicsProgram {
 	
 	private void addPoints() {
 		countPoints = new GLabel("" + countBricks);
+		countPoints.setColor(Color.MAGENTA);
+		countPoints.setFont("MONOSPACED-20");
 		add(countPoints);
 	}
 	
