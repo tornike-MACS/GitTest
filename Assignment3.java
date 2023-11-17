@@ -65,6 +65,8 @@ public class Assignment3 extends GraphicsProgram {
 	
 	GLabel healthLeft;
 	
+	GLabel countPoints;
+	
 	private double vx;
 	private double vy;
 	
@@ -92,6 +94,7 @@ public class Assignment3 extends GraphicsProgram {
 		addPaddle();
 		addMouseListeners();
 		addBall();
+		addPoints();
 	}
 
 
@@ -254,12 +257,17 @@ public class Assignment3 extends GraphicsProgram {
 	}
 	
 // adds paddle
-		private void addPaddle() {
+	private void addPaddle() {
 			paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
 			paddle.setFilled(true);
 			paddle.setColor(Color.MAGENTA);
 			add(paddle, getWidth() / 2 - paddle.getWidth() / 2, getHeight() - PADDLE_Y_OFFSET);
-		}
+	}
+	
+	private void addPoints() {
+		countPoints = new GLabel("" + countBricks);
+		add(countPoints);
+	}
 	
 	@Override
 	public void mouseMoved(MouseEvent e) {
@@ -271,6 +279,7 @@ public class Assignment3 extends GraphicsProgram {
 				paddleX = 0;
 			}
 			paddle.setLocation(paddleX, getHeight() - PADDLE_HEIGHT - PADDLE_Y_OFFSET);
+			countPoints.setLocation(paddleX, getHeight() - PADDLE_HEIGHT - PADDLE_Y_OFFSET);
 	}
 }
 
