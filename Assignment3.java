@@ -133,7 +133,7 @@ public class Assignment3 extends GraphicsProgram {
 					if(ball.getX() + BALL_RADIUS < paddle.getX() + PADDLE_WIDTH / 2 && vx >= 0) {
 						vx = - (paddle.getX() + PADDLE_WIDTH / 2 - ball.getX()) / 30 * vx;
 					}
-					if(ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH / 2 && vx < 0) {
+					if(ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH / 2 && vx <= 0) {
 						vx = -(ball.getX() - (paddle.getX() + PADDLE_WIDTH / 2)) / 30 * vx;
 					}
 					vy = -vy;
