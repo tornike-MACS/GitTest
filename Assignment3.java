@@ -209,7 +209,7 @@ public class Assignment3 extends GraphicsProgram {
 				break;
 			}
 			if((countBricks + 1) % 7 == 0) {
-				vy += 0.01;
+				vy += 0.1;
 			}
 			
 		}
