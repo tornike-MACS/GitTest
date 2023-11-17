@@ -21,13 +21,13 @@ public class Problem43 extends GraphicsProgram{
 	public void mousePressed(MouseEvent e) {
 		if(getElementAt(e.getX(), e.getY()) == circle) {
 			x= e.getX() - circle.getX();
-			y = e.getX() - circle.getX();
+			y = e.getY() - circle.getY();
 		}
 	}
 	
 	public void mouseDragged(MouseEvent e) {
 		if(getElementAt(e.getX(), e.getY()) == circle) {
-		circle.setLocation(e.getX() - x, e.getY() - y);
+			circle.setLocation(e.getX() - x, e.getY() - y);
 		}
 	}
 }
