@@ -16,7 +16,7 @@ public class Problem43 extends GraphicsProgram{
 		addMouseListeners();
 	}
 	
-	public void mouseClicked(MouseEvent e) {
+	public void mousePressed(MouseEvent e) {
 		circle.setLocation(e.getX()- 50, e.getY() - 50);
 	}
 	
