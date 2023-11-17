@@ -92,9 +92,9 @@ public class Assignment3 extends GraphicsProgram {
 		addBricks();
 		addTrialsLeft();
 		addPaddle();
+		addPoints();
 		addMouseListeners();
 		addBall();
-		addPoints();
 	}
 
 
