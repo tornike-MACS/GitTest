@@ -12,13 +12,13 @@ public class Problem44 extends GraphicsProgram{
 		ball.setFilled(true);
 		addMouseListeners();
 		while(true) {
-			ball.move(2, 0);
+			ball.move(0, 2);
 			pause(7);
 		}
 	}
 	
 	public void mouseClicked(MouseEvent e) {
-		add(ball);
+//		add(ball);
 		ball.setLocation(e.getX(), e.getY());
 	}
 }
