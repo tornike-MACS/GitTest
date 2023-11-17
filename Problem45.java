@@ -5,9 +5,11 @@ import acm.program.GraphicsProgram;
 //რამდენჯერ გვხვდება მოცემულ ტექსტში მოცემული სიმბოლო
 public class Problem45 extends ConsoleProgram {
 	public void run() {
+		int count = 0;
 		String text = readLine("Enter the text: ");
 		String sSymbol = readLine("Enter the symbol: ");
 		char symbol = sSymbol.charAt(0);
-		println(symbol);
+//		for(int i = 0; i < text.)
+		println(text.length());
 	}
 }
