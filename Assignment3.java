@@ -208,8 +208,8 @@ public class Assignment3 extends GraphicsProgram {
 				winningClip.play();
 				break;
 			}
-			if((countBricks + 1) % 7 == 0) {
-				vy += 0.01;
+			if((countBricks + 1) % 3 == 0) {
+				vy += 0.02;
 			}
 			
 		}
