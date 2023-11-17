@@ -138,28 +138,28 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				bounceClip.play();
 			}
-			if(collider1 != null && collider1 != paddle && collider1 != trialsLeft && collider1 != getElementAt(8, 28) && collider1 != getElementAt(31, 28) && collider1 != healthLeft) {
+			if(collider1 != null && collider1 != paddle && collider1 != trialsLeft && collider1 != getElementAt(8, 28) && collider1 != getElementAt(31, 22) && collider1 != healthLeft) {
 				remove(collider1);
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
 				continue;
 			}
-			if(collider2 != null && collider2 != paddle && collider2 != trialsLeft && collider2 != getElementAt(8, 28) && collider2 != getElementAt(31, 28) && collider2 != healthLeft) {
+			if(collider2 != null && collider2 != paddle && collider2 != trialsLeft && collider2 != getElementAt(8, 28) && collider2 != getElementAt(31, 22) && collider2 != healthLeft) {
 				remove(collider2);
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
 				continue;
 			}
-			if(collider4 != null && collider4 != paddle && collider4 != trialsLeft && collider4 != getElementAt(8, 28) && collider4 != getElementAt(31, 28) && collider4 != healthLeft) {
+			if(collider4 != null && collider4 != paddle && collider4 != trialsLeft && collider4 != getElementAt(8, 28) && collider4 != getElementAt(31, 22) && collider4 != healthLeft) {
 				remove(collider4);
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
 				continue;
 			}
-			if(collider3 != null && collider3 != paddle && collider3 != trialsLeft && collider3 != getElementAt(8, 28) && collider3 != getElementAt(31, 28) && collider3 != healthLeft) {
+			if(collider3 != null && collider3 != paddle && collider3 != trialsLeft && collider3 != getElementAt(8, 28) && collider3 != getElementAt(31, 22) && collider3 != healthLeft) {
 				remove(collider3);
 				vy = -vy;
 				countBricks++;
