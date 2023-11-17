@@ -110,7 +110,12 @@ public class Assignment3 extends GraphicsProgram {
 			add(trialsLeft, i * 23 + 5, 22);
 		}
 }
-
+	private void addPoints() {
+		countPoints = new GLabel("" + countBricks);
+		countPoints.setColor(Color.MAGENTA);
+		countPoints.setFont("MONOSPACED-19");
+		add(countPoints);
+	}
 
 	// adds moving ball that collides bricks
 	private void addBall() {
@@ -141,9 +146,11 @@ public class Assignment3 extends GraphicsProgram {
 			}
 			if(collider1 != null && collider1 != paddle && collider1 != trialsLeft && collider1 != getElementAt(8, 28) && collider1 != getElementAt(31, 28) && collider1 != healthLeft) {
 				remove(collider1);
+				remove(countPoints);
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
+				add(countPoints);
 				continue;
 			}
 			if(collider2 != null && collider2 != paddle && collider2 != trialsLeft && collider2 != getElementAt(8, 28) && collider2 != getElementAt(31, 28) && collider2 != healthLeft) {
@@ -264,12 +271,6 @@ public class Assignment3 extends GraphicsProgram {
 			add(paddle, getWidth() / 2 - paddle.getWidth() / 2, getHeight() - PADDLE_Y_OFFSET);
 	}
 	
-	private void addPoints() {
-		countPoints = new GLabel("" + countBricks);
-		countPoints.setColor(Color.MAGENTA);
-		countPoints.setFont("MONOSPACED-19");
-		add(countPoints);
-	}
 	
 	@Override
 	public void mouseMoved(MouseEvent e) {
