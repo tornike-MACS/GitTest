@@ -140,7 +140,9 @@ public class Assignment3 extends GraphicsProgram {
 			}
 			if(collider1 != null && collider1 != paddle ) {
 				remove(collider1);
-				vy = -vy;
+				if(vx < 0 && ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH) {
+					vx = -vx;
+				}else vy = -vy;
 				countBricks++;
 				bounceClip.play();
 				continue;
