@@ -8,6 +8,8 @@ import acm.program.GraphicsProgram;
 public class Problem44 extends GraphicsProgram{
 	GOval ball;
 	public void run() {
+		ball = new GOval(30,30);
+		ball.setFilled(true);
 		addMouseListeners();
 		while(true) {
 			ball.move(2, 0);
@@ -16,8 +18,7 @@ public class Problem44 extends GraphicsProgram{
 	}
 	
 	public void mouseClicked(MouseEvent e) {
-		ball = new GOval(30,30);
-		ball.setFilled(true);
-		add(ball, e.getX(), e.getY());
+		add(ball);
+		ball.setLocation(e.getX(), e.getY());
 	}
 }
