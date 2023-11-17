@@ -65,7 +65,6 @@ public class Assignment3 extends GraphicsProgram {
 	
 	GLabel healthLeft;
 	
-	GLabel countPoints;
 	
 	private double vx;
 	private double vy;
@@ -92,7 +91,6 @@ public class Assignment3 extends GraphicsProgram {
 		addBricks();
 		addTrialsLeft();
 		addPaddle();
-		addPoints();
 		addMouseListeners();
 		addBall();
 	}
@@ -110,12 +108,7 @@ public class Assignment3 extends GraphicsProgram {
 			add(trialsLeft, i * 23 + 5, 22);
 		}
 }
-	private void addPoints() {
-		countPoints = new GLabel(" " + countBricks);
-		countPoints.setColor(Color.MAGENTA);
-		countPoints.setFont("MONOSPACED-19");
-		add(countPoints);
-	}
+
 
 	// adds moving ball that collides bricks
 	private void addBall() {
@@ -215,6 +208,9 @@ public class Assignment3 extends GraphicsProgram {
 				winningClip.play();
 				break;
 			}
+			if(countBricks % 7 == 0) {
+				vy *= 2;
+			}
 			
 		}
 	}
@@ -280,7 +276,6 @@ public class Assignment3 extends GraphicsProgram {
 				paddleX = 0;
 			}
 			paddle.setLocation(paddleX, getHeight() - PADDLE_HEIGHT - PADDLE_Y_OFFSET);
-			countPoints.setLocation(paddleX + PADDLE_WIDTH / 2 - countPoints.getWidth() / 2 - 5, getHeight() - PADDLE_Y_OFFSET + PADDLE_HEIGHT + 4);
 	}
 }
 
