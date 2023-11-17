@@ -220,7 +220,7 @@ public class Assignment3 extends GraphicsProgram {
 				break;
 			}
 			if((countBricks + 1) % 7 == 0) {
-				p *= 0.999;
+				p *= 0.9995;
 				paddle.setSize(80, 10);
 			}
 			
