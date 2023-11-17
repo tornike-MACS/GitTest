@@ -3,7 +3,7 @@ import java.awt.event.MouseEvent;
 import acm.graphics.*;
 import acm.program.GraphicsProgram;
 
-//4. მაუსის კლიკზე იმავე ადგილზე ჩნდება ბურთი და იწყებს ვარდნას ძირს, თუ მაუსს სხვა
+//44. მაუსის კლიკზე იმავე ადგილზე ჩნდება ბურთი და იწყებს ვარდნას ძირს, თუ მაუსს სხვა
 //ადგილზე ვაკლიკებ ბურთი გადადის ახალ ადგილზე და იქედან იწყებს ვარდნას
 public class Problem44 extends GraphicsProgram{
 	GOval ball;
