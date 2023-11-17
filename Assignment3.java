@@ -152,7 +152,6 @@ public class Assignment3 extends GraphicsProgram {
 				if(vx > 0 && ball.getX() + BALL_RADIUS < paddle.getX()) {
 					vx = -vx;
 				}else vy = -vy;
-				vy = -vy;
 				countBricks++;
 				bounceClip.play();
 				continue;
@@ -162,7 +161,6 @@ public class Assignment3 extends GraphicsProgram {
 				if(vx > 0 && ball.getX() + BALL_RADIUS < paddle.getX()) {
 					vx = -vx;
 				}else vy = -vy;
-				vy = -vy;
 				countBricks++;
 				bounceClip.play();
 				continue;
