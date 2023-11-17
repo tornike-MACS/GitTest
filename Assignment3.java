@@ -149,7 +149,6 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
-				add(countPoints);
 				continue;
 			}
 			if(collider2 != null && collider2 != paddle && collider2 != trialsLeft && collider2 != getElementAt(8, 28) && collider2 != getElementAt(31, 28) && collider2 != healthLeft) {
@@ -157,7 +156,6 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
-				add(countPoints);
 				continue;
 			}
 			if(collider4 != null && collider4 != paddle && collider4 != trialsLeft && collider4 != getElementAt(8, 28) && collider4 != getElementAt(31, 28) && collider4 != healthLeft) {
@@ -165,7 +163,6 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
-				add(countPoints);
 				continue;
 			}
 			if(collider3 != null && collider3 != paddle && collider3 != trialsLeft && collider3 != getElementAt(8, 28) && collider3 != getElementAt(31, 28) && collider3 != healthLeft) {
@@ -173,7 +170,6 @@ public class Assignment3 extends GraphicsProgram {
 				vy = -vy;
 				countBricks++;
 				bounceClip.play();
-				add(countPoints);
 				continue;
 			}
 			if(ball.getX() >= getWidth() - 2 * BALL_RADIUS) {
