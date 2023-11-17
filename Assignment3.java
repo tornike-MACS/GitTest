@@ -26,8 +26,8 @@ public class Assignment3 extends GraphicsProgram {
 	private static final int HEIGHT = APPLICATION_HEIGHT;
 
 /** Dimensions of the paddle */
-	private int PADDLE_WIDTH = 60;
-	private int PADDLE_HEIGHT = 10;
+	private static final int PADDLE_WIDTH = 60;
+	private static final int PADDLE_HEIGHT = 10;
 
 /** Offset of the paddle up from the bottom */
 	private static final int PADDLE_Y_OFFSET = 30;
@@ -220,11 +220,8 @@ public class Assignment3 extends GraphicsProgram {
 				break;
 			}
 			if((countBricks + 1) % 7 == 0) {
-				p *= 0.9997;
-				paddle.setSize(80, 10);
+				p *= 0.9998;
 			}
-			
-			
 		}
 	}
 
