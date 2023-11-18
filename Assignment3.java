@@ -300,6 +300,9 @@ public class Assignment3 extends GraphicsProgram {
 				paddleX = 0;
 			}
 			paddle.setLocation(paddleX, getHeight() - PADDLE_HEIGHT - PADDLE_Y_OFFSET);
+			GLabel points = new GLabel("" + countBricks);
+			add(points);
+			points.setLocation(e.getX(), e.getY());
 	}
 }
 
