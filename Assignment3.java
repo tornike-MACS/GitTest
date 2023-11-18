@@ -127,13 +127,16 @@ public class Assignment3 extends GraphicsProgram {
 	}
 	
 	private void addBall() {
-		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
-		ball.setFilled(true);
-		ball.setColor(Color.MAGENTA);
+//		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
+//		ball.setFilled(true);
+//		ball.setColor(Color.MAGENTA);
 //		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS); 
 	}
 	
 	public void mouseClicked(MouseEvent e) {
+		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
+		ball.setFilled(true);
+		ball.setColor(Color.MAGENTA);
 		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS); 
 	}
 
