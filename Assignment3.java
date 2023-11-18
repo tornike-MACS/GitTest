@@ -132,6 +132,7 @@ public class Assignment3 extends GraphicsProgram {
 	
 	// adds moving ball that collides bricks
 	private void ballMovementAndCollision() {
+		points = new GLabel("" + countBricks);
 		add(points);
 		double p = 8.0;
 		vy = 3;
