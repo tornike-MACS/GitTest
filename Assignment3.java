@@ -99,8 +99,8 @@ public class Assignment3 extends GraphicsProgram {
 
 
 	private void movements() {
-		ballMovementAndCollision();
 		addMouseListeners();
+		ballMovementAndCollision();
 }
 
 
