@@ -164,7 +164,6 @@ public class Assignment3 extends GraphicsProgram {
 					}else vy = -vy;
 					countBricks++;
 					bounceClip.play();
-					remove(points);
 					continue;
 				}
 				if(collider2 != null && collider2 != paddle) {
@@ -174,7 +173,6 @@ public class Assignment3 extends GraphicsProgram {
 					}else vy = -vy;
 					countBricks++;
 					bounceClip.play();
-					remove(points);
 					continue;
 				}
 				if(collider4 != null && collider4 != paddle ) {
@@ -184,7 +182,6 @@ public class Assignment3 extends GraphicsProgram {
 					}else vy = -vy;
 					countBricks++;
 					bounceClip.play();
-					remove(points);
 					continue;
 				}
 				if(collider3 != null && collider3 != paddle) {
@@ -194,7 +191,6 @@ public class Assignment3 extends GraphicsProgram {
 					}else vy = -vy;
 					countBricks++;
 					bounceClip.play();
-					remove(points);
 					continue;
 				}
 			}
