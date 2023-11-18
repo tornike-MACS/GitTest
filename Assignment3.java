@@ -91,10 +91,6 @@ public class Assignment3 extends GraphicsProgram {
 	public void run() {
 		setup();
 		movements();
-//		addBricks();
-//		addTrialsLeft();
-//		addPaddle();
-//		addBall();
 	}
 
 
@@ -136,10 +132,6 @@ public class Assignment3 extends GraphicsProgram {
 	// adds moving ball that collides bricks
 	private void ballMovementAndCollision() {
 		double p = 8.0;
-//		GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
-//		ball.setFilled(true);
-//		ball.setColor(Color.MAGENTA);
-//		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS); 
 		vy = 3;
 		vx = rgen.nextDouble(1.0, 3.0);
 		if(rgen.nextBoolean(0.5))vx = -vx;
