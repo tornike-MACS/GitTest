@@ -150,8 +150,7 @@ public class Assignment3 extends GraphicsProgram {
 		vy = 3;
 		vx = rgen.nextDouble(1.0, 3.0);
 		if(rgen.nextBoolean(0.5))vx = -vx;
-		while(true){
-			if(ball != null) {
+		while(ball != null){
 				ball.move(vx, vy);
 				pause(p);
 				if(ball.getY() >= BRICK_Y_OFFSET - 2 * BALL_RADIUS) {
@@ -255,7 +254,6 @@ public class Assignment3 extends GraphicsProgram {
 				}
 			}
 		}
-	}
 
 // returns an object on the x and y coordinates
 	private GObject getCollidingObject(double x, double y) {
