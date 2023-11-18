@@ -72,6 +72,8 @@ public class Assignment3 extends GraphicsProgram {
 	int countTrials = 0;
 	int countBricks = 0;
 	
+	GLabel points;
+	
 	GOval ball;
 	
 	
@@ -236,6 +238,8 @@ public class Assignment3 extends GraphicsProgram {
 			if((countBricks + 1) % 7 == 0) {
 				p *= 0.9998;
 			}
+			points = new GLabel("" + countBricks);
+			add(points);
 		}
 	}
 
@@ -300,8 +304,8 @@ public class Assignment3 extends GraphicsProgram {
 				paddleX = 0;
 			}
 			paddle.setLocation(paddleX, getHeight() - PADDLE_HEIGHT - PADDLE_Y_OFFSET);
-			GLabel points = new GLabel("" + countBricks);
-			add(points);
+//			GLabel points = new GLabel("" + countBricks);
+//			add(points);
 			points.setLocation(e.getX(), getHeight() - PADDLE_Y_OFFSET + PADDLE_HEIGHT);
 	}
 }
