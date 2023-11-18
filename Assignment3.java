@@ -133,7 +133,7 @@ public class Assignment3 extends GraphicsProgram {
 	// adds moving ball that collides bricks
 	private void ballMovementAndCollision() {
 		points = new GLabel("" + countBricks);
-		add(points, 200, 200);
+		add(points);
 		double p = 8.0;
 		vy = 3;
 		vx = rgen.nextDouble(1.0, 3.0);
@@ -164,6 +164,8 @@ public class Assignment3 extends GraphicsProgram {
 					}else vy = -vy;
 					countBricks++;
 					bounceClip.play();
+					remove(points);
+					points = new GLabel("" + countBricks);
 					continue;
 				}
 				if(collider2 != null && collider2 != paddle) {
@@ -173,6 +175,8 @@ public class Assignment3 extends GraphicsProgram {
 					}else vy = -vy;
 					countBricks++;
 					bounceClip.play();
+					remove(points);
+					points = new GLabel("" + countBricks);
 					continue;
 				}
 				if(collider4 != null && collider4 != paddle ) {
@@ -182,6 +186,8 @@ public class Assignment3 extends GraphicsProgram {
 					}else vy = -vy;
 					countBricks++;
 					bounceClip.play();
+					remove(points);
+					points = new GLabel("" + countBricks);
 					continue;
 				}
 				if(collider3 != null && collider3 != paddle) {
@@ -191,6 +197,8 @@ public class Assignment3 extends GraphicsProgram {
 					}else vy = -vy;
 					countBricks++;
 					bounceClip.play();
+					remove(points);
+					points = new GLabel("" + countBricks);
 					continue;
 				}
 			}
@@ -240,8 +248,8 @@ public class Assignment3 extends GraphicsProgram {
 			if((countBricks + 1) % 7 == 0) {
 				p *= 0.9998;
 			}
-			points = new GLabel("" + countBricks);
-//			add(points);
+//			points = new GLabel("" + countBricks);
+			add(points);
 		}
 	}
 
