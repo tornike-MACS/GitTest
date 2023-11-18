@@ -130,9 +130,12 @@ public class Assignment3 extends GraphicsProgram {
 		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
 		ball.setColor(Color.MAGENTA);
+//		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS); 
+	}
+	
+	public void mouseClicked(MouseEvent e) {
 		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS); 
 	}
-
 
 	// adds moving ball that collides bricks
 	private void ballMovementAndCollision() {
