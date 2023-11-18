@@ -133,6 +133,7 @@ public class Assignment3 extends GraphicsProgram {
 	// adds moving ball that collides bricks
 	private void ballMovementAndCollision() {
 		points = new GLabel("" + countBricks);
+		points.setFont("MONOSPACED-19");
 		add(points);
 		double p = 8.0;
 		vy = 3;
@@ -316,7 +317,7 @@ public class Assignment3 extends GraphicsProgram {
 			paddle.setLocation(paddleX, getHeight() - PADDLE_HEIGHT - PADDLE_Y_OFFSET);
 //			GLabel points = new GLabel("" + countBricks);
 //			add(points);
-			points.setLocation(e.getX(), getHeight() - PADDLE_Y_OFFSET + PADDLE_HEIGHT);
+			points.setLocation(e.getX(), getHeight() - PADDLE_Y_OFFSET + PADDLE_HEIGHT - points.getWidth() / 2);
 	}
 }
 
