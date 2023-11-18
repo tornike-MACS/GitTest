@@ -87,13 +87,28 @@ public class Assignment3 extends GraphicsProgram {
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
+		setup();
+		movements();
+//		addBricks();
+//		addTrialsLeft();
+//		addPaddle();
+//		addBall();
+	}
+
+
+	private void movements() {
+		ballMovementAndCollision();
+		addMouseListeners();
+}
+
+
+	private void setup() {
 		setBackground(Color.DARK_GRAY);
 		addBricks();
 		addTrialsLeft();
 		addPaddle();
-		addMouseListeners();
 		addBall();
-	}
+}
 
 
 	private void addTrialsLeft() {
@@ -107,16 +122,23 @@ public class Assignment3 extends GraphicsProgram {
 			trialsLeft.setColor(Color.magenta);
 			add(trialsLeft, i * 23 + 5, 22);
 		}
-}
-
-
-	// adds moving ball that collides bricks
+	}
+	
 	private void addBall() {
-		double p = 8.0;
 		GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
 		ball.setColor(Color.MAGENTA);
 		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS); 
+	}
+
+
+	// adds moving ball that collides bricks
+	private void ballMovementAndCollision() {
+		double p = 8.0;
+//		GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
+//		ball.setFilled(true);
+//		ball.setColor(Color.MAGENTA);
+//		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS); 
 		vy = 3;
 		vx = rgen.nextDouble(1.0, 3.0);
 		if(rgen.nextBoolean(0.5))vx = -vx;
