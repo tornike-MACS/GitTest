@@ -133,7 +133,7 @@ public class Assignment3 extends GraphicsProgram {
 	// adds moving ball that collides bricks
 	private void ballMovementAndCollision() {
 		points = new GLabel("" + countBricks);
-		points.setFont("MONOSPACED-19");
+		points.setFont(CENTER);
 		add(points);
 		double p = 8.0;
 		vy = 3;
