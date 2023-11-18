@@ -93,7 +93,6 @@ public class Assignment3 extends GraphicsProgram {
 		movements();
 	}
 
-
 	private void movements() {
 		addMouseListeners();
 		ballMovementAndCollision();
@@ -106,7 +105,7 @@ public class Assignment3 extends GraphicsProgram {
 		addTrialsLeft();
 		addPaddle();
 		addBall();
-}
+	}
 
 
 	private void addTrialsLeft() {
