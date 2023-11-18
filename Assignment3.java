@@ -151,7 +151,7 @@ public class Assignment3 extends GraphicsProgram {
 		vx = rgen.nextDouble(1.0, 3.0);
 		if(rgen.nextBoolean(0.5))vx = -vx;
 		while(true){
-			if(ball.getX() >= 0) {
+			if(ball != null) {
 				ball.move(vx, vy);
 			}
 			pause(p);
