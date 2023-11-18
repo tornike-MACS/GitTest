@@ -153,106 +153,106 @@ public class Assignment3 extends GraphicsProgram {
 		while(true){
 			if(ball != null) {
 				ball.move(vx, vy);
-			}
-			pause(p);
-			if(ball.getY() >= BRICK_Y_OFFSET - 2 * BALL_RADIUS) {
-				GObject collider1 = getCollidingObject(ball.getX(), ball.getY());
-				GObject collider2 = getCollidingObject(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
-				GObject collider3 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY());
-				GObject collider4 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);
-				if(collider2 == paddle || collider4 == paddle) { // bottom points of the ball
-					ball.setLocation(ball.getX(), paddle.getY() - 2 * BALL_RADIUS);
-					if(ball.getX() + BALL_RADIUS < paddle.getX() + PADDLE_WIDTH / 2 && vx >= 0) {
-						vx = - vx;
+				pause(p);
+				if(ball.getY() >= BRICK_Y_OFFSET - 2 * BALL_RADIUS) {
+					GObject collider1 = getCollidingObject(ball.getX(), ball.getY());
+					GObject collider2 = getCollidingObject(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
+					GObject collider3 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY());
+					GObject collider4 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);
+					if(collider2 == paddle || collider4 == paddle) { // bottom points of the ball
+						ball.setLocation(ball.getX(), paddle.getY() - 2 * BALL_RADIUS);
+						if(ball.getX() + BALL_RADIUS < paddle.getX() + PADDLE_WIDTH / 2 && vx >= 0) {
+							vx = - vx;
+						}
+						if(ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH / 2 && vx <= 0) {
+							vx = - vx;
+						}
+						vy = -vy;
+						bounceClip.play();
 					}
-					if(ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH / 2 && vx <= 0) {
-						vx = - vx;
+					if(collider1 != null && collider1 != paddle ) {
+						remove(collider1);
+						if(vx < 0 && ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH) {
+							vx = -vx;
+						}else vy = -vy;
+						countBricks++;
+						bounceClip.play();
+						continue;
 					}
-					vy = -vy;
-					bounceClip.play();
+					if(collider2 != null && collider2 != paddle) {
+						remove(collider2);
+						if(vx > 0 && ball.getX() + BALL_RADIUS < paddle.getX()) {
+							vx = -vx;
+						}else vy = -vy;
+						countBricks++;
+						bounceClip.play();
+						continue;
+					}
+					if(collider4 != null && collider4 != paddle ) {
+						remove(collider4);
+						if(vx > 0 && ball.getX() + BALL_RADIUS < paddle.getX()) {
+							vx = -vx;
+						}else vy = -vy;
+						countBricks++;
+						bounceClip.play();
+						continue;
+					}
+					if(collider3 != null && collider3 != paddle) {
+						remove(collider3);
+						if(vx < 0 && ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH) {
+							vx = -vx;
+						}else vy = -vy;
+						countBricks++;
+						bounceClip.play();
+						continue;
+					}
 				}
-				if(collider1 != null && collider1 != paddle ) {
-					remove(collider1);
-					if(vx < 0 && ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH) {
+				if(ball.getX() >= getWidth() - 2 * BALL_RADIUS) {
+					ball.setLocation(getWidth() - 2 * BALL_RADIUS, ball.getY());
+					vx *= -1;
+				}
+				if(ball.getX() <= 0) {
+					ball.setLocation(0, ball.getY());
+					vx *= -1;
+				}
+				if(ball.getY() <= 0) {
+					ball.setLocation(ball.getX(), 0);
+					vy *= -1;
+				}
+				if(ball.getY() >= getHeight() - 2 * BALL_RADIUS) {
+					ball.setLocation(getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
+					countTrials++;
+					fallingClip.play();
+					remove(getElementAt((countTrials - 1) * 23 + 8, 28));// removes pink circles after each trial
+					if(countTrials < NTURNS) {// on the last try we do not need pause
+						pause(1500);
+					}
+					vx = rgen.nextDouble(1.0,3.0); //generating new direction for the ball for each try
+					if(rgen.nextBoolean(0.5)) {
 						vx = -vx;
-					}else vy = -vy;
-					countBricks++;
-					bounceClip.play();
-					continue;
+					}
 				}
-				if(collider2 != null && collider2 != paddle) {
-					remove(collider2);
-					if(vx > 0 && ball.getX() + BALL_RADIUS < paddle.getX()) {
-						vx = -vx;
-					}else vy = -vy;
-					countBricks++;
-					bounceClip.play();
-					continue;
+				if(countTrials == NTURNS) {
+					GLabel LLabel = new GLabel("GAME OVER!");
+					LLabel.setFont("MONOSPACED-45");
+					LLabel.setColor(Color.MAGENTA);
+					add(LLabel, getWidth() / 2 - LLabel.getWidth() / 2, getHeight() / 2 + LLabel.getAscent());
+					remove(ball);
+					gameOverClip1.play();
+					break;
 				}
-				if(collider4 != null && collider4 != paddle ) {
-					remove(collider4);
-					if(vx > 0 && ball.getX() + BALL_RADIUS < paddle.getX()) {
-						vx = -vx;
-					}else vy = -vy;
-					countBricks++;
-					bounceClip.play();
-					continue;
+				if(countBricks > 99) {
+					GLabel WLabel = new GLabel("YOU WIN!");
+					WLabel.setFont("MONOSPACED-45");
+					WLabel.setColor(Color.MAGENTA);
+					add(WLabel, getWidth() / 2 - WLabel.getWidth() / 2, getHeight() / 2 + WLabel.getAscent() / 2);
+					remove(ball);
+					winningClip.play();
+					break;
 				}
-				if(collider3 != null && collider3 != paddle) {
-					remove(collider3);
-					if(vx < 0 && ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH) {
-						vx = -vx;
-					}else vy = -vy;
-					countBricks++;
-					bounceClip.play();
-					continue;
+				if((countBricks + 1) % 7 == 0) {
+					p *= 0.9998;
 				}
-			}
-			if(ball.getX() >= getWidth() - 2 * BALL_RADIUS) {
-				ball.setLocation(getWidth() - 2 * BALL_RADIUS, ball.getY());
-				vx *= -1;
-			}
-			if(ball.getX() <= 0) {
-				ball.setLocation(0, ball.getY());
-				vx *= -1;
-			}
-			if(ball.getY() <= 0) {
-				ball.setLocation(ball.getX(), 0);
-				vy *= -1;
-			}
-			if(ball.getY() >= getHeight() - 2 * BALL_RADIUS) {
-				ball.setLocation(getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
-				countTrials++;
-				fallingClip.play();
-				remove(getElementAt((countTrials - 1) * 23 + 8, 28));// removes pink circles after each trial
-				if(countTrials < NTURNS) {// on the last try we do not need pause
-					pause(1500);
-				}
-				vx = rgen.nextDouble(1.0,3.0); //generating new direction for the ball for each try
-				if(rgen.nextBoolean(0.5)) {
-					vx = -vx;
-				}
-			}
-			if(countTrials == NTURNS) {
-				GLabel LLabel = new GLabel("GAME OVER!");
-				LLabel.setFont("MONOSPACED-45");
-				LLabel.setColor(Color.MAGENTA);
-				add(LLabel, getWidth() / 2 - LLabel.getWidth() / 2, getHeight() / 2 + LLabel.getAscent());
-				remove(ball);
-				gameOverClip1.play();
-				break;
-			}
-			if(countBricks > 99) {
-				GLabel WLabel = new GLabel("YOU WIN!");
-				WLabel.setFont("MONOSPACED-45");
-				WLabel.setColor(Color.MAGENTA);
-				add(WLabel, getWidth() / 2 - WLabel.getWidth() / 2, getHeight() / 2 + WLabel.getAscent() / 2);
-				remove(ball);
-				winningClip.play();
-				break;
-			}
-			if((countBricks + 1) % 7 == 0) {
-				p *= 0.9998;
 			}
 		}
 	}
