@@ -7,16 +7,10 @@ import acm.program.ConsoleProgram;
 public class Problem49 extends ConsoleProgram {
 	public void run() {
 		String text = readLine("enter number: ");
-		int n = text.charAt(3);
-//		double n = stringToInteger(text);
+		double n = stringToInteger(text);
 		println(n);
 	}
 	private double stringToInteger(String text) {
-		double answer = 0;
-		for(int i = 0; i < text.length(); i++) {
-			int n = text.charAt(i);
-			answer += n * Math.pow(10, text.length() - 1 - i);
-		}
-		return answer;
+		
 	}
 }
