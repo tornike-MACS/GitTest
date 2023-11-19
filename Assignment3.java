@@ -159,7 +159,7 @@ public class Assignment3 extends GraphicsProgram {
 				}
 				if(collider1 != null && collider1 != paddle ) {
 					remove(collider1);
-					if(vx < 0 && ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH) {
+					if(vx < 0 && ball.getX() >= paddle.getX() + PADDLE_WIDTH) {
 						vx = -vx;
 					}else vy = -vy;
 					countBricks++;
@@ -170,7 +170,7 @@ public class Assignment3 extends GraphicsProgram {
 				}
 				if(collider2 != null && collider2 != paddle) {
 					remove(collider2);
-					if(vx > 0 && ball.getX() + BALL_RADIUS < paddle.getX()) {
+					if(vx > 0 && ball.getX() + 2 * BALL_RADIUS <= paddle.getX()) {
 						vx = -vx;
 					}else vy = -vy;
 					countBricks++;
@@ -181,7 +181,7 @@ public class Assignment3 extends GraphicsProgram {
 				}
 				if(collider4 != null && collider4 != paddle ) {
 					remove(collider4);
-					if(vx > 0 && ball.getX() + BALL_RADIUS < paddle.getX()) {
+					if(vx > 0 && ball.getX() + 2 * BALL_RADIUS <= paddle.getX()) {
 						vx = -vx;
 					}else vy = -vy;
 					countBricks++;
@@ -192,7 +192,7 @@ public class Assignment3 extends GraphicsProgram {
 				}
 				if(collider3 != null && collider3 != paddle) {
 					remove(collider3);
-					if(vx < 0 && ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH) {
+					if(vx < 0 && ball.getX() >= paddle.getX() + PADDLE_WIDTH) {
 						vx = -vx;
 					}else vy = -vy;
 					countBricks++;
