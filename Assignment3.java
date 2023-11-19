@@ -164,7 +164,7 @@ public class Assignment3 extends GraphicsProgram {
 					}else vy = -vy;
 					countBricks++;
 					bounceClip.play();
-					remove(points);
+//					remove(points);
 					points = new GLabel("" + countBricks);
 					continue;
 				}
@@ -175,7 +175,7 @@ public class Assignment3 extends GraphicsProgram {
 					}else vy = -vy;
 					countBricks++;
 					bounceClip.play();
-					remove(points);
+//					remove(points);
 					points = new GLabel("" + countBricks);
 					continue;
 				}
