@@ -6,7 +6,9 @@ public class Problem48 extends ConsoleProgram {
 		String text = readLine("Enter text: ");
 		for(char c = 'a'; c <= 'z'; c++) {
 			int count = countChar(text, c);
-			println(c + " : " + count);
+			if(count > 0) {
+				println(c + " : " + count);
+			}
 		}	
 	}
 
