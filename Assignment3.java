@@ -247,7 +247,7 @@ public class Assignment3 extends GraphicsProgram {
 				break;
 			}
 			if((countBricks + 1) % 7 == 0) {
-				p *= 0.9998;
+				p *= 0.9997;
 			}
 		}
 	}
@@ -324,7 +324,3 @@ public class Assignment3 extends GraphicsProgram {
 	}
 }
 
-
-
-//ხმა +
-//ქულები
