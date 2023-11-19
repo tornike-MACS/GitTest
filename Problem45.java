@@ -7,7 +7,8 @@ public class Problem45 extends ConsoleProgram {
 	public void run() {
 		String text = readLine("Enter text: ");
 		char symbol = readChar();
-		int count = countChar();
+		int count = countChar(text, symbol);
+		println(count);
 	}
 	
 	private int countChar(String text, char symbol) {
