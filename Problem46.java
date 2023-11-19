@@ -4,7 +4,7 @@ import acm.program.ConsoleProgram;
 //ყველაზე ხშირ სიმბოლოს.
 public class Problem46 extends ConsoleProgram{
 	public void run() {
-		char maxChar = 0;
+		char maxChar = 'a';
 		int maxCount = 0;
 		String text = readLine("Enter text: ");
 		for(char c = 'a'; c <= 'z'; c++) {
