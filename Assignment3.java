@@ -202,6 +202,7 @@ public class Assignment3 extends GraphicsProgram {
 					continue;
 				}
 			}
+			add(points);
 			if(ball.getX() >= getWidth() - 2 * BALL_RADIUS) {
 				ball.setLocation(getWidth() - 2 * BALL_RADIUS, ball.getY());
 				vx *= -1;
@@ -249,7 +250,7 @@ public class Assignment3 extends GraphicsProgram {
 				p *= 0.9998;
 			}
 //			points = new GLabel("" + countBricks);
-			add(points);
+//			add(points);
 		}
 	}
 
