@@ -201,9 +201,8 @@ public class Assignment3 extends GraphicsProgram {
 					points = new GLabel("" + countBricks);
 					continue;
 				}
-				add(points);
 			}
-//			add(points);
+			add(points);
 			if(ball.getX() >= getWidth() - 2 * BALL_RADIUS) {
 				ball.setLocation(getWidth() - 2 * BALL_RADIUS, ball.getY());
 				vx *= -1;
@@ -250,8 +249,6 @@ public class Assignment3 extends GraphicsProgram {
 			if((countBricks + 1) % 7 == 0) {
 				p *= 0.9998;
 			}
-//			points = new GLabel("" + countBricks);
-//			add(points);
 		}
 	}
 
@@ -316,9 +313,14 @@ public class Assignment3 extends GraphicsProgram {
 				paddleX = 0;
 			}
 			paddle.setLocation(paddleX, getHeight() - PADDLE_HEIGHT - PADDLE_Y_OFFSET);
-//			GLabel points = new GLabel("" + countBricks);
-//			add(points);
-			points.setLocation(e.getX() - points.getWidth() / 2, getHeight() - PADDLE_Y_OFFSET + PADDLE_HEIGHT);
+			double pointsX = e.getX() - points.getWidth() / 2;
+			if(e.getX() > getWidth() - PADDLE_WIDTH / 2) {
+				pointsX = getWidth() - PADDLE_WIDTH / 2;
+			}
+			if(e.getX() < PADDLE_WIDTH / 2) {
+				pointsX = PADDLE_WIDTH / 2;
+			}
+			points.setLocation(pointsX, getHeight() - PADDLE_Y_OFFSET + PADDLE_HEIGHT);
 	}
 }
 
