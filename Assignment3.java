@@ -320,7 +320,7 @@ public class Assignment3 extends GraphicsProgram {
 			if(e.getX() < PADDLE_WIDTH / 2) {
 				pointsX = PADDLE_WIDTH / 2 - points.getWidth() / 2;
 			}
-			points.setLocation(pointsX, getHeight() - PADDLE_Y_OFFSET + PADDLE_HEIGHT);
+			points.setLocation(pointsX, getHeight() - PADDLE_Y_OFFSET + PADDLE_HEIGHT + 2);
 	}
 }
 
