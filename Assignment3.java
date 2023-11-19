@@ -141,7 +141,7 @@ public class Assignment3 extends GraphicsProgram {
 		while(true){
 			ball.move(vx, vy);
 			pause(p);
-			if(ball.getY() >= BRICK_Y_OFFSET - 2 * BALL_RADIUS) {
+			if(ball.getY() >= BRICK_Y_OFFSET - 2 * BALL_RADIUS && ball.getY() < getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT / 2 - 2 * BALL_RADIUS) {
 				GObject collider1 = getCollidingObject(ball.getX(), ball.getY());
 				GObject collider2 = getCollidingObject(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
 				GObject collider3 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY());
