@@ -1,3 +1,4 @@
+
 /*
  * File: Breakout.java
  * -------------------
@@ -17,79 +18,72 @@ import java.awt.event.*;
 
 public class Assignment3 extends GraphicsProgram {
 
-/** Width and height of application window in pixels */
+	/** Width and height of application window in pixels */
 	public static final int APPLICATION_WIDTH = 400;
 	public static final int APPLICATION_HEIGHT = 600;
 
-/** Dimensions of game board (usually the same) */
+	/** Dimensions of game board (usually the same) */
 	private static final int WIDTH = APPLICATION_WIDTH;
 	private static final int HEIGHT = APPLICATION_HEIGHT;
 
-/** Dimensions of the paddle */
+	/** Dimensions of the paddle */
 	private static final int PADDLE_WIDTH = 60;
 	private static final int PADDLE_HEIGHT = 10;
 
-/** Offset of the paddle up from the bottom */
+	/** Offset of the paddle up from the bottom */
 	private static final int PADDLE_Y_OFFSET = 30;
 
-/** Number of bricks per row */
+	/** Number of bricks per row */
 	private static final int NBRICKS_PER_ROW = 10;
 
-/** Number of rows of bricks */
+	/** Number of rows of bricks */
 	private static final int NBRICK_ROWS = 10;
 
-/** Separation between bricks */
+	/** Separation between bricks */
 	private static final int BRICK_SEP = 4;
 
-/** Width of a brick */
-	private static final int BRICK_WIDTH =
-	  (WIDTH - (NBRICKS_PER_ROW - 1) * BRICK_SEP) / NBRICKS_PER_ROW;
+	/** Width of a brick */
+	private static final int BRICK_WIDTH = (WIDTH - (NBRICKS_PER_ROW - 1) * BRICK_SEP) / NBRICKS_PER_ROW;
 
-/** Height of a brick */
+	/** Height of a brick */
 	private static final int BRICK_HEIGHT = 8;
 
-/** Radius of the ball in pixels */
+	/** Radius of the ball in pixels */
 	private static final int BALL_RADIUS = 10;
 
-/** Offset of the top brick row from the top */
+	/** Offset of the top brick row from the top */
 	private static final int BRICK_Y_OFFSET = 70;
 
-/** Number of turns */
+	/** Number of turns */
 	private static final int NTURNS = 3;
-	
+
 	private GRect paddle;
-	
+
 	private GRect brick;
-	
+
 	private GOval trialsLeft;
-	
+
 	GLabel healthLeft;
-	
-	
+
 	private double vx;
 	private double vy;
-	
+
 	int countTrials = 0;
 	int countBricks = 0;
-	
+
 	GLabel points;
-	
+
 	GOval ball;
-	
-	
+
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-	
+
 	AudioClip bounceClip = MediaTools.loadAudioClip("sound1.au");
 	AudioClip gameOverClip1 = MediaTools.loadAudioClip("gameover.au");
 	AudioClip fallingClip = MediaTools.loadAudioClip("fallingSound.au");
 	AudioClip winningClip = MediaTools.loadAudioClip("winningsound.au");
 
-
-	
-
-	
-/* Method: run() */
-/** Runs the Breakout program. */
+	/* Method: run() */
+	/** Runs the Breakout program. */
 	public void run() {
 		setup();
 		movements();
@@ -98,8 +92,7 @@ public class Assignment3 extends GraphicsProgram {
 	private void movements() {
 		addMouseListeners();
 		ballMovementAndCollision();
-}
-
+	}
 
 	private void setup() {
 		setBackground(Color.DARK_GRAY);
@@ -109,27 +102,26 @@ public class Assignment3 extends GraphicsProgram {
 		addBall();
 	}
 
-
 	private void addTrialsLeft() {
 		healthLeft = new GLabel("HEALTH:");
 		healthLeft.setColor(Color.MAGENTA);
 		healthLeft.setFont("MONOSPACED-15");
 		add(healthLeft, 5, 15);
-		for(int i = 0; i < 3; i++) {
+		for (int i = 0; i < 3; i++) {
 			trialsLeft = new GOval(17, 17);
 			trialsLeft.setFilled(true);
 			trialsLeft.setColor(Color.magenta);
 			add(trialsLeft, i * 23 + 5, 22);
 		}
 	}
-	
+
 	private void addBall() {
 		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
 		ball.setColor(Color.MAGENTA);
-		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS); 
+		add(ball, getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
 	}
-	
+
 	// adds moving ball that collides bricks
 	private void ballMovementAndCollision() {
 		points = new GLabel("" + countBricks);
@@ -137,64 +129,70 @@ public class Assignment3 extends GraphicsProgram {
 		double p = 8.0;
 		vy = 3;
 		vx = rgen.nextDouble(1.0, 3.0);
-		if(rgen.nextBoolean(0.5))vx = -vx;
-		while(true){
+		if (rgen.nextBoolean(0.5))
+			vx = -vx;
+		while (true) {
 			ball.move(vx, vy);
 			pause(p);
-			if(ball.getY() >= BRICK_Y_OFFSET - 2 * BALL_RADIUS && ball.getY() < getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT / 2 - 2 * BALL_RADIUS) {
+			if (ball.getY() >= BRICK_Y_OFFSET - 2 * BALL_RADIUS
+					&& ball.getY() < getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT / 2 - 2 * BALL_RADIUS) {
 				GObject collider1 = getCollidingObject(ball.getX(), ball.getY());
 				GObject collider2 = getCollidingObject(ball.getX(), ball.getY() + 2 * BALL_RADIUS);
 				GObject collider3 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY());
 				GObject collider4 = getCollidingObject(ball.getX() + 2 * BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);
-				if(collider2 == paddle || collider4 == paddle) { // bottom points of the ball
+				if (collider2 == paddle || collider4 == paddle) { // bottom points of the ball
 					ball.setLocation(ball.getX(), paddle.getY() - 2 * BALL_RADIUS);
-					if(ball.getX() + BALL_RADIUS < paddle.getX() + PADDLE_WIDTH / 2 && vx >= 0) {
-						vx = - vx;
+					if (ball.getX() + BALL_RADIUS < paddle.getX() + PADDLE_WIDTH / 2 && vx >= 0) {
+						vx = -vx;
 					}
-					if(ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH / 2 && vx <= 0) {
-						vx = - vx;
+					if (ball.getX() + BALL_RADIUS > paddle.getX() + PADDLE_WIDTH / 2 && vx <= 0) {
+						vx = -vx;
 					}
 					vy = -vy;
 					bounceClip.play();
 				}
-				if(collider1 != null && collider1 != paddle ) {
+				if (collider1 != null && collider1 != paddle) {
 					remove(collider1);
-					if(vx < 0 && ball.getX() >= paddle.getX() + PADDLE_WIDTH) {
+					if (vx < 0 && ball.getX() >= paddle.getX() + PADDLE_WIDTH) {
 						vx = -vx;
-					}else vy = -vy;
+					} else
+						vy = -vy;
 					countBricks++;
 					bounceClip.play();
 					remove(points);
 					points = new GLabel("" + countBricks);
 					continue;
 				}
-				if(collider2 != null && collider2 != paddle) {
+				if (collider2 != null && collider2 != paddle) {
 					remove(collider2);
-					if(vx > 0 && ball.getX() + 2 * BALL_RADIUS <= paddle.getX()) {
+					if (vx > 0 && ball.getX() + 2 * BALL_RADIUS <= paddle.getX()) {
 						vx = -vx;
-					}else vy = -vy;
+					} else
+						vy = -vy;
 					countBricks++;
 					bounceClip.play();
 					remove(points);
 					points = new GLabel("" + countBricks);
 					continue;
 				}
-				if(collider4 != null && collider4 != paddle ) {
+				if (collider4 != null && collider4 != paddle) {
 					remove(collider4);
-					if(vx > 0 && ball.getX() + 2 * BALL_RADIUS <= paddle.getX()) {
+					if (vx > 0 && ball.getX() + 2 * BALL_RADIUS <= paddle.getX()) {
 						vx = -vx;
-					}else vy = -vy;
+					} else
+						vy = -vy;
 					countBricks++;
 					bounceClip.play();
 					remove(points);
 					points = new GLabel("" + countBricks);
 					continue;
 				}
-				if(collider3 != null && collider3 != paddle) {
+				if (collider3 != null && collider3 != paddle) {
 					remove(collider3);
-					if(vx < 0 && ball.getX() >= paddle.getX() + PADDLE_WIDTH) {
+					if (vx < 0 && ball.getX() >= paddle.getX() + PADDLE_WIDTH) {
 						vx = -vx;
-					}else vy = -vy;
+					} else
+						vy = -vy;
 					countBricks++;
 					bounceClip.play();
 					remove(points);
@@ -203,32 +201,32 @@ public class Assignment3 extends GraphicsProgram {
 				}
 			}
 			add(points);
-			if(ball.getX() >= getWidth() - 2 * BALL_RADIUS) {
+			if (ball.getX() >= getWidth() - 2 * BALL_RADIUS) {
 				ball.setLocation(getWidth() - 2 * BALL_RADIUS, ball.getY());
 				vx *= -1;
 			}
-			if(ball.getX() <= 0) {
+			if (ball.getX() <= 0) {
 				ball.setLocation(0, ball.getY());
 				vx *= -1;
 			}
-			if(ball.getY() <= 0) {
+			if (ball.getY() <= 0) {
 				ball.setLocation(ball.getX(), 0);
 				vy *= -1;
 			}
-			if(ball.getY() >= getHeight() - 2 * BALL_RADIUS) {
+			if (ball.getY() >= getHeight() - 2 * BALL_RADIUS) {
 				ball.setLocation(getWidth() / 2 - BALL_RADIUS, getHeight() / 2 - BALL_RADIUS);
 				countTrials++;
 				fallingClip.play();
-				remove(getElementAt((countTrials - 1) * 23 + 8, 28));// removes pink circles after each trial
-				if(countTrials < NTURNS) {// on the last try we do not need pause
+				remove(getElementAt((countTrials - 1) * 23 + 8, 28));// removes pink circle after each trial
+				if (countTrials < NTURNS) {// on the last try we do not need pause
 					pause(1500);
 				}
-				vx = rgen.nextDouble(1.0,3.0); //generating new direction for the ball for each try
-				if(rgen.nextBoolean(0.5)) {
+				vx = rgen.nextDouble(1.0, 3.0); // generating new direction for the ball for each try
+				if (rgen.nextBoolean(0.5)) {
 					vx = -vx;
 				}
 			}
-			if(countTrials == NTURNS) {
+			if (countTrials == NTURNS) {
 				GLabel LLabel = new GLabel("GAME OVER!");
 				LLabel.setFont("MONOSPACED-45");
 				LLabel.setColor(Color.MAGENTA);
@@ -237,7 +235,7 @@ public class Assignment3 extends GraphicsProgram {
 				gameOverClip1.play();
 				break;
 			}
-			if(countBricks > 99) {
+			if (countBricks > 99) {
 				GLabel WLabel = new GLabel("YOU WIN!");
 				WLabel.setFont("MONOSPACED-45");
 				WLabel.setColor(Color.MAGENTA);
@@ -246,27 +244,27 @@ public class Assignment3 extends GraphicsProgram {
 				winningClip.play();
 				break;
 			}
-			if((countBricks + 1) % 7 == 0) {
+			if ((countBricks + 1) % 7 == 0) {
 				p *= 0.9997;
 			}
 		}
 	}
 
-// returns an object on the x and y coordinates
+	// returns an object on the x and y coordinates
 	private GObject getCollidingObject(double x, double y) {
 		return getElementAt(x, y);
 	}
 
-// adds 100 bricks with different colors
+	// adds 100 bricks with different colors
 	private void addBricks() {
-		for(int i = 0; i < NBRICK_ROWS; i++) {
-			for(int j = 0; j <= NBRICKS_PER_ROW; j++) {
+		for (int i = 0; i < NBRICK_ROWS; i++) {
+			for (int j = 0; j <= NBRICKS_PER_ROW; j++) {
 				createBrick(i, j);
 			}
 		}
 	}
 
-// creates each brick
+	// creates each brick
 	private void createBrick(int i, int j) {
 		double startingX = (getWidth() - 10 * BRICK_WIDTH - 9 * BRICK_SEP) / 2; // left side X coordinate of the bricks
 		brick = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
@@ -274,53 +272,51 @@ public class Assignment3 extends GraphicsProgram {
 		paintBrick(brick, i);
 		add(brick, startingX + j * (BRICK_WIDTH + BRICK_SEP), BRICK_Y_OFFSET + i * (BRICK_HEIGHT + BRICK_SEP));
 	}
-	
-// paints each brick. depends on which line is the brick.
+
+	// paints each brick. depends on which line is the brick.
 	private void paintBrick(GRect brick, int i) {
-		if(i == 0 || i == 1) {
+		if (i == 0 || i == 1) {
 			brick.setColor(Color.RED);
 		}
-		if(i == 2 || i == 3) {
+		if (i == 2 || i == 3) {
 			brick.setColor(Color.ORANGE);
 		}
-		if(i == 4 || i == 5) {
+		if (i == 4 || i == 5) {
 			brick.setColor(Color.YELLOW);
 		}
-		if(i == 6 || i == 7) {
+		if (i == 6 || i == 7) {
 			brick.setColor(Color.GREEN);
 		}
-		if(i == 8 || i == 9) {
+		if (i == 8 || i == 9) {
 			brick.setColor(Color.CYAN);
 		}
 	}
-	
-// adds paddle
+
+	// adds paddle
 	private void addPaddle() {
-			paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
-			paddle.setFilled(true);
-			paddle.setColor(Color.MAGENTA);
-			add(paddle, getWidth() / 2 - paddle.getWidth() / 2, getHeight() - PADDLE_Y_OFFSET);
+		paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
+		paddle.setFilled(true);
+		paddle.setColor(Color.MAGENTA);
+		add(paddle, getWidth() / 2 - paddle.getWidth() / 2, getHeight() - PADDLE_Y_OFFSET);
 	}
-	
-	
+
 	@Override
 	public void mouseMoved(MouseEvent e) {
-			double paddleX = e.getX() - PADDLE_WIDTH / 2; // x coordinate of the paddle
-			if(paddleX > getWidth() - PADDLE_WIDTH) { // paddle should not go outside of the window
-				paddleX = getWidth() - PADDLE_WIDTH;
-			}
-			if(paddleX < 0) {
-				paddleX = 0;
-			}
-			paddle.setLocation(paddleX, getHeight() - PADDLE_HEIGHT - PADDLE_Y_OFFSET);
-			double pointsX = e.getX() - points.getWidth() / 2;
-			if(e.getX() > getWidth() - PADDLE_WIDTH / 2) {
-				pointsX = getWidth() - PADDLE_WIDTH / 2;
-			}
-			if(e.getX() < PADDLE_WIDTH / 2) {
-				pointsX = PADDLE_WIDTH / 2 - points.getWidth() / 2;
-			}
-			points.setLocation(pointsX, getHeight() - PADDLE_Y_OFFSET + PADDLE_HEIGHT + 2);
+		double paddleX = e.getX() - PADDLE_WIDTH / 2; // x coordinate of the paddle
+		if (paddleX > getWidth() - PADDLE_WIDTH) { // paddle should not go outside of the window
+			paddleX = getWidth() - PADDLE_WIDTH;
+		}
+		if (paddleX < 0) {
+			paddleX = 0;
+		}
+		paddle.setLocation(paddleX, getHeight() - PADDLE_HEIGHT - PADDLE_Y_OFFSET);
+		double pointsX = e.getX() - points.getWidth() / 2;
+		if (e.getX() > getWidth() - PADDLE_WIDTH / 2) {
+			pointsX = getWidth() - PADDLE_WIDTH / 2;
+		}
+		if (e.getX() < PADDLE_WIDTH / 2) {
+			pointsX = PADDLE_WIDTH / 2 - points.getWidth() / 2;
+		}
+		points.setLocation(pointsX, getHeight() - PADDLE_Y_OFFSET + PADDLE_HEIGHT + 2);
 	}
 }
-
