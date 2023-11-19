@@ -4,11 +4,10 @@ import acm.program.ConsoleProgram;
 public class Problem48 extends ConsoleProgram {
 	public void run() {
 		String text = readLine("Enter text: ");
-		for(int i = 0; i < text.length(); i++) {
-			char c = text.charAt(i);
+		for(char c = 'a'; c <= 'z'; c++) {
 			int count = countChar(text, c);
 			println(c + " : " + count);
-		}
+		}	
 	}
 
 	private int countChar(String text, char c) {
