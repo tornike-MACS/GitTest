@@ -4,11 +4,15 @@ import acm.program.ConsoleProgram;
 //ყველაზე ხშირ სიმბოლოს.
 public class Problem46 extends ConsoleProgram{
 	public void run() {
+		int maxCount = 0;
 		String text = readLine("Enter text: ");
-		
-		
-		
-	
+		for(char c = 'a'; c <= 'z'; c++) {
+			int count = countChar(text, c);
+			if(count > maxCount) {
+				maxCount = count;
+			}
+			println(count);
+		}
 //		String text = readLine("Enter text: ");
 //		int maxCount = 0;
 //		char maxCharacter = 0;
@@ -30,6 +34,16 @@ public class Problem46 extends ConsoleProgram{
 //			}
 //		}
 //		return count;
+	}
+
+	private int countChar(String text, char c) {
+		int count = 0;
+		for(int i = 0; i < text.length(); i ++) {
+			if(c == text.charAt(i)) {
+				count++;
+			}
+		}
+		return count;
 	}
 }
 //49
