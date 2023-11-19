@@ -6,11 +6,16 @@ import acm.program.ConsoleProgram;
 //რომ დაბრუნებული მნიშვნელობა დადებითია და ეტევა int-ში
 public class Problem49 extends ConsoleProgram {
 	public void run() {
-//		String text = readLine("enter number: ");
-//		int n = stringToInteger(text);
-		int a = '0' - '1';
-		println(a);
+		String text = readLine("enter number: ");
+		double n = stringToInteger(text);
+		println(n);
 	}
-	private int stringToInteger(String text) {
+	private double stringToInteger(String text) {
+		double answer = 0;
+		for(int i = 0; i < text.length(); i++) {
+			int n = text.charAt(i);
+			answer += n * Math.pow(10, text.length() - 1 - i);
+		}
+		return answer;
 	}
 }
