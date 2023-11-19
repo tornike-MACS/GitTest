@@ -29,8 +29,8 @@ public class Problem45 extends ConsoleProgram {
 	private int countChar(String text, String Ssymbol) {
 		char symbol = Ssymbol.charAt(0);
 		int count = 0;
-		for(int i = 0; i < Ssymbol.length(); i++) {
-			if(symbol == Ssymbol.charAt(i)) {
+		for(int i = 0; i < text.length(); i++) {
+			if(symbol == text.charAt(i)) {
 				count++;
 			}
 		}
