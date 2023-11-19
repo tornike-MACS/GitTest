@@ -7,7 +7,8 @@ import acm.program.ConsoleProgram;
 public class Problem49 extends ConsoleProgram {
 	public void run() {
 		String text = readLine("enter number: ");
-		double n = stringToInteger(text);
+		int n = text.charAt(3);
+//		double n = stringToInteger(text);
 		println(n);
 	}
 	private double stringToInteger(String text) {
