@@ -165,7 +165,7 @@ public class Assignment3 extends GraphicsProgram {
 					countBricks++;
 					bounceClip.play();
 					remove(points);
-					points = new GLabel("" + countBricks);
+					points = new GLabel("{POINTS: " + countBricks);
 					continue;
 				}
 				if(collider2 != null && collider2 != paddle) {
