@@ -15,7 +15,7 @@ public class Problem47 extends ConsoleProgram{
 		if(count == text.length() / 2) {
 			println("palindrom");
 		}else {
-			println("not");
+			println("not palindom");
 		}
 	}
 }
