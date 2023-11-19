@@ -6,29 +6,11 @@ import acm.program.GraphicsProgram;
 public class Problem45 extends ConsoleProgram {
 	public void run() {
 		String text = readLine("Enter text: ");
-		String Ssymbol = readLine("Enter symbol: ");
-		println(countChar(text, Ssymbol));
-//		int count = 0;
-//		String text = readLine("Enter the text: ");
-//		String sSymbol = readLine("Enter the symbol: ");
-//		char symbol = sSymbol.charAt(0);
-//		count = countChar(text, symbol);
-//		println(count);
-//	}
-//	
-//	private int countChar(String text, char symbol) {
-//		int count = 0;
-//		for(int i = 0; i < text.length(); i++) {
-//			if(symbol == text.charAt(i)) {
-//				count++;
-//			}
-//		}
-//		return count;
+		char symbol = readChar();
+		int count = countChar();
 	}
 	
-	private int countChar(String text, String Ssymbol) {
-		if(Ssymbol.length() != 1) return 0;
-		char symbol = Ssymbol.charAt(0);
+	private int countChar(String text, char symbol) {
 		int count = 0;
 		for(int i = 0; i < text.length(); i++) {
 			if(symbol == text.charAt(i)) {
@@ -36,5 +18,14 @@ public class Problem45 extends ConsoleProgram {
 			}
 		}
 		return count;
+	}
+	
+	private char readChar () {
+		String Ssymbol = "";
+		while(Ssymbol.length() != 1) {
+			Ssymbol = readLine("Enter symbol: ");
+		}
+		char symbol = Ssymbol.charAt(0);
+		return symbol;
 	}
 }
