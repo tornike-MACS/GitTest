@@ -10,10 +10,11 @@ public class Problem46 extends ConsoleProgram{
 		for(char c = 'a'; c <= 'z'; c++) {
 			int count = countChar(text, c);
 			if(count > maxCount) {
+				maxCount = count;
 				maxChar = c;
 			}
 		}
-		println(maxChar);
+		println(maxCount);
 //		String text = readLine("enter text: ");
 //		int maxCount = 0;
 //		char maxCharacter = 0;
