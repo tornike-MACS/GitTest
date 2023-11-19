@@ -7,19 +7,16 @@ public class Problem47 extends ConsoleProgram{
 		int count = 0;
 		String text = readLine("Enter text: ");
 		for(int i = 0; i < text.length() / 2; i++) {
-			for(int j = text.length() - 1; j > text.length() / 2; j--) {
-				if(text.charAt(i) == text.charAt(j)) {
-					count++;
-					if(count == text.length()) {
-						println("palindrom");
-						break;
-					}
-					continue;
-				}else {
-					println("not palindrom");
-					break;
-				}
+			if(text.charAt(i) == text.charAt(text.length() - 1 - i)) {
+				count++;
+				continue;
 			}
+		}
+		if(count == text.length() / 2) {
+			println("palindrom");
+		}else {
+			println("not");
 		}
 	}
 }
+
