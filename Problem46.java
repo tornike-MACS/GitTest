@@ -15,6 +15,7 @@ public class Problem46 extends ConsoleProgram{
 			}
 		}
 		println(maxCount);
+		println(maxChar);
 //		String text = readLine("enter text: ");
 //		int maxCount = 0;
 //		char maxCharacter = 0;
