@@ -11,8 +11,8 @@ public class Problem46 extends ConsoleProgram{
 			if(count > maxCount) {
 				maxCount = count;
 			}
-			println(count);
 		}
+		println(maxCount);
 //		String text = readLine("Enter text: ");
 //		int maxCount = 0;
 //		char maxCharacter = 0;
