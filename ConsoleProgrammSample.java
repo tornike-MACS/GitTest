@@ -24,20 +24,28 @@ public class ConsoleProgrammSample extends ConsoleProgram {
 //	}
 	public void run() {
 		String number = readLine("enter number: ");
-		if(isDivisibleByFour(number)) {
+		if(isDivisibleByFive(number)) {
 			println("divisible");
 		}else { 
 			println("not");
 		}
 	}
-
-	private boolean isDivisibleByFour(String number) {
-		int num1 = number.charAt(number.length() - 2) - '0';
-		int num2 = number.charAt(number.length() - 1) - '0';
-		int lastTwo = num1 * 10 + num2;
-		if(lastTwo % 4 ==0) {
+	
+	private boolean isDivisibleByFive(String number) {
+		int lastDig = number.charAt(number.charAt(number.length() - 1)) - '0';
+		if(lastDig % 5 == 0) {
 			return true;
 		}
 		return false;
 	}
+
+//	private boolean isDivisibleByFour(String number) {
+//		int num1 = number.charAt(number.length() - 2) - '0';
+//		int num2 = number.charAt(number.length() - 1) - '0';
+//		int lastTwo = num1 * 10 + num2;
+//		if(lastTwo % 4 ==0) {
+//			return true;
+//		}
+//		return false;
+//	}
 }
