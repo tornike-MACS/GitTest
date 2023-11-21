@@ -32,7 +32,7 @@ public class ConsoleProgrammSample extends ConsoleProgram {
 	}
 	
 	private boolean isDivisibleByFive(String number) {
-		int lastDig = number.charAt(number.charAt(number.length() - 1)) - '0';
+		int lastDig = number.charAt(number.length() - 1) - '0';
 		if(lastDig % 5 == 0) {
 			return true;
 		}
