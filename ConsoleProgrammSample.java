@@ -6,7 +6,7 @@ public class ConsoleProgrammSample extends ConsoleProgram {
 	public void run() {
 		String number = readLine("enter number");
 		if(isDivisibleByThree(number)) {
-			println("divisible");
+			println("divisible: ");
 		}else {
 			println("not");
 		}
