@@ -32,8 +32,8 @@ public class ConsoleProgrammSample extends ConsoleProgram {
 	}
 
 	private boolean isDivisibleByFour(String number) {
-		int num1 = number.charAt(number.length() - 1) - '0';
-		int num2 = number.charAt(number.length() - 2) - '0';
+		int num1 = number.charAt(number.length()) - '0';
+		int num2 = number.charAt(number.length() - 1) - '0';
 		int lastTwo = num1 * 10 + num2;
 		if(lastTwo % 4 ==0) {
 			return true;
