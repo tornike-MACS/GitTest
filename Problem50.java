@@ -4,20 +4,18 @@ import java.util.StringTokenizer;
 //50. შეყვანილ ტექსტში დათვალეთ სიტვყების რაოდენობა, ტოკენაიზერის საშუალებით
 public class Problem50 extends ConsoleProgram{
 	public void run() {
-//		String text = readLine("enter text: ");
-//		int wordCount = countWords(text);
-//		println("there are " + wordCount + " words in the text.");
-		int count = 0;
-		StringTokenizer tokenizer = new StringTokenizer("sefef wef wef ", " ");
-		while(tokenizer.hasMoreTokens()) {
-			println(tokenizer.nextToken());
-			count++;
-		}
-		println(count);
+		String text  = readLine("Enter text: ");
+		int wordCount = countWords(text);
+		println(wordCount);
 	}
 	
 	private int countWords(String text) {
-//		StringTokenizer tokenizer = new StringTokenizer(text, " ");
-		
+		int count = 0;
+		StringTokenizer str = new StringTokenizer(text, " ");
+		while(str.hasMoreTokens()) {
+			str.nextToken();
+			count++;
+		}
+		return count;
 	}
 }
