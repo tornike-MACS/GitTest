@@ -1,13 +1,14 @@
-import acm.program.ConsoleProgram;
+import acm.program.*;
+import java.util.*;
+import java.lang.Object;
 
 public class StringTokenizer extends ConsoleProgram{
+
 	public void run() {
-		StringTokenizer tokenizer = new StringTokenizer("sdevsd");
-		int countWords = 0;
-		while (tokenizer.hasMoreTokens()) {
-			countWords++;
-			String token = tokenizer.nextToken();
-		}
-		println(countWords)
+		  StringTokenizer st = new StringTokenizer("this is a test");
+		     while (st.hasMoreTokens()) {
+		         System.out.println(st.nextToken());
+		     }
 	}
+	
 }
