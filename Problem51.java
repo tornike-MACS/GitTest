@@ -10,7 +10,7 @@ public class Problem51 extends ConsoleProgram {
 	}
 	
 	private String removeDoubleWords(String text) {
-		String answer = "";
+		String answer = " ";
 		for(int i = 0; i < text.length(); i++) {
 			if(answer.charAt(answer.length() - 1) != text.charAt(i)) {
 				answer += text.charAt(i);
