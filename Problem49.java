@@ -18,7 +18,7 @@ public class Problem49 extends ConsoleProgram {
 	private int stringToInteger(String text) {
 		int answer = 0;
 		for(int i = 0; i < text.length(); i++) {
-			answer += answer * 10 + (text.charAt(i) - '0');
+			answer = answer * 10 + (text.charAt(i) - '0');
 		}
 		return answer;
 	}
