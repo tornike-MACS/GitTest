@@ -7,10 +7,13 @@ public class Problem50 extends ConsoleProgram{
 //		String text = readLine("enter text: ");
 //		int wordCount = countWords(text);
 //		println("there are " + wordCount + " words in the text.");
-		StringTokenizer tokenizer = new StringTokenizer("sefef wef wef ", "e");
+		int count = 0;
+		StringTokenizer tokenizer = new StringTokenizer("sefef wef wef ", " ");
 		while(tokenizer.hasMoreTokens()) {
 			println(tokenizer.nextToken());
+			count++;
 		}
+		println(count);
 	}
 	
 	private int countWords(String text) {
