@@ -3,13 +3,18 @@ import java.awt.*;
 import acm.graphics.*;
 import acm.program.*;
 
-public class bonusprob8_1 extends GraphicsProgram {
+public class bonusprob8_1 extends ConsoleProgram {
 	public void run() {
-		int x = getHeight();
-		int y = x;
-		GLabel label = new GLabel("width: " + x + ", height: " + y, 180, 200);
-		label.setFont("London-42");
-		label.setColor(Color.RED);
-		add(label);
+		
 	}
-}
+	private boolean contains(String a, String b) {
+		int prevIndex = 0;
+		for(int i = 0; i < b.length(); i++) {
+			int index = a.indexOf(b.charAt(i), prevIndex);
+			if(index == -1) {
+				return false;
+			}
+		}
+		return true;
+	}
+//თავიდააან
