@@ -16,6 +16,6 @@ public class Problem51 extends ConsoleProgram {
 				answer += text.charAt(i);
 			}
 		}
-		return answer;
+		return answer
 	}
-}
+//}არასწორიააა contains ით
