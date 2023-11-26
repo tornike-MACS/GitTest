@@ -18,7 +18,7 @@ public class PrepForMid extends ConsoleProgram{
 	
 	private int findLog(int n, int m) {
 		int count = 0;
-		while(m != 1 || m!= -1) {
+		while(m != 1) {
 			m /= n;
 			count++;
 		}
