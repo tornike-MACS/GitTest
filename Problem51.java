@@ -11,12 +11,6 @@ public class Problem51 extends ConsoleProgram {
 	}
 	
 	private String removeDoubleWords(String text) {
-		letterSaver = saveLetters(text);
-//		String compressedWord = printCompressedWord();
-		return letterSaver;
-	}
-	
-	private String saveLetters(String text) {
 		for(int i = 0; i < text.length(); i++) {
 			if(letterSaver.contains(text.charAt(i) + "") == false) {
 				letterSaver += text.charAt(i);
