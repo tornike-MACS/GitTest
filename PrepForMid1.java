@@ -2,10 +2,10 @@ import acm.program.ConsoleProgram;
 
 public class PrepForMid1 extends ConsoleProgram{
 	public void run() {
+		int diffLetters = 0;
+		int maxLetters = 0;
+		String max = "";
 		while(true) {
-			int diffLetters = 0;
-			int maxLetters = 0;
-			String max = "";
 			String s = readLine();
 			if(s.equals("END")) {
 				println(max);
