@@ -12,6 +12,7 @@ public class PrepForMid1 extends ConsoleProgram{
 				max = s;
 			}
 			if(s.equals("END")) {
+				println(max);
 				break;
 			}
 		}
