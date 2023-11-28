@@ -6,7 +6,7 @@ public class PrepForMid1 extends ConsoleProgram{
 		
 		int diffLetters = 0;
 		int maxLetters = 0;
-		String max ;
+		String max = "";
 		while(true) {
 			String s = readLine();
 			if(s.equals("END")) {
@@ -29,4 +29,4 @@ public class PrepForMid1 extends ConsoleProgram{
 		}
 		return letters.length();
 	}
-}
+
