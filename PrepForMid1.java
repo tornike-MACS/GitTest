@@ -7,13 +7,13 @@ public class PrepForMid1 extends ConsoleProgram{
 			int maxLetters = 0;
 			String max = "";
 			String s = readLine();
-			diffLetters = countDiffLetters(s);
-			if(diffLetters >= maxLetters && s.equals("END") == false) {
-				max = s;
-			}
 			if(s.equals("END")) {
 				println(max);
 				break;
+			}
+			diffLetters = countDiffLetters(s);
+			if(diffLetters >= maxLetters) {
+				max = s;
 			}
 		}
 	}
