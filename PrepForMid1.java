@@ -8,7 +8,7 @@ public class PrepForMid1 extends ConsoleProgram{
 			String max = "";
 			String s = readLine();
 			diffLetters = countDiffLetters(s);
-			if(diffLetters >= maxLetters) {
+			if(diffLetters >= maxLetters && s.equals("END") == false) {
 				max = s;
 			}
 			if(s.equals("END")) {
