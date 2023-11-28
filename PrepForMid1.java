@@ -23,7 +23,7 @@ public class PrepForMid1 extends ConsoleProgram{
 	private int countDiffLetters(String s) {
 		String letters = "";
 		for(int i = 0; i < s.length(); i++) {
-			if(letters.contains(s.charAt(i) + "")) {
+			if(letters.contains(s.charAt(i) + "") == false) {
 				letters += s.charAt(i);
 			}
 		}
