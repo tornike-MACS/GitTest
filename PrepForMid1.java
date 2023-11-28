@@ -25,7 +25,7 @@ public class PrepForMid1 extends ConsoleProgram{
 				letters += s.charAt(i);
 				count++;
 			}
-			return count;
 		}
+		return count;
 	}
 }
