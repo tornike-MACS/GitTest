@@ -1,4 +1,8 @@
+import java.awt.event.MouseEvent;
+
+import acm.graphics.GRect;
 import acm.program.ConsoleProgram;
+import acm.program.GraphicsProgram;
 
 //ამოცანა 1. ლოგარითმი (15 ქულა)
 //თქვენი ამოცანაა დაწეროთ მეთოდი რომელიც ლოგარითმს გამოითვლის. შეგახსენებთ რომ ლოგარითმი n-ის ფუძით m 
@@ -8,20 +12,36 @@ import acm.program.ConsoleProgram;
 //დაწერეთ მეთოდი log რომელსაც გადაეცემა 2 მთელი რიცხვი და რომელიცაბრუნებს ამ რიცხვებითვის 
 //ლოგარითმის მთელ ნაწილს. თქვენ არ გავთ უფლება გამოიყენოთ Math კლასი.
 //შესაბამისადვერგამოიყენებთმეთოდებს log, log10, log1p, pow და ა.შ. ჩათვალეთ, რომ m>n>0.
-public class PrepForMid extends ConsoleProgram{
+public class PrepForMid extends GraphicsProgram{
+	private static final int ROWS = 8;
+	private static final int COLUMNS = 8;
+	private static final int SIDE_LEN = 55;
+	
+	private GRect r1 = null;
+	private GRect r2 = null;
+	
 	public void run() {
-		int n = readInt("n: ");
-		int m = readInt("m: " );
-		println(findLog(n, m));
-
+		addMouseListeners();
+		drawBoard();
+	}
+	private void drawBoard() {
+		for(int i = 0; i < ROWS; i++) {
+			for(int j = 0; j < COLUMNS; j++) {
+				GRect r = new GRect(SIDE_LEN, SIDE_LEN);
+				add(r, i*SIDE_LEN, j*SIDE_LEN);
+			}
+		}
+	}
+	public void mouseClicked(MouseEvent e) {
+		double x = e.getX();
+		double y = e.getY();
+		GRect obj = (GRect) getElementAt(x, y);
+		if(obj == null) return;//break
+		if(r1 == null && r2 == null) {
+			r2 = obj;
+			r2.setFilled(true);
+			return;
+		}
 	}
 	
-	private int findLog(int n, int m) {
-		int count = 0;
-		while(m != 1) {
-			m /= n;
-			count++;
-		}
-		return count;
-	}
 }
