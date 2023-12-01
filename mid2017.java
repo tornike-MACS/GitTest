@@ -8,9 +8,9 @@ public class mid2017 extends GraphicsProgram{
 	
 	private static final double FRAME_SIZE = 300;
 	
-	private GRect frame; 
-	private GLabel points;
-	private int intPoints = 0;
+	GRect frame; 
+	GLabel points;
+	int intPoints = 0;
 	double x1;
 	double x2;
 	
@@ -22,18 +22,18 @@ public class mid2017 extends GraphicsProgram{
 
 	}
 	
-	public void mouseClicked(MouseEvent e) {
+	public void mousePressed(MouseEvent e) {
 		x1 = e.getX();
 	}
-//	public void mouseReleased(MouseEvent e) {
-//		x2 = e.getX();
-//	}
 	
 	public void mouseDragged(MouseEvent e) {
-		System.out.println("sd");
 		x2 = e.getX();
 		
+	}
+	
+	public void mouseReleased(MouseEvent e) {
 		if(x1 < x2) {
+
 			intPoints++;
 			System.out.println("sd");
 			remove(points);
@@ -44,8 +44,6 @@ public class mid2017 extends GraphicsProgram{
 			Gpoints();
 		}
 	}
-	
-	
 	
 	private void Gpoints () {
 		points = new GLabel(intPoints + "");
