@@ -11,8 +11,7 @@ public class yvelazeGamyofi2017 extends ConsoleProgram{
 	
 	private int getBiggestDivisor(int n) {
 		int biggest = 0;
-		for(int i = 2; i < n; i++) {
-			System.out.println("sd");
+		for(int i = 2; i <= n; i++) {
 			if(n % i == 0 && isPrime(i) && i > biggest) {
 				biggest = i;
 			}
