@@ -22,7 +22,8 @@ public class mid2021 extends GraphicsProgram{
 	private int x2 = 0;
 	private int y2 = 0;
 	
-	GLine line;
+	GLine line1;
+	GLine line2; 
 	
 	public void run() {
 		addMouseListeners();
@@ -33,16 +34,13 @@ public class mid2021 extends GraphicsProgram{
 		y1 = y2;
 		x2 = e.getX();
 		y2 = e.getY();
-		line = new GLine(x1, y1, x2, y2);
-		add(line);
+		line1 = new GLine(x1, y1, x2, y2);
+		add(line1);
 	}
 	
 	public void mouseDragged(MouseEvent e) {
-		if(line == null) {
-			line = new GLine(x1, y1, x2, y2);
-		}
+		line2 = new GLine(x1, y1, e.getX(), e.getY());
 		add(line);
-		
 	}
 }
 
