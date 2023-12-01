@@ -24,10 +24,13 @@ public class mid2017 extends GraphicsProgram{
 	public void mousePressed(MouseEvent e) {
 		x1 = e.getX();
 	}
+	public void mouseReleased(MouseEvent e) {
+		x2 = e.getX();
+	}
 	
 	public void mouseDragged(MouseEvent e) {
+		x2 = e.getX();
 		if(x1 < x2) {
-
 			intPoints++;
 			System.out.println("sd");
 			remove(points);
@@ -39,9 +42,6 @@ public class mid2017 extends GraphicsProgram{
 		}
 	}
 	
-	public void mouseReleased(MouseEvent e) {
-		x2 = e.getX();
-	}
 	
 	private void Gpoints () {
 		points = new GLabel(intPoints + "");
