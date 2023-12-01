@@ -21,7 +21,7 @@ public class mid2021 extends GraphicsProgram{
 	private int y1 = 0;
 	private int x2 = 0;
 	private int y2 = 0;
-	private boolean dawyebuli = false;
+	private boolean dawyebuli = true;
 	
 	GLine line;
 	
