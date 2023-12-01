@@ -6,7 +6,7 @@ import acm.program.GraphicsProgram;
 
 public class mid2017 extends GraphicsProgram{
 	
-	private static final double FRAME_SIZE = 200;
+	private static final double FRAME_SIZE = 300;
 	
 	GRect frame; 
 	GLabel points;
