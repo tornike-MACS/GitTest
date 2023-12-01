@@ -13,7 +13,7 @@ public class mid2021 extends ConsoleProgram{
 	
 	private int log(int n, int m) {
 		int nextN = n;
-		int ans = 1;
+		int ans = 0;
 		while(m > nextN) {
 			nextN *= n;
 			ans++;
