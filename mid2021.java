@@ -18,7 +18,7 @@ public class mid2021 extends ConsoleProgram{
 	}
 
 	private boolean amIYourFatherLuke(String father, String son) {
-		for(int i = 0; i < father.length(); i++) {
+		for(int i = 0; i < father.length() - 1; i++) {
 			for(int j = 1; j < father.length(); j++) {
 				String subS = father.substring(i, j);
 				if(son.equals(subS)) {
