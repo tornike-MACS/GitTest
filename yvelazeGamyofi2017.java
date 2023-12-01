@@ -12,9 +12,9 @@ public class yvelazeGamyofi2017 extends ConsoleProgram{
 	private int getBiggestDivisor(int n) {
 		int biggest = 0;
 		for(int i = 0; i < n; i++) {
+			System.out.println("sd");
 			if(n % i == 0 && isPrime(i) && i > biggest) {
 				biggest = i;
-				System.out.println("sd");
 			}
 		}
 		return biggest;
