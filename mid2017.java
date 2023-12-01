@@ -11,6 +11,8 @@ public class mid2017 extends GraphicsProgram{
 	GRect frame; 
 	GLabel points;
 	int intPoints = 0;
+	double x1;
+	double x2;
 	
 	public void run() {
 		frame = new GRect(FRAME_SIZE, FRAME_SIZE);
@@ -22,4 +24,6 @@ public class mid2017 extends GraphicsProgram{
 	public void mouseDragged(MouseEvent e) {
 		
 	}
+	
+	
 }
