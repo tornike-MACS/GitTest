@@ -45,7 +45,7 @@ public class mid2021 extends GraphicsProgram{
 		if(line == null) {
 			line = new GLine(x1, y1, x2, y2);
 		}
-		line.setEndPoint(e.getX(), e.getY());
+//		line.setEndPoint(e.getX(), e.getY());
 		add(line);
 	}
 }
