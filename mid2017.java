@@ -16,7 +16,7 @@ public class mid2017 extends GraphicsProgram{
 	
 	public void run() {
 		GRect frame = new GRect(FRAME_SIZE, FRAME_SIZE);
-		add(frame, getWidth() / 2 - FRAME_SIZE / 2, getHeight() / 2 - FRAME_SIZE);
+		add(frame, getWidth() / 2 - FRAME_SIZE / 2, getHeight() / 2 - FRAME_SIZE / 2);
 
 	}
 	
