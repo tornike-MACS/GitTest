@@ -12,6 +12,7 @@ public class PrepForMid extends GraphicsProgram{
 	
 	private GRect first = null;
 	private GRect second = null;
+	private GRect third = null;
 	
 	public void run() {
 		addMouseListeners();
@@ -37,10 +38,16 @@ public class PrepForMid extends GraphicsProgram{
 		if(second == null) {
 			second = rect;
 			second.setFilled(true);
+			third = null;
+			return;
+		}
+		if(third == null) {
+			third = rect;
+			third .setFilled(true);
 			first.setFilled(false);
 			first = second;
-			second = null;
-			return;
+			second = third;
+			third = null;
 		}
 		
 	}
