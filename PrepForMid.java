@@ -21,7 +21,7 @@ public class PrepForMid extends GraphicsProgram{
 		for(int i = 0; i < ROWS; i++) {
 			for(int j = 0; j < COLUMNS; j++) {
 				GRect rect = new GRect(SIDE_LEN, SIDE_LEN);
-				add(rect);
+				add(rect, i * SIDE_LEN, j * SIDE_LEN);
 			}
 		}
 	}
