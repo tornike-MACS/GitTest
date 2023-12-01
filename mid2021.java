@@ -33,6 +33,7 @@ public class mid2021 extends GraphicsProgram{
 		x2 = e.getX();
 		y2 = e.getY();
 		line = new GLine(x1, y1, x2, y2);
+		add(line);
 	}
 }
 
