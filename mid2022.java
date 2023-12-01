@@ -34,7 +34,20 @@ public class mid2022 extends GraphicsProgram{
 			second = null;
 			return;
 		}
-		if(rect)
+		if(first == null) {
+			first = rect;
+			first.setFilled(true);
+			return;
+		}
+		if(second == null) {
+			second = rect;
+			second.setFilled(true);
+			return;
+		}
+		first.setFilled(false);
+		first = second;
+		second = rect;
+		second.setFilled(true);
 	}
 }
 //or cvladshi vinaxavt gashavebulebs
