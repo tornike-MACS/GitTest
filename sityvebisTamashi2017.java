@@ -18,17 +18,14 @@ public class sityvebisTamashi2017 extends ConsoleProgram{
 	}
 	
 	private boolean spellWord(String a, String b) {
-		String letterSaver = "";
-		for(int i = 0; i < a.length(); i ++) {
-			if(letterSaver.contains(a.charAt(i) + "") == false) {
-				letterSaver += a.charAt(i);
+		for(int i = 0; i < a.length() - 1; i++) {
+			for(int j = 0; j < a.length(); j++) {
+				String racxa = a.substring(i, j) + a.substring(j);
+				if(racxa.equals(b)) {
+					return true;
+				}
 			}
 		}
-		for(int i = 0; i < b.length(); i ++) {
-			if(letterSaver.contains(b.charAt(i) + "") == false) {
-				return false;
-			}
-		}
-		return true;
+		return false;
 	}
 }
