@@ -35,7 +35,8 @@ public class yvelazeMimdevroba2017 extends ConsoleProgram{
 		y += 1;
 		r.move(x,y);
 		s = s.substring(s.indexOf('a'));
-		return (int)(x + y + r.getX() + s.length());
+//		return (int)(x + y + r.getX() + s.length());
+		return (int)(x);
 	}
 }
 
