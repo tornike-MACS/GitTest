@@ -29,7 +29,7 @@ public class mid2021 extends GraphicsProgram{
 	}
 	
 	public void mouseClicked(MouseEvent e) {
-		System.out.prinln("asd");
+		System.out.println("asd");
 		x1 = x2;
 		y1 = y2;
 		x2 = e.getX();
