@@ -5,7 +5,7 @@ import acm.program.*;
 
 public class bonusprob8_1 extends ConsoleProgram {
 	public void run() {
-		println("acs" + 'a');
+		println(1 + 'a');
 	}
 	
 }
