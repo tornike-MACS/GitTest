@@ -21,7 +21,7 @@ public class mid2021 extends GraphicsProgram{
 	private int y1 = 0;
 	private int x2 = 0;
 	private int y2 = 0;
-	private boolean dawyebuli = true;
+	private boolean dawyebuli = false;
 	
 	GLine line;
 	
@@ -36,9 +36,13 @@ public class mid2021 extends GraphicsProgram{
 		add(line);
 		x1 = x2;
 		y1 = y2;
+		dawyebuli = !dawyebuli;
 	}
 	
 	public void mouseDragged(MouseEvent e) {
+		if(!dawyebuli) {
+			line = new GLine(x1, y1, x2, y2);
+		}
 		line.setEndPoint(e.getX(), e.getY());
 		add(line);
 	}
