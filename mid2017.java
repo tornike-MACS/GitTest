@@ -8,8 +8,8 @@ public class mid2017 extends GraphicsProgram{
 	
 	private static final double FRAME_SIZE = 300;
 	
-	GRect frame; 
-	GLabel points;
+	private GRect frame; 
+	private GLabel points;
 	int intPoints = 0;
 	double x1;
 	double x2;
