@@ -22,7 +22,7 @@ public class mid2021 extends GraphicsProgram{
 	private int x2 = 0;
 	private int y2 = 0;
 	
-	GLine line = new GLine(x1, y1, x2, y2);;
+	GLine line = new GLine(x1, y1, x2, y2);
 	
 	public void run() {
 		addMouseListeners();
