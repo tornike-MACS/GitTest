@@ -48,7 +48,9 @@ public class PrepForMid extends GraphicsProgram{
 			first = second;
 			second = third;
 			third = null;
+			return;
 		}
+		rect.setFilled(false);
 		
 	}
 }
