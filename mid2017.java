@@ -15,6 +15,7 @@ public class mid2017 extends GraphicsProgram{
 	double x2;
 	
 	public void run() {
+		addMouseListeners();
 		frame = new GRect(FRAME_SIZE, FRAME_SIZE);
 		add(frame, getWidth() / 2 - FRAME_SIZE / 2, getHeight() / 2 - FRAME_SIZE / 2);
 		Gpoints();
