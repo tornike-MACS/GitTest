@@ -21,7 +21,7 @@ public class mid2017 extends GraphicsProgram{
 
 	}
 	
-	public void mousePressed(MouseEvent e) {
+	public void mouseClicked(MouseEvent e) {
 		x1 = e.getX();
 	}
 //	public void mouseReleased(MouseEvent e) {
