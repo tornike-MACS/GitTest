@@ -13,12 +13,9 @@ public class mid2019 extends ConsoleProgram{
 		return false;
 	}
 	private int reversedN(int n ) {
-		int lastDigit;
-		int revN = n % 10;
+		int revN = 0;
 		while(n > 0) {
-			revN = revN * 10;
-			n /= 10;
-			revN += n % 10;
+			revN = revN * 10 + n % 10;
 			n /= 10;
 		}
 		return revN;
