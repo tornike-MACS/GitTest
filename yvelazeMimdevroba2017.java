@@ -21,7 +21,7 @@ public class yvelazeMimdevroba2017 extends ConsoleProgram{
 	
 	RandomGenerator rg = RandomGenerator.getInstance();
 	
-	private static final int EXPERIMENT_COUNT = 1000;
+	private static final int EXPERIMENT_COUNT = 10000;
 	
 	public void run() {
 		double sum = 0;
