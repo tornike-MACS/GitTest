@@ -42,6 +42,8 @@ public class mid2021 extends GraphicsProgram{
 	public void mouseDragged(MouseEvent e) {
 		line2.setEndPoint(e.getX(), e.getY());
 		add(line2);
+		x2 = e.getX();
+		y2 = e.getY();
 	}
 }
 
