@@ -23,11 +23,11 @@ public class mid2022_2 extends GraphicsProgram{
 		while(true) {
 			if(isMoving) {
 				ball.move(0, v);
-				if(ball.getY() < 0 || ball.getY() + ball.getHeight() >= getHeight()) {
+				if(ball.getY() < 0 || ball.getY() + 2* BALL_RADIUS >= getHeight()) {
 					v = -v;
 				}
-				pause(PAUSE);// es sachiroaa
 			}
+			pause(PAUSE);// es sachiroaa
 		}
 		
 	}
