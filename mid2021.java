@@ -44,6 +44,7 @@ public class mid2021 extends GraphicsProgram{
 		y2 = e.getY();
 		if(!dawyebuli) {
 			line = new GLine(x1, y1, x2, y2);
+			dawyebuli = !dawyebuli;
 		}
 		add(line);
 	}
