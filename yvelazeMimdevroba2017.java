@@ -37,11 +37,10 @@ public class yvelazeMimdevroba2017 extends ConsoleProgram{
 		while(n > 0) {
 			if(rg.nextBoolean(0.5)) {
 				n /= 2;
-				count++;
 			}else {
 				n -= 1;
-				count++;
 			}
+			count++;
 		}
 		return count;
 	}
