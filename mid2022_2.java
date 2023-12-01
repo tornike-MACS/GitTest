@@ -15,7 +15,7 @@ public class mid2022_2 extends GraphicsProgram{
 	
 	public void run() {
 		addMouseListeners();
-		ball = new GOval();
+		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
 		add(ball, getWidth() / 2 - BALL_RADIUS, 0);
 		isMoving = true;
