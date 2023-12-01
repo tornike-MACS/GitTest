@@ -29,6 +29,19 @@ public class PrepForMid extends GraphicsProgram{
 	
 	public void mouseClicked(MouseEvent e) {
 		GRect rect = (GRect)getElementAt(e.getX(), e.getY());
+		if(rect == first) {
+			first.setFilled(false);
+			first = second;
+			second = null;
+			third = null;
+			return;
+		}
+		if(rect == second) {
+			second.setFilled(false);
+			second = null;
+			third = null;
+			return;
+		}
 		if(first == null) {
 			first = rect;
 			first.setFilled(true);
