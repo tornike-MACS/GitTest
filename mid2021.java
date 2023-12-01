@@ -21,7 +21,7 @@ public class mid2021 extends ConsoleProgram{
 		for(int i = 0; i < father.length() - 2; i++) {
 			for(int j = 1; j < father.length(); j++) {
 				String subS = father.substring(i, j);
-				if(son.contains(subS)) {
+				if(son.contains(subS) && subS.length() > father.length() / 2) {
 					return true;
 				}
 			}
