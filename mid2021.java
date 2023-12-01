@@ -54,6 +54,10 @@ public class mid2021 extends GraphicsProgram{
 		x2 = e.getX();
 		y2 = e.getY();
 	}
+	
+	public void mouseReleased(MouseEvent e){
+		nowClicked = false;
+	}
 }
 
 //SPOILER ALERT! თქვენი ამოცანაა დაადგინოთ არის თუ არა ლუკა ანაკინის შვილი.
