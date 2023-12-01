@@ -19,7 +19,7 @@ public class sityvebisTamashi2017 extends ConsoleProgram{
 	
 	private boolean spellWord(String a, String b) {
 		for(int i = 0; i < a.length() - 1; i++) {
-			for(int j = 0; j < a.length(); j++) {
+			for(int j = 1; j < a.length(); j++) {
 				String racxa = a.substring(i, j) + a.substring(j);
 				if(racxa.equals(b)) {
 					return true;
