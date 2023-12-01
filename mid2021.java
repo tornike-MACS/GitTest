@@ -46,6 +46,8 @@ public class mid2021 extends GraphicsProgram{
 		}
 		line.setEndPoint(e.getX(), e.getY());
 		add(line);
+		x1 = x2;
+		y1 = y2;
 	}
 }
 
