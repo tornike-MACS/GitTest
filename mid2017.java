@@ -31,7 +31,9 @@ public class mid2017 extends GraphicsProgram{
 	
 	public void mouseReleased(MouseEvent e) {
 		if(x1 < x2) {
+
 			intPoints++;
+			System.out.println("sd");
 			remove(points);
 			Gpoints();
 		}else {
