@@ -13,8 +13,11 @@ public class mid2022_2 extends GraphicsProgram{
 	private RandomGenerator rg = RandomGenerator.getInstance();
 	private boolean isMoving;
 	
-	public void run() {
+	public void init() {
 		addMouseListeners();
+	}
+	
+	public void run() {
 		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 		ball.setFilled(true);
 		add(ball, getWidth() / 2 - BALL_RADIUS, 0);
