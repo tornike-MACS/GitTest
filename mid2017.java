@@ -15,36 +15,11 @@ public class mid2017 extends GraphicsProgram{
 	double x2;
 	
 	public void run() {
-		addMouseListeners();
-		frame = new GRect(FRAME_SIZE, FRAME_SIZE);
-		add(frame, getWidth() / 2 - FRAME_SIZE / 2, getHeight() / 2 - FRAME_SIZE / 2);
-		Gpoints();
+		GRect frame = new GRect(FRAME_SIZE, FRAME_SIZE);
+		add(frame, getWidth() / 2 - FRAME_SIZE / 2, getHeight() / 2 - FRAME_SIZE);
 
 	}
 	
-	public void mousePressed(MouseEvent e) {
-		x1 = e.getX();
-	}
 	
-	public void mouseDragged(MouseEvent e) {
-		x2 = e.getX();
-	}
-	
-	public void mouseReleased(MouseEvent e) {
-		if(x1 < x2) {
-			intPoints++;
-			remove(points);
-			Gpoints();
-		}else {
-			intPoints--;
-			remove(points);
-			Gpoints();
-		}
-	}
-	
-	private void Gpoints () {
-		points = new GLabel(intPoints + "");
-		add(points, getWidth() / 2 - points.getWidth() / 2, getHeight() / 2);
-	}
  	
 }
