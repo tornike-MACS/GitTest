@@ -21,7 +21,7 @@ public class mid2021 extends GraphicsProgram{
 	private int y1 = 0;
 	private int x2 = 0;
 	private int y2 = 0;
-	private boolean nowClicked = false;
+	private boolean dawyebuli = false;
 	
 	GLine line1;
 	
@@ -30,7 +30,6 @@ public class mid2021 extends GraphicsProgram{
 	}
 	
 	public void mouseClicked(MouseEvent e) {
-		System.out.println("asd");
 		x1 = x2;
 		y1 = y2;
 		x2 = e.getX();
@@ -41,13 +40,13 @@ public class mid2021 extends GraphicsProgram{
 	
 	
 	public void mouseDragged(MouseEvent e) {
-		if(!nowClicked){
+		if(!dawyebuli){
 			x1 = x2;
 			y1 = y2;
 			x2 = e.getX();
 			y2 = e.getY();
 			line1 = new GLine(x1, y1, x2, y2);
-			nowClicked = true;
+			dawyebuli = true;
 		}
 		line1.setEndPoint(e.getX(), e.getY());
 		add(line1);
@@ -56,7 +55,7 @@ public class mid2021 extends GraphicsProgram{
 	}
 	
 	public void mouseReleased(MouseEvent e){
-		nowClicked = false;
+		dawyebuli = false;
 	}
 }
 
