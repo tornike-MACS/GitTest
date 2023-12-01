@@ -31,7 +31,6 @@ public class PrepForMid extends GraphicsProgram{
 		if(first == null) {
 			first = rect;
 			first.setFilled(true);
-			second = first;
 			return;
 		}
 		if(second == null) {
