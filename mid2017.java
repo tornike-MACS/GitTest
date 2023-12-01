@@ -35,7 +35,7 @@ public class mid2017 extends GraphicsProgram{
 		}
 		remove(points);
 		points = new GLabel("" + intPoints);
-		add(points);
+		add(points, getWidth() / 2, getHeight() / 2);
 	}
 	
  	
