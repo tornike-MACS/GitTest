@@ -19,7 +19,7 @@ public class mid2017 extends GraphicsProgram{
 		GRect frame = new GRect(FRAME_SIZE, FRAME_SIZE);
 		add(frame, getWidth() / 2 - FRAME_SIZE / 2, getHeight() / 2 - FRAME_SIZE / 2);
 		points = new GLabel("" + intPoints);
-		add(points);
+		add(points, getWidth() / 2, getHeight() / 2);
 	}
 	public void mouseDragged(MouseEvent e) {
 		x2 = e.getY();
