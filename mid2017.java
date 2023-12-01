@@ -19,7 +19,22 @@ public class mid2017 extends GraphicsProgram{
 		add(frame, getWidth() / 2 - FRAME_SIZE / 2, getHeight() / 2 - FRAME_SIZE / 2);
 
 	}
-	
+	public void mouseDragged(MouseEvent e) {
+		x2 = e.getY();
+	}
+	public void mousePressed(MouseEvent e) {
+		x1 = e.getX();
+	}
+	public void mouseReleased(MouseEvent e) {
+		if(x1 < x2 && getElementAt(e.getX(), e.getY()) != null) {
+			intPoints++;
+		}else {
+			intPoints--;
+		}
+		remove(points);
+		points = new GLabel("" + intPoints);
+		add(points);
+	}
 	
  	
 }
