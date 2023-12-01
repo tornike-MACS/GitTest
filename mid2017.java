@@ -30,7 +30,8 @@ public class mid2017 extends GraphicsProgram{
 	public void mouseReleased(MouseEvent e) {
 		if(x1 < x2 && getElementAt(e.getX(), e.getY()) != null) {
 			intPoints++;
-		}else {
+		}
+		if(x1 > x2 && getElementAt(e.getX(), e.getY()) != null){
 			intPoints--;
 		}
 		remove(points);
