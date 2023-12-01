@@ -10,7 +10,7 @@ public class mid2017 extends GraphicsProgram{
 	
 	private GRect frame; 
 	private GLabel points;
-	int intPoints = 0;
+	private int intPoints = 0;
 	double x1;
 	double x2;
 	
