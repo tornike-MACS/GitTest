@@ -14,7 +14,7 @@ public class mid2021 extends ConsoleProgram{
 	private int log(int n, int m) {
 		int nextN = n;
 		int ans = 1;
-		while(m > n) {
+		while(m > nextN) {
 			nextN *= n;
 			ans++;
 		}
