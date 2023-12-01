@@ -28,14 +28,11 @@ public class mid2017 extends GraphicsProgram{
 	
 	public void mouseDragged(MouseEvent e) {
 		x2 = e.getX();
-		
 	}
 	
 	public void mouseReleased(MouseEvent e) {
 		if(x1 < x2) {
-
 			intPoints++;
-			System.out.println("sd");
 			remove(points);
 			Gpoints();
 		}else {
