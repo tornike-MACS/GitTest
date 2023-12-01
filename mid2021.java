@@ -1,4 +1,39 @@
+import java.awt.event.MouseEvent;
+
+import acm.graphics.GLine;
 import acm.program.ConsoleProgram;
+import acm.program.GraphicsProgram;
+//ამოცანა 3. ტეხილი (25 ქულა)
+//დაწერეთ პროგრამა რაომელიც მომხმარებელს მისცემს საშუალებას მაუსის
+//დახმარებით დახატოს ტეხილი. მოთხოვნები:
+//ტეხილის სათავე დაფიქსირებულია და მდებარეობს (0,0) წერტილში.მაუსის
+//ყოველ კლიკზე დაფაზე უნდა დაემატოს ახალი GLine რომლის ერთი წვერო არის
+//ტეხილის ბოლო წერტილი, ხოლო მეორე წვერო კი, წერტილი სადაც მოხდა მაუსის
+//კლიკი. მაგალითად თუ მომხმარებელმა პირველად დააკლიკა (10, 100) წერტილზე,მაშინ თქვენმა პროგრამამ დაფაზე უნდა დაამატოს (0, 0) წერტილიდან (10, 100)
+//წერტილამდე მონაკვეთი. ხოლო თუ მეორე დაჭერისას მომხმარებელმა
+//დააკლიკა (5, 5) წერტილზე, დაფაზე უნდა დაემატოს (10, 100) წერტილიდან (5, 5)
+//წერტილამდე მონაკვეთი. ყოველი მაუსის გაჩოჩებისას(mouseDragged) პროგრამა უნდა ხატავდეს
+//მონაკვეთის მოძრაობას, რომლის ერთი ბოლო დაფიქსირებულია ტეხილის ბოლო
+//წერტილში, ხოლო მეორე ბოლო დაყვება მაუსის ისარს. ისევე როგორც ეს ხდება
+
+public class mid2021 extends GraphicsProgram{
+	private int x1 = 0;
+	private int y1 = 0;
+	private int x2 = 0;
+	private int y2 = 0;
+	
+	public void run() {
+		addMouseListeners();
+	}
+	
+	public void mouseClicked(MouseEvent e) {
+		x2 = e.getX();
+		y2 = e.getY();
+		GLine line = new GLine(x1, y1, x2, y2);
+		add(line);
+	}
+}
+
 //SPOILER ALERT! თქვენი ამოცანაა დაადგინოთ არის თუ არა ლუკა ანაკინის შვილი.
 //ამისათვის თქვენ გადმოგეცემათ ლუკას და ანაკინის DNA ნიმუშები (ორი სტრინგი). ეს ნიმუშები ერთმანეთს უნდა შეადაროთ და იპოვოთ მაქსიმალური სიგრძის
 //ზუსტი დამთხვევა რომელიც ორივე DNA-ს ნიმუშში გვხვდება. თუკი მაქსიმალური
@@ -10,28 +45,23 @@ import acm.program.ConsoleProgram;
 //სტრინგებში "CGAT", "CCTGACT" მაქსიმალური სიგრძის ქვესტინგია "GA" სტრინგებში "GATTA", "ATTGATTT" 
 //მაქსიმალური სიგრძის ქვესტინგია "GATT" სტრინგებში "ATAGGCC", "ATCCGCCAG" მაქსიმალური სიგრძის ქვესტინგია "GCC"
 
-public class mid2021 extends ConsoleProgram{
-	public void run() {
-		String father = readLine();
-		String son = readLine();
-		println(amIYourFatherLuke(father, son));
-	}
-
-	private boolean amIYourFatherLuke(String father, String son) {
-		for(int i = 0; i < father.length() - 2; i++) {
-			for(int j = 1; j < father.length(); j++) {
-				String subS = father.substring(i, j);
-				if(son.contains(subS) && subS.length() > father.length() / 2) {
-					return true;
-				}
-			}
-		}
-		return false;
-	}
-	
-}
-
-
+//public void run() {
+//	String father = readLine();
+//	String son = readLine();
+//	println(amIYourFatherLuke(father, son));
+//}
+//
+//private boolean amIYourFatherLuke(String father, String son) {
+//	for(int i = 0; i < father.length() - 2; i++) {
+//		for(int j = 1; j < father.length(); j++) {
+//			String subS = father.substring(i, j);
+//			if(son.contains(subS) && subS.length() > father.length() / 2) {
+//				return true;
+//			}
+//		}
+//	}
+//	return false;
+//}
 
 
 
