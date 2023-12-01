@@ -36,6 +36,7 @@ public class mid2021 extends GraphicsProgram{
 		add(line);
 		x1 = x2;
 		y1 = y2;
+		dawyebuli = !dawyebuli;
 	}
 	
 	public void mouseDragged(MouseEvent e) {
