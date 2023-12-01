@@ -24,9 +24,9 @@ public class mid2017 extends GraphicsProgram{
 	public void mousePressed(MouseEvent e) {
 		x1 = e.getX();
 	}
-	public void mouseReleased(MouseEvent e) {
-		x2 = e.getX();
-	}
+//	public void mouseReleased(MouseEvent e) {
+//		x2 = e.getX();
+//	}
 	
 	public void mouseDragged(MouseEvent e) {
 		x2 = e.getX();
@@ -41,6 +41,7 @@ public class mid2017 extends GraphicsProgram{
 			Gpoints();
 		}
 	}
+	
 	
 	
 	private void Gpoints () {
