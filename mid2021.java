@@ -42,7 +42,7 @@ public class mid2021 extends GraphicsProgram{
 	public void mouseDragged(MouseEvent e) {
 		if(!dawyebuli) {
 			line = new GLine(x1, y1, x2, y2);
-			dawyebuli = !dawyebuli;
+			dawyebuli = false;
 		}
 		line.setEndPoint(e.getX(), e.getY());
 		add(line);
