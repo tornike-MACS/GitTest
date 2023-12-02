@@ -24,12 +24,11 @@ public class gankumshva extends ConsoleProgram{
 	
 	private String longestRunDecompression(String s) {
 		String ans = "";
-		for(int i = 0; i < s.length() - 1; i++) {
-			if(isDigit(s.charAt(i))){
-				for(int j = 0; j < (int)s.charAt(i) - '0'; j++) {
+		for(int i = 0; i < s.length(); i++) {
+			if(isDigit(s.charAt(i))) {
+				for(int j = 0; j < s.charAt(i) - '0'; j++) {
 					ans += s.charAt(i + 1);
 				}
-				i += 1;
 			}else {
 				ans += s.charAt(i);
 			}
@@ -37,10 +36,30 @@ public class gankumshva extends ConsoleProgram{
 		return ans;
 	}
 	
-	private boolean isDigit(char c) {
+	private Boolean isDigit(char c) {
 		if(c >= 'a' && c <= 'z') {
 			return false;
-		}
-		return true;
+		}else return true;
 	}
+//	private String longestRunDecompression(String s) {
+//		String ans = "";
+//		for(int i = 0; i < s.length() - 1; i++) {
+//			if(isDigit(s.charAt(i))){
+//				for(int j = 0; j < (int)s.charAt(i) - '0'; j++) {
+//					ans += s.charAt(i + 1);
+//				}
+//				i += 1;
+//			}else {
+//				ans += s.charAt(i);
+//			}
+//		}
+//		return ans;
+//	}
+//	
+//	private boolean isDigit(char c) {
+//		if(c >= 'a' && c <= 'z') {
+//			return false;
+//		}
+//		return true;
+//	}
 }
