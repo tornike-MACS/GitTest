@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.event.MouseEvent;
 
 import acm.graphics.GOval;
@@ -24,6 +25,24 @@ public class cimcima extends GraphicsProgram {
 			ball.setFilled(true);
 			ball.setColor(rg.nextColor());
 			add(ball, e.getX() - SIZE / 2, e.getY() - SIZE / 2);
+		}else {
+			cimcim();
 		}
+	}
+	
+	private void cimcim() {
+		while(true) {
+			ball.setColor(getColor());
+			if(ball.getColor() == Color.GREEN) break;
+			pause(300);
+		}
+	}
+	
+	private Color getColor() {
+		int n = rg.nextInt(1, 4);
+		if(n == 1) return Color.BLACK;
+		if(n == 2) return Color.BLUE;
+		if(n == 3) return Color.RED;
+		if(n == 4) return Color.GREEN;
 	}
 }
