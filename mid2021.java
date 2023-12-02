@@ -38,7 +38,8 @@ public class mid2021 extends GraphicsProgram{
 	public void mouseDragged(MouseEvent e) {
 		if(x1 < x2) {
 			ovalOrRect = true;
-		}else {
+		}
+		if(x1 > x2) {
 			ovalOrRect = false;
 		}
 	}
