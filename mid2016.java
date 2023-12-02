@@ -38,7 +38,7 @@ public class mid2016 extends ConsoleProgram{
 	}
 	
 	private boolean hasDoubleWords(String s) {
-		for(int i = 0; i < s.length(); i ++) {
+		for(int i = 0; i < s.length() - 1; i ++) {
 			if(s.charAt(i) == s.charAt(i + 1)) {
 				return true;
 			}
