@@ -36,7 +36,7 @@ public class mid2022_2 extends GraphicsProgram{
 	
 	public void mouseClicked(MouseEvent e) {
 		if(getElementAt(e.getX(), e.getY()) == ball) {
-			isMoving = !isMoving;
+			isMoving = false;
 			ball.setColor(rg.nextColor());
 		}
 	}
