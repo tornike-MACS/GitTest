@@ -21,7 +21,7 @@ public class mid2021 extends ConsoleProgram{
 	}
 		
 	private int log(int n, int m) {
-		int count = 1;
+		int count = 0;
 		while(n < m) {
 			n *= n;
 			count++;
