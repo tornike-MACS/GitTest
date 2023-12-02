@@ -23,8 +23,8 @@ public class mid2021 extends ConsoleProgram{
 	}
 	
 	private boolean amIYourFatherLuke(String father, String son) {
-		for(int i = 0; i < son.length() - 2; i++) {
-			for(int j = 2; j < son.length() - 1; j++) {
+		for(int i = 0; i < son.length(); i++) {
+			for(int j = I; j < son.length(); j++) {
 				String substring = son.substring(i, j);
 				if(father.contains(substring + "") && substring.length() > father.length() / 2) {
 					return true;
