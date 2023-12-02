@@ -40,9 +40,9 @@ public class mid2021 extends GraphicsProgram{
 		x2 = e.getX();
 	}
 	
-	public void mousePressd(MouseEvent e) {
-		x1 = e.getX();
-	}
+//	public void mousePressd(MouseEvent e) {
+//		x1 = e.getX();
+//	}
 	public void mouseReleased(MouseEvent e) {
 		if(x1 < x2) {
 			ovalOrRect = true;
