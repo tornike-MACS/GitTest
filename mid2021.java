@@ -25,15 +25,15 @@ public class mid2021 extends GraphicsProgram{
 		ovalOrRect = true;
 		addMouseListeners();
 	}
-	
+	@Override
 	public void mousePressd(MouseEvent e) {
 		x1 = e.getX();
 	}
-	
+	@Override
 	public void mouseDragged(MouseEvent e) {
 		ovalOrRect = (x1 - e.getX() > 0);
 	}
-	
+	@Override
 	public void mouseClicked(MouseEvent e) {
 		GObject obj;
 		if(ovalOrRect) {
