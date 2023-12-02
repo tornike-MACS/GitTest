@@ -17,28 +17,12 @@ public class mid2022_2 extends GraphicsProgram{
 	
 	public void run() {
 		addMouseListeners();
-		ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
-		ball.setFilled(true);
-		add(ball, getWidth() / 2 - BALL_RADIUS, 0);
-		isMoving = true;
-		double v = BALL_V;
-		if(isMoving) {
-		while(true) {
-				ball.move(0, v);
-				if(ball.getY() < 0 || ball.getY() + 2* BALL_RADIUS >= getHeight()) {
-					v = -v;
-				}
-				pause(PAUSE);// es sachiroaa
-			}
-		}
+		
 		
 	}
 	
 	public void mouseClicked(MouseEvent e) {
-		if(getElementAt(e.getX(), e.getY()) == ball) {
-			isMoving = false;
-			ball.setColor(rg.nextColor());
-		}
+		
 	}
 	
 	
