@@ -7,6 +7,42 @@ import acm.graphics.GRect;
 import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
 /*-
+ * თქვენი ამოცანაა დაადგინოთ გადმოცემული სტრინგები ერთმანეთის ანაგრამები არიან თუ არა
+ * 
+ * ერთი ტექსტი მეორის ანაგრამაა, თუკი ორივე ტექსტის ჩასაწერად ერთი და იგივე ასოიების კრებულიგამოიყენება
+ * და ერთი სიტყვიდან მეორის მიღება უბრალო ასოების გადაადგილებითაა შესაძლებელი
+ */
+public class mid2021 extends ConsoleProgram{
+	public void run() {
+		String a = readLine();
+		String b = readLine();
+		println(isAnagram(a, b));
+		
+	}
+	
+	private boolean isAnagram(String a, String b) {
+		for(int i = 0; i < a.length(); i++) {
+			if(b.contains(a.charAt(i) + "")) {
+				b = cut(b, a.charAt(i));
+				a = cut(a, a.charAt(i));
+			}else {
+				return false;
+			}
+		}
+		if(b.isEmpty() && a.isEmpty()) {
+			return true;
+		}else return false;
+	}
+	
+	private String cut(String s, char c) {
+		String substring1 = s.substring(0, s.indexOf(c));
+		String substring2 = s.substring(s.indexOf(c) + 1);
+		return substring1 + substring2;
+	}
+	
+	
+}
+/*-
  * დაწერეთ გრაფიკული პროგრამა, რომელსაც აქვს ორი რეჟიმი: ამატებს ან კვადრატს, ან წრეს.
  * 
  * 1. მაუსის კლიკზე ან კვადრატი ემატება ფანჯარაზე, ან წრე (იმ წერტილზე სადაც კლიკი მოხდა)
@@ -15,45 +51,39 @@ import acm.program.GraphicsProgram;
  *    - მარცხნიდან->მარჯვნივ: შემდეგ კლიკზე ემატება კვადრატი
  * 3. თავიდან სანამ დრეგი არ მოხდება (default-ად) ემატება ოვალი
  */
-public class mid2021 extends GraphicsProgram{
-	
-	private static final double GOB_D = 50;
-	private boolean isOval;
-	private int xs;
 
-	@Override
-	public void init() {
-		isOval = true;
-		addMouseListeners();
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-		xs = e.getX();
-	}
-
-	@Override
-	public void mouseDragged(MouseEvent e) {
-		isOval = (xs - e.getX() > 0);
-	}
-
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		GObject obj;
-		if (isOval) {
-			obj = new GOval(GOB_D, GOB_D);
-		} else {
-			obj = new GRect(GOB_D, GOB_D);
-		}
-		double x = e.getX() - GOB_D / 2;
-		double y = e.getY() - GOB_D / 2;
-		add(obj, x, y);
-	}
-	
-}
-
-
-
+//private static final double GOB_D = 50;
+//private boolean isOval;
+//private int xs;
+//
+//@Override
+//public void init() {
+//	isOval = true;
+//	addMouseListeners();
+//}
+//
+//@Override
+//public void mousePressed(MouseEvent e) {
+//	xs = e.getX();
+//}
+//
+//@Override
+//public void mouseDragged(MouseEvent e) {
+//	isOval = (xs - e.getX() > 0);
+//}
+//
+//@Override
+//public void mouseClicked(MouseEvent e) {
+//	GObject obj;
+//	if (isOval) {
+//		obj = new GOval(GOB_D, GOB_D);
+//	} else {
+//		obj = new GRect(GOB_D, GOB_D);
+//	}
+//	double x = e.getX() - GOB_D / 2;
+//	double y = e.getY() - GOB_D / 2;
+//	add(obj, x, y);
+//}
 
 
 
