@@ -22,8 +22,8 @@ public class mid2022_2 extends GraphicsProgram{
 		add(ball, getWidth() / 2 - BALL_RADIUS, 0);
 		isMoving = true;
 		double v = BALL_V;
+		if(isMoving) {
 		while(true) {
-			if(isMoving) {
 				ball.move(0, v);
 				if(ball.getY() < 0 || ball.getY() + 2* BALL_RADIUS >= getHeight()) {
 					v = -v;
