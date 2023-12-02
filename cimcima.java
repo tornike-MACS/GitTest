@@ -21,9 +21,9 @@ public class cimcima extends GraphicsProgram {
 		ball = (GOval)getElementAt(e.getX(), e.getY());
 		if(ball == null) {
 			ball = new GOval(SIZE, SIZE);
-			add(ball, e.getX() - SIZE / 2, e.getY() - SIZE / 2);
 			ball.setFilled(true);
 			ball.setColor(rg.nextColor());
+			add(ball, e.getX() - SIZE / 2, e.getY() - SIZE / 2);
 		}
 	}
 }
