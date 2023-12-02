@@ -19,7 +19,7 @@ public class PrepForMid3 extends ConsoleProgram{
 	}
 	
 	private String removeNplet(String s, int n) {
-		String ans;
+		String ans = s;
 		while(hasNplet(s, n)) {
 			ans = cut(s, n);
 		}
