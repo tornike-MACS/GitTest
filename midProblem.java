@@ -11,7 +11,7 @@ public class midProblem extends ConsoleProgram {
 		int count = 1;
 		String ans = "";
 		for(int i = 0; i < s.length() - 1; i++) {
-			if(s.charAt(i) == s.charAt(i + 1)) {
+			if(s.charAt(i) == s.charAt(i + 3)) {
 				count++;
 			}else {
 				ans += "" + count + s.charAt(i);
