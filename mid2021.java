@@ -40,6 +40,8 @@ public class mid2021 extends GraphicsProgram{
 	}
 	
 	public void mouseDragged(MouseEvent e) {
+		x2 = e.getX();
+		y2 = e.getY();
 		if(axali) {
 			line = new GLine(x2, y2, e.getX(), e.getY());
 			axali = !axali;
@@ -49,8 +51,6 @@ public class mid2021 extends GraphicsProgram{
 	}
 	
 	public void mouseReleased(MouseEvent e) {
-		x2 = e.getX();
-		y2 = e.getY();
 		axali = true;
 	}
 	
