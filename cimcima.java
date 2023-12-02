@@ -23,9 +23,10 @@ public class cimcima extends GraphicsProgram {
 			pause(300);
 			if(ball != null) {
 				ball.setColor(getOurColor());
-			}
-			if(ball.getColor() == Color.GREEN) {
-				break;
+			
+				if(ball.getColor() == Color.GREEN) {
+					ball = null;
+				}
 			}
 		}
 	}
