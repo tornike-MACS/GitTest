@@ -23,7 +23,7 @@ public class mid2021 extends ConsoleProgram{
 	private int log(int n, int m) {
 		int count = 0;
 		int prev = n;
-		while(n <= m) {
+		while(prev <= m) {
 			prev = prev * n;
 			count++;
 		}
