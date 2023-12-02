@@ -19,9 +19,11 @@ public class mid2016 extends ConsoleProgram{
 	
 	private String unEvilText(String s) {
 		String ans = s;
-		for(int i = 0; i < ans.length() - 1; i++) {
-			if(ans.charAt(i) == ans.charAt(i + 1)) {
-				ans = cut(ans, i);
+		while(hasDoubleWords(ans)) {
+			for(int i = 0; i < ans.length() - 1; i++) {
+				if(ans.charAt(i) == ans.charAt(i + 1)) {
+					ans = cut(ans, i);
+				}
 			}
 		}
 		return ans;
@@ -33,6 +35,15 @@ public class mid2016 extends ConsoleProgram{
 		String substring2 = s.substring(i + 2);
 		ans = substring1 + substring2;
 		return ans;
+	}
+	
+	private boolean hasDoubleWords(String s) {
+		for(int i = 0; i < s.length(); i ++) {
+			if(s.charAt(i) == s.charAt(i + 1)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
 
