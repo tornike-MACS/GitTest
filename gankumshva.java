@@ -16,51 +16,31 @@ import acm.program.ConsoleProgram;
 //მაგალითად
 //longestRunCompress(“2a4b2c”) -&gt; “aabbbbcc”
 //longestRunCompress(“abbbbcccdee”) -&gt; “a4b3cd2e”
-public class gankumshva extends ConsoleProgram{
+public class gankumshva extends ConsoleProgram {
 	public void run() {
 		String s = readLine();
 		println(longestRunDecompression(s));
 	}
-	
+
 	private String longestRunDecompression(String s) {
 		String ans = "";
-		for(int i = 0; i < s.length(); i++) {
-			if(isDigit(s.charAt(i))) {
-				for(int j = 0; j < s.charAt(i) - '0'; j++) {
+		for (int i = 0; i < s.length() - 1; i++) {
+			if (isDigit(s.charAt(i))) {
+				for (int j = 0; j < (int) s.charAt(i) - '0'; j++) {
 					ans += s.charAt(i + 1);
 				}
 				i += 1;
-			}else {
+			} else {
 				ans += s.charAt(i);
 			}
 		}
 		return ans;
 	}
-	
-	private Boolean isDigit(char c) {
-		if(c >= 'a' && c <= 'z') {
+
+	private boolean isDigit(char c) {
+		if (c >= 'a' && c <= 'z') {
 			return false;
-		}else return true;
+		}
+		return true;
 	}
-//	private String longestRunDecompression(String s) {
-//		String ans = "";
-//		for(int i = 0; i < s.length() - 1; i++) {
-//			if(isDigit(s.charAt(i))){
-//				for(int j = 0; j < (int)s.charAt(i) - '0'; j++) {
-//					ans += s.charAt(i + 1);
-//				}
-//				i += 1;
-//			}else {
-//				ans += s.charAt(i);
-//			}
-//		}
-//		return ans;
-//	}
-//	
-//	private boolean isDigit(char c) {
-//		if(c >= 'a' && c <= 'z') {
-//			return false;
-//		}
-//		return true;
-//	}
 }
