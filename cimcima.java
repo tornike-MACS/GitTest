@@ -11,7 +11,7 @@ public class cimcima extends GraphicsProgram {
 	private GOval ball;
 	private RandomGenerator rg = RandomGenerator.getInstance();
 	
-	private boolean daiwyo = true;
+	private boolean daiwyo = false;
 	
 	private static final double SIZE = 40;
 	
