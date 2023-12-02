@@ -16,7 +16,7 @@ import acm.program.GraphicsProgram;
  */
 public class mid2021 extends GraphicsProgram{
 	
-	private boolean ovalOrRect = false;
+	private boolean ovalOrRect = true;
 	
 	private int x1;
 	private int x2;
