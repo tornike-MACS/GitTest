@@ -26,6 +26,14 @@ public class mid2021 extends GraphicsProgram{
 		addMouseListeners();
 	}
 	
+	public void mousePressd(MouseEvent e) {
+		x1 = e.getX();
+	}
+	
+	public void mouseDragged(MouseEvent e) {
+		ovalOrRect = (x1 - e.getX() > 0);
+	}
+	
 	public void mouseClicked(MouseEvent e) {
 		GObject obj;
 		if(ovalOrRect) {
@@ -34,14 +42,6 @@ public class mid2021 extends GraphicsProgram{
 			obj = new GRect(30, 30);
 		}
 		add(obj, e.getX() - 15, e.getY() - 15);
-	}
-	
-	public void mouseDragged(MouseEvent e) {
-		ovalOrRect = (x1 - e.getX() > 0);
-	}
-	
-	public void mousePressd(MouseEvent e) {
-		x1 = e.getX();
 	}
 	
 }
