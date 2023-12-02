@@ -41,7 +41,7 @@ public class mid2021 extends GraphicsProgram{
 	
 	public void mouseDragged(MouseEvent e) {
 		if(axali) {
-			line = new GLine(x1, y1, e.getX(), e.getY());
+			line = new GLine(x2, y2, e.getX(), e.getY());
 			axali = !axali;
 		}
 		line.setEndPoint(e.getX(), e.getY());
