@@ -13,8 +13,12 @@ public class midProblem extends ConsoleProgram {
 		for(int i = 0; i < s.length(); i++) {
 			 char ch = s.charAt(i);
 			 count = getCount(s, ch, i);
-			 ans += "" + count + ch;
-			 i += count - 1;
+			 if(count == 1) {
+				 ans += ch;
+			 }else {
+				 ans += "" + count + ch;
+				 i += count - 1;
+			 }ww
 		}
 		return ans;
 	}
