@@ -22,7 +22,7 @@ public class cimcima extends GraphicsProgram {
 		while(true) {
 			pause(300);
 			if(ball != null) {
-				ball.setColor(getColor());
+				ball.setColor(getOurColor());
 			}
 			if(ball.getColor() == Color.GREEN) {
 				ball = null;
@@ -50,7 +50,7 @@ public class cimcima extends GraphicsProgram {
 //		}
 //	}
 	
-	private Color getColor() {
+	private Color getOurColor() {
 		int n = rg.nextInt(1, 4);
 		if(n == 1) return Color.BLACK;
 		if(n == 2) return Color.BLUE;
