@@ -29,7 +29,6 @@ public class mid2021 extends GraphicsProgram{
 		if(ovalOrRect == false) {
 			GOval oval = new GOval(30, 30);
 			add(oval, e.getX() - 15, e.getY() - 15);
-			pause(1);
 		}else {
 			GRect rect = new GRect(30, 30);
 			add(rect, e.getX() - 15, e.getY() - 15);
@@ -39,6 +38,7 @@ public class mid2021 extends GraphicsProgram{
 	public void mouseDragged(MouseEvent e) {
 		if(x1 < x2) {
 			ovalOrRect = true;
+			System.out.println("we");
 		}
 		if(x1 > x2) {
 			ovalOrRect = false;
