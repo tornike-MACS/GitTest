@@ -1,7 +1,5 @@
-import java.awt.event.MouseEvent;
 
 import acm.program.ConsoleProgram;
-import acm.program.GraphicsProgram;
 //ამოცანა 4. ენპლეტი (25 ქულა)
 //ტექსტში ენპლეტი ეწოდება n ცალ ერთმანეთის მიყოლებით მდგარ ერთიდაიგივე
 //სიმბოლოებისგან შემდგარ სტრინგს. თქვენი ამოცანაა ტექსტში წაშალოთ ყველა
@@ -21,12 +19,12 @@ public class PrepForMid3 extends ConsoleProgram{
 		println(hasNplet(s, n));
 	}
 	
-	private String removeNplet(String s, int n) {
-		while(hasNplet(s, n)) {
-			
-		}
-		return null;
-	}
+//	private String removeNplet(String s, int n) {
+//		while(hasNplet(s, n)) {
+//			
+//		}
+//		return null;
+//	}
 	
 	private boolean hasNplet(String s, int n) {
 		int count = 0;
