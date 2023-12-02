@@ -17,7 +17,7 @@ public class cimcima extends GraphicsProgram {
 	
 	public void run() {
 		addMouseListeners();
-		
+		cimcim();
 	}
 	
 	public void mouseClicked(MouseEvent e) {
