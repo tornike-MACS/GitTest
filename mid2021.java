@@ -17,31 +17,37 @@ import acm.program.GraphicsProgram;
  */
 public class mid2021 extends GraphicsProgram{
 	
-	private boolean ovalOrRect;
-	
-	private int x1;
-	
+	private static final double GOB_D = 50;
+	private boolean isOval;
+	private int xs;
+
+	@Override
 	public void init() {
-		ovalOrRect = true;
+		isOval = true;
 		addMouseListeners();
 	}
+
 	@Override
-	public void mousePressd(MouseEvent e) {
-		x1 = e.getX();
+	public void mousePressed(MouseEvent e) {
+		xs = e.getX();
 	}
+
 	@Override
 	public void mouseDragged(MouseEvent e) {
-		ovalOrRect = (x1 - e.getX() > 0);
+		isOval = (xs - e.getX() > 0);
 	}
+
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		GObject obj;
-		if(ovalOrRect) {
-			obj = new GOval(30, 30);
-		}else{
-			obj = new GRect(30, 30);
+		if (isOval) {
+			obj = new GOval(GOB_D, GOB_D);
+		} else {
+			obj = new GRect(GOB_D, GOB_D);
 		}
-		add(obj, e.getX() - 15, e.getY() - 15);
+		double x = e.getX() - GOB_D / 2;
+		double y = e.getY() - GOB_D / 2;
+		add(obj, x, y);
 	}
 	
 }
