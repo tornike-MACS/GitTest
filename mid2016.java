@@ -9,6 +9,9 @@ import acm.program.ConsoleProgram;
 //გეომეტრიული პროგრესიია და უნდა დაბეჭდოს სტრინგი “Not a geometric porgression”
 //წინააღმდეგ შემთხვევაში. რის შემდეგაც პროგრამამ უნდა დაასრულოს მუშაობა
 public class mid2016 extends ConsoleProgram{
+	
+	private boolean yesOrNot = true;
+	
 	public void run() {
 		int n1 = readInt();
 		int n2 = readInt();
@@ -17,13 +20,20 @@ public class mid2016 extends ConsoleProgram{
 		while(true) {
 			int n = readInt();
 			if(prev * q != n) {
-				println("not");
-				break;
+				yesOrNot = false;
 			}else {
 				prev = n;
 			}
+			if(n == -1) {
+				break;
+			}
 		}
-		println("yes");
+		if(yesOrNot) {
+			println("yes");
+		}else { 
+			println("no");
+		}
+		
 	}
 }
 
