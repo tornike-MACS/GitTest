@@ -19,7 +19,7 @@ public class mid2016 extends ConsoleProgram{
 		int prev = n2;
 		while(true) {
 			int n = readInt();
-			if(prev * q != n) {
+			if(prev * q != n && n != -1) {
 				yesOrNot = false;
 			}else {
 				prev = n;
