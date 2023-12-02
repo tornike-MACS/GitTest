@@ -29,6 +29,7 @@ public class gankumshva extends ConsoleProgram{
 				for(int j = 0; j < s.charAt(i) - '0'; j++) {
 					ans += s.charAt(i + 1);
 				}
+				i += 1;
 			}else {
 				ans += s.charAt(i);
 			}
