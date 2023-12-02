@@ -18,7 +18,7 @@ public class midProblem extends ConsoleProgram {
 			 }else {
 				 ans += "" + count + ch;
 				 i += count - 1;
-			 }ww
+			 }
 		}
 		return ans;
 	}
