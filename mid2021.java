@@ -3,58 +3,7 @@ import java.awt.event.MouseEvent;
 import acm.graphics.GLine;
 import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
-//ამოცანა 3. ტეხილი (25 ქულა)
-//დაწერეთ პროგრამა რაომელიც მომხმარებელს მისცემს საშუალებას მაუსის
-//დახმარებით დახატოს ტეხილი. მოთხოვნები:
-//ტეხილის სათავე დაფიქსირებულია და მდებარეობს (0,0) წერტილში.მაუსის
-//ყოველ კლიკზე დაფაზე უნდა დაემატოს ახალი GLine რომლის ერთი წვერო არის
-//ტეხილის ბოლო წერტილი, ხოლო მეორე წვერო კი, წერტილი სადაც მოხდა მაუსის
-//კლიკი. მაგალითად თუ მომხმარებელმა პირველად დააკლიკა (10, 100) წერტილზე,მაშინ თქვენმა პროგრამამ დაფაზე უნდა დაამატოს (0, 0) წერტილიდან (10, 100)
-//წერტილამდე მონაკვეთი. ხოლო თუ მეორე დაჭერისას მომხმარებელმა
-//დააკლიკა (5, 5) წერტილზე, დაფაზე უნდა დაემატოს (10, 100) წერტილიდან (5, 5)
-//წერტილამდე მონაკვეთი. ყოველი მაუსის გაჩოჩებისას(mouseDragged) პროგრამა უნდა ხატავდეს
-//მონაკვეთის მოძრაობას, რომლის ერთი ბოლო დაფიქსირებულია ტეხილის ბოლო
-//წერტილში, ხოლო მეორე ბოლო დაყვება მაუსის ისარს. ისევე როგორც ეს ხდება
 
-public class mid2021 extends GraphicsProgram{
-	
-	private int x1 = 0;
-	private int y1 = 0;
-	private int x2 = 0;
-	private int y2 = 0;
-	
-	private GLine line;
-	
-	private boolean axali = true;
-	
-	public void run() {
-		addMouseListeners();
-	}
-	public void mouseClicked(MouseEvent e) {
-		x2 = e.getX();
-		y2 = e.getY();
-		line = new GLine(x1, y1, x2, y2);
-		add(line);
-		x1 = x2;
-		y1 = y2;
-	}
-	
-	public void mouseDragged(MouseEvent e) {
-		if(axali) {
-			line = new GLine(x1, y1, e.getX(), e.getY());
-			axali = !axali;
-		}
-		line.setEndPoint(e.getX(), e.getY());
-		add(line);
-		x1 = e.getX();
-		y1 = e.getY();
-	}
-	
-	public void mouseReleased(MouseEvent e) {
-		axali = true;
-	}
-	
-}
 
 //SPOILER ALERT! თქვენი ამოცანაა დაადგინოთ არის თუ არა ლუკა ანაკინის შვილი.
 //ამისათვის თქვენ გადმოგეცემათ ლუკას და ანაკინის DNA ნიმუშები (ორი სტრინგი). ეს ნიმუშები ერთმანეთს უნდა შეადაროთ და იპოვოთ მაქსიმალური სიგრძის
@@ -66,30 +15,82 @@ public class mid2021 extends GraphicsProgram{
 //ქვესტრინგი, რომელსაც ორივე სტრინგი შეიცავს. მაგალითად:
 //სტრინგებში "CGAT", "CCTGACT" მაქსიმალური სიგრძის ქვესტინგია "GA" სტრინგებში "GATTA", "ATTGATTT" 
 //მაქსიმალური სიგრძის ქვესტინგია "GATT" სტრინგებში "ATAGGCC", "ATCCGCCAG" მაქსიმალური სიგრძის ქვესტინგია "GCC"
+public class mid2021 extends GraphicsProgram{
+	public void run() {
+		String father = readLine();
+		String son = readLine();
+		println(amIYourFatherLuke(father, son));
+	}
+	
+	private boolean amIYourFatherLuke(String father, String son) {
+		for(int i = 0; i < son.length() - 1; i++) {
+			for(int j = 0; j < son.length(); j++) {
+				String substring = son.substring(i, j);
+				if(father.contains(substring + "") && substring.length() > father.length() / 2) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+}
 
-//public void run() {
-//	String father = readLine();
-//	String son = readLine();
-//	println(amIYourFatherLuke(father, son));
-//}
+
+
+
+
+////ამოცანა 3. ტეხილი (25 ქულა)
+////დაწერეთ პროგრამა რაომელიც მომხმარებელს მისცემს საშუალებას მაუსის
+////დახმარებით დახატოს ტეხილი. მოთხოვნები:
+////ტეხილის სათავე დაფიქსირებულია და მდებარეობს (0,0) წერტილში.მაუსის
+////ყოველ კლიკზე დაფაზე უნდა დაემატოს ახალი GLine რომლის ერთი წვერო არის
+////ტეხილის ბოლო წერტილი, ხოლო მეორე წვერო კი, წერტილი სადაც მოხდა მაუსის
+////კლიკი. მაგალითად თუ მომხმარებელმა პირველად დააკლიკა (10, 100) წერტილზე,მაშინ თქვენმა პროგრამამ დაფაზე უნდა დაამატოს (0, 0) წერტილიდან (10, 100)
+////წერტილამდე მონაკვეთი. ხოლო თუ მეორე დაჭერისას მომხმარებელმა
+////დააკლიკა (5, 5) წერტილზე, დაფაზე უნდა დაემატოს (10, 100) წერტილიდან (5, 5)
+////წერტილამდე მონაკვეთი. ყოველი მაუსის გაჩოჩებისას(mouseDragged) პროგრამა უნდა ხატავდეს
+////მონაკვეთის მოძრაობას, რომლის ერთი ბოლო დაფიქსირებულია ტეხილის ბოლო
+////წერტილში, ხოლო მეორე ბოლო დაყვება მაუსის ისარს. ისევე როგორც ეს ხდება
 //
-//private boolean amIYourFatherLuke(String father, String son) {
-//	for(int i = 0; i < father.length() - 2; i++) {
-//		for(int j = 1; j < father.length(); j++) {
-//			String subS = father.substring(i, j);
-//			if(son.contains(subS) && subS.length() > father.length() / 2) {
-//				return true;
-//			}
-//		}
+//public class mid2021 extends GraphicsProgram{
+//	
+//	private int x1 = 0;
+//	private int y1 = 0;
+//	private int x2 = 0;
+//	private int y2 = 0;
+//	
+//	private GLine line;
+//	
+//	private boolean axali = true;
+//	
+//	public void run() {
+//		addMouseListeners();
 //	}
-//	return false;
+//	public void mouseClicked(MouseEvent e) {
+//		x2 = e.getX();
+//		y2 = e.getY();
+//		line = new GLine(x1, y1, x2, y2);
+//		add(line);
+//		x1 = x2;
+//		y1 = y2;
+//	}
+//	
+//	public void mouseDragged(MouseEvent e) {
+//		if(axali) {
+//			line = new GLine(x1, y1, e.getX(), e.getY());
+//			axali = !axali;
+//		}
+//		line.setEndPoint(e.getX(), e.getY());
+//		add(line);
+//		x1 = e.getX();
+//		y1 = e.getY();
+//	}
+//	
+//	public void mouseReleased(MouseEvent e) {
+//		axali = true;
+//	}
+//	
 //}
-
-
-
-
-
-
 //თქვენი ამოცანაა დაწეროთ მეთოდი რომელიც ლოგარითმს გამოითვლის. შეგახსენებთ რომ ლოგარითმი n-ის ფუძით m არის რიცხვი რომელ ხარისხშიც
 //უნდა ავიყვანოთ n იმისათვის რომ m მივიღოთ. ანუ, თუ n^x =m , მაშინ xის მთელი
 //ნაწილია შედეგი. n ^ x > m
