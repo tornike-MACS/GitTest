@@ -15,7 +15,7 @@ import acm.program.GraphicsProgram;
 //ქვესტრინგი, რომელსაც ორივე სტრინგი შეიცავს. მაგალითად:
 //სტრინგებში "CGAT", "CCTGACT" მაქსიმალური სიგრძის ქვესტინგია "GA" სტრინგებში "GATTA", "ATTGATTT" 
 //მაქსიმალური სიგრძის ქვესტინგია "GATT" სტრინგებში "ATAGGCC", "ATCCGCCAG" მაქსიმალური სიგრძის ქვესტინგია "GCC"
-public class mid2021 extends GraphicsProgram{
+public class mid2021 extends ConsoleProgram{
 	public void run() {
 		String father = readLine();
 		String son = readLine();
