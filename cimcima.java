@@ -17,7 +17,7 @@ public class cimcima extends GraphicsProgram {
 	
 	public void run() {
 		addMouseListeners();
-		cimcim();
+//		cimcim();
 	}
 	
 	public void mouseClicked(MouseEvent e) {
@@ -29,6 +29,7 @@ public class cimcima extends GraphicsProgram {
 			add(ball, e.getX() - SIZE / 2, e.getY() - SIZE / 2);
 		}else {
 			daiwyo = true;
+			cimcim();
 		}
 	}
 	
