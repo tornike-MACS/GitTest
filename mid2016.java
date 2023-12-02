@@ -20,7 +20,7 @@ public class mid2016 extends ConsoleProgram{
 	private String unEvilText(String s) {
 		String ans = s;
 		for(int i = 0; i < ans.length() - 1; i++) {
-			if(s.charAt(i) == s.charAt(i + 1)) {
+			if(ans.charAt(i) == ans.charAt(i + 1)) {
 				ans = cut(ans, i);
 			}
 		}
