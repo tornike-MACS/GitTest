@@ -17,12 +17,12 @@ import acm.program.GraphicsProgram;
  */
 public class mid2021 extends GraphicsProgram{
 	
-	private boolean ovalOrRect = true;
+	private boolean ovalOrRect;
 	
 	private int x1;
-	private int x2;
 	
-	public void run() {
+	public void init() {
+		ovalOrRect = true;
 		addMouseListeners();
 	}
 	
