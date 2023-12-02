@@ -51,8 +51,6 @@ public class mid2021 extends GraphicsProgram{
 	public void mouseReleased(MouseEvent e) {
 		x1 = x2;
 		y1 = y2;
-		x2 = e.getX();
-		y2 = e.getY();
 		axali = true;
 	}
 	
