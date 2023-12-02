@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 
+import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
@@ -17,31 +18,34 @@ public class cimcima extends GraphicsProgram {
 	
 	public void run() {
 		addMouseListeners();
+		
+		while(true) {
+			if(ball != null) {
+				ball.setColor(getColor());
+			}
+			if(ball.getColor() == Color.GREEN) ball = null;
+		}
 	}
 	
 	public void mouseClicked(MouseEvent e) {
-		ball = (GOval)getElementAt(e.getX(), e.getY());
-		if(ball == null) {
-			ball = new GOval(SIZE, SIZE);
-			ball.setFilled(true);
-			ball.setColor(rg.nextColor());
-			add(ball, e.getX() - SIZE / 2, e.getY() - SIZE / 2);
+		GObject object = getElementAt(e.getX(), e.getY());
+		if(object == null) {
+			addBall(e.getX(), e.getY());
 		}else {
-			daiwyo = true;
-			cimcim();
+			ball = (GOval)object;
 		}
 	}
 	
-	private void cimcim() {
-		while(daiwyo) {
-			ball.setColor(getColor());
-			if(ball.getColor() == Color.GREEN) {
-				daiwyo = false;
-				break;
-			}
-			pause(30);
-		}
-	}
+//	private void cimcim() {
+//		while(daiwyo) {
+//			ball.setColor(getColor());
+//			if(ball.getColor() == Color.GREEN) {
+//				daiwyo = false;
+//				break;
+//			}
+//			pause(30);
+//		}
+//	}
 	
 	private Color getColor() {
 		int n = rg.nextInt(1, 4);
@@ -50,5 +54,12 @@ public class cimcima extends GraphicsProgram {
 		if(n == 3) return Color.RED;
 		if(n == 4) return Color.GREEN;
 		return null;
+	}
+	
+	private void addBall(int x , int y) {
+		GOval ball = new GOval(SIZE, SIZE);
+		ball.setFilled(true);
+		ball.setColor(rg.nextColor());
+		add(ball, x - SIZE / 2, y - SIZE / 2);
 	}
 }
