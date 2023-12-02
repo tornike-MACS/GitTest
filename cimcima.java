@@ -16,8 +16,8 @@ public class cimcima extends GraphicsProgram {
 	private static final double SIZE = 40;
 	
 	public void run() {
-		addMouseListeners();
 		cimcim();
+		addMouseListeners();
 	}
 	
 	public void mouseClicked(MouseEvent e) {
