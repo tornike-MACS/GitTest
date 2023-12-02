@@ -44,11 +44,11 @@ public class mid2021 extends GraphicsProgram{
 		x1 = e.getX();
 	}
 	public void mouseReleased(MouseEvent e) {
-		if(x1 < x2) {
-			ovalOrRect = true;
-		}
+//		if(x1 < x2) {
+//			ovalOrRect = ovalOrRect;
+//		}
 		if(x1 > x2) {
-			ovalOrRect = false;
+			ovalOrRect = !ovalOrRect;
 		}
 	}
 	
