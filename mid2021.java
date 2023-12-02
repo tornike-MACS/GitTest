@@ -31,7 +31,8 @@ public class mid2021 extends ConsoleProgram{
 		}
 		if(b.isEmpty() && a.isEmpty()) {
 			return true;
-		}else return false;
+		}
+		return false;
 	}
 	
 	private String cut(String s, char c) {
