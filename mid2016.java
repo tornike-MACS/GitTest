@@ -14,11 +14,25 @@ import acm.program.ConsoleProgram;
 public class mid2016 extends ConsoleProgram{
 	public void run() {
 		String s = readLine();
-		println(unEvilText(s, n));
+		println(unEvilText(s));
 	}
 	
 	private String unEvilText(String s) {
-		
+		String ans = "";
+		for(int i = 0; i < s.length(); i++) {
+			if(s.charAt(i) == s.charAt(i + 1)) {
+				ans = cut(s, i);
+			}
+		}
+		return ans;
+	}
+	
+	private String cut(String s, int i) {
+		String ans;
+		String substring1 = s.substring(0, i);
+		String substring2 = s.substring(i + 2);
+		ans = substring1 + substring2;
+		return ans;
 	}
 }
 
