@@ -16,6 +16,7 @@ public class PrepForMid1 extends ConsoleProgram{
 			diffLetters = countDiffLetters(s);
 			if(diffLetters >= maxLetters) {
 				max = s;
+				maxLetters = diffLetters;
 			}
 		}
 	}
