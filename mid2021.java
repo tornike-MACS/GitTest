@@ -25,7 +25,8 @@ public class mid2021 extends ConsoleProgram{
 			if(b.contains(a.charAt(i) + "")) {
 				b = cut(b, a.charAt(i));
 				a = cut(a, a.charAt(i));
-			}else {
+			}
+			if(b.contains(a.charAt(i) + "") == false) {
 				return false;
 			}
 		}
