@@ -26,30 +26,22 @@ public class mid2021 extends GraphicsProgram{
 	}
 	
 	public void mouseClicked(MouseEvent e) {
-		if(!ovalOrRect) {
+		if(ovalOrRect == true) {
 			GOval oval = new GOval(30, 30);
 			add(oval, e.getX() - 15, e.getY() - 15);
 		}
-		if(ovalOrRect){
+		if(ovalOrRect == false){
 			GRect rect = new GRect(30, 30);
 			add(rect, e.getX() - 15, e.getY() - 15);
 		}
 	}
 	
 	public void mouseDragged(MouseEvent e) {
-		x2 = e.getX();
+		ovalOrRect = (x1 - e.getX()) > 0;
 	}
 	
 	public void mousePressd(MouseEvent e) {
 		x1 = e.getX();
-	}
-	public void mouseReleased(MouseEvent e) {
-//		if(x1 < x2) {
-//			ovalOrRect = ovalOrRect;
-//		}
-		if(x1 > x2) {
-			ovalOrRect = !ovalOrRect;
-		}
 	}
 	
 }
