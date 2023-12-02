@@ -11,13 +11,13 @@ public class cimcima extends GraphicsProgram {
 	private GOval ball;
 	private RandomGenerator rg = RandomGenerator.getInstance();
 	
-	private boolean daiwyo = false;
+	private boolean daiwyo = true;
 	
 	private static final double SIZE = 40;
 	
 	public void run() {
 		addMouseListeners();
-//		cimcim();
+		cimcim();
 	}
 	
 	public void mouseClicked(MouseEvent e) {
@@ -29,7 +29,6 @@ public class cimcima extends GraphicsProgram {
 			add(ball, e.getX() - SIZE / 2, e.getY() - SIZE / 2);
 		}else {
 			daiwyo = true;
-			cimcim();
 		}
 	}
 	
