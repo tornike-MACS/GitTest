@@ -17,43 +17,43 @@ import acm.program.GraphicsProgram;
 //წერტილში, ხოლო მეორე ბოლო დაყვება მაუსის ისარს. ისევე როგორც ეს ხდება
 
 public class mid2021 extends GraphicsProgram{
+	
 	private int x1 = 0;
 	private int y1 = 0;
 	private int x2 = 0;
 	private int y2 = 0;
-	private boolean dawyebuli = false;
 	
-	GLine line;
+	private GLine line;
+	
+	private boolean axali = true;
 	
 	public void run() {
 		addMouseListeners();
 	}
-	
 	public void mouseClicked(MouseEvent e) {
+		x1 = x2;
+		y1 = y2;
 		x2 = e.getX();
 		y2 = e.getY();
 		line = new GLine(x1, y1, x2, y2);
 		add(line);
-		x1 = x2;
-		y1 = y2;
-		dawyebuli = !dawyebuli;
 	}
 	
 	public void mouseDragged(MouseEvent e) {
-		if(!dawyebuli) {
-			line = new GLine(x1, y1, x2, y2);
-			dawyebuli = !dawyebuli;
+		if(axali) {
+			line = new GLine(x1, y1, e.getX(), e.getY());
+			axali = !axali;
 		}
 		line.setEndPoint(e.getX(), e.getY());
 		add(line);
-		x1 = e.getX();
-		y1 = e.getY();
-		
 	}
 	
 	public void mouseReleased(MouseEvent e) {
-		dawyebuli = !dawyebuli;
+		x1 = x2;
+		y1 = y2;
+		axali = true;
 	}
+	
 }
 
 //SPOILER ALERT! თქვენი ამოცანაა დაადგინოთ არის თუ არა ლუკა ანაკინის შვილი.
