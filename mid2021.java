@@ -29,7 +29,8 @@ public class mid2021 extends GraphicsProgram{
 		if(ovalOrRect == false) {
 			GOval oval = new GOval(30, 30);
 			add(oval, e.getX() - 15, e.getY() - 15);
-		}else {
+		}
+		if(ovalOrRect == true){
 			GRect rect = new GRect(30, 30);
 			add(rect, e.getX() - 15, e.getY() - 15);
 		}
