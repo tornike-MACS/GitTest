@@ -15,16 +15,16 @@ public class PrepForMid3 extends ConsoleProgram{
 	public void run() {
 		String s = readLine();
 		int n = readInt();
-//		println(removeNplet(s, n));
-		println(hasNplet(s, n));
+		println(removeNplet(s, n));
 	}
 	
-//	private String removeNplet(String s, int n) {
-//		while(hasNplet(s, n)) {
-//			
-//		}
-//		return null;
-//	}
+	private String removeNplet(String s, int n) {
+		String ans;
+		while(hasNplet(s, n)) {
+			ans = cut(s, n);
+		}
+		return ans;
+	}
 	
 	private boolean hasNplet(String s, int n) {
 		int count = 1;
@@ -37,5 +37,22 @@ public class PrepForMid3 extends ConsoleProgram{
 			}
 		}
 		return false;
+	}
+	
+	private String cut(String s, int n) {
+		String ans;
+		int count = 1;
+		for(int i = 0; i < s.length() - 1; i++) {
+			if(s.charAt(i) == s.charAt(i + 1)) {
+				count++;
+			}
+			if(count == n) {
+				String substring1 = s.substring(0, i + 1 - count + 1);
+				String substring2 = s.substring(i + 2);
+				ans = substring1 + substring2;
+				return ans;
+			}
+		}
+		return s;
 	}
 }
