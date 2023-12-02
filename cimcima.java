@@ -40,22 +40,12 @@ public class cimcima extends GraphicsProgram {
 		}
 	}
 	
-//	private void cimcim() {
-//		while(daiwyo) {
-//			ball.setColor(getColor());
-//			if(ball.getColor() == Color.GREEN) {
-//				daiwyo = false;
-//				break;
-//			}
-//			pause(30);
-//		}
-//	}
-	
 	private Color getOurColor() {
 		int n = rg.nextInt(1, 4);
 		if(n == 1) return Color.BLACK;
 		if(n == 2) return Color.BLUE;
 		if(n == 3) return Color.RED;
+		if(n == 5) return Color.CYAN;
 		if(n == 4) return Color.GREEN;
 		return null;
 	}
