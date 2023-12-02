@@ -39,7 +39,7 @@ public class cimcima extends GraphicsProgram {
 				daiwyo = false;
 				break;
 			}
-			pause(300);
+			pause(30);
 		}
 	}
 	
