@@ -29,4 +29,4 @@ public class PrepForMid1 extends ConsoleProgram{
 		}
 		return letters.length();
 	}
-
+}
