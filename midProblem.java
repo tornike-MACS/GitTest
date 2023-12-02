@@ -21,7 +21,7 @@ public class midProblem extends ConsoleProgram {
 	
 	private int getCount(String s, char ch, int i ) {
 		int count = 0;
-		for(int j = 0; j < s.length(); j++) {
+		for(int j = i; j < s.length(); j++) {
 			if(s.charAt(j) == ch) {
 				count++;
 			}else {
