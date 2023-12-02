@@ -24,7 +24,7 @@ public class mid2021 extends ConsoleProgram{
 	
 	private boolean amIYourFatherLuke(String father, String son) {
 		for(int i = 0; i < son.length() - 2; i++) {
-			for(int j = 1; j < son.length() - 1; j++) {
+			for(int j = 2; j < son.length() - 1; j++) {
 				String substring = son.substring(i, j);
 				if(father.contains(substring + "") && substring.length() > father.length() / 2) {
 					return true;
