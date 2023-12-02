@@ -36,13 +36,6 @@ public class mid2021 extends GraphicsProgram{
 	}
 	
 	public void mouseDragged(MouseEvent e) {
-		if(x1 < x2) {
-			ovalOrRect = true;
-			System.out.println("we");
-		}
-		if(x1 > x2) {
-			ovalOrRect = false;
-		}
 		x2 = e.getX();
 	}
 	
@@ -50,7 +43,12 @@ public class mid2021 extends GraphicsProgram{
 		x1 = e.getX();
 	}
 	public void mouseReleased(MouseEvent e) {
-		x2 = e.getX();
+		if(x1 < x2) {
+			ovalOrRect = true;
+		}
+		if(x1 > x2) {
+			ovalOrRect = false;
+		}
 	}
 	
 }
