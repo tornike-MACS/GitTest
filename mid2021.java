@@ -28,7 +28,7 @@ public class mid2021 extends GraphicsProgram{
 	
 	public void mouseClicked(MouseEvent e) {
 		GObject obj;
-		if(ovalOrRect == true) {
+		if(ovalOrRect) {
 			obj = new GOval(30, 30);
 		}else{
 			obj = new GRect(30, 30);
