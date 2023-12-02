@@ -28,8 +28,8 @@ public class mid2022_2 extends GraphicsProgram{
 				if(ball.getY() < 0 || ball.getY() + 2* BALL_RADIUS >= getHeight()) {
 					v = -v;
 				}
+				pause(PAUSE);// es sachiroaa
 			}
-			pause(PAUSE);// es sachiroaa
 		}
 		
 	}
