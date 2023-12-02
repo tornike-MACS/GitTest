@@ -1,6 +1,7 @@
 import java.awt.event.MouseEvent;
 
 import acm.graphics.GLine;
+import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.ConsoleProgram;
@@ -26,14 +27,13 @@ public class mid2021 extends GraphicsProgram{
 	}
 	
 	public void mouseClicked(MouseEvent e) {
+		GObject obj;
 		if(ovalOrRect == true) {
-			GOval oval = new GOval(30, 30);
-			add(oval, e.getX() - 15, e.getY() - 15);
+			obj = new GOval(30, 30);
+		}else{
+			obj = new GRect(30, 30);
 		}
-		if(ovalOrRect == false){
-			GRect rect = new GRect(30, 30);
-			add(rect, e.getX() - 15, e.getY() - 15);
-		}
+		add(obj, e.getX() - 15, e.getY() - 15);
 	}
 	
 	public void mouseDragged(MouseEvent e) {
