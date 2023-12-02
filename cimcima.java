@@ -44,5 +44,6 @@ public class cimcima extends GraphicsProgram {
 		if(n == 2) return Color.BLUE;
 		if(n == 3) return Color.RED;
 		if(n == 4) return Color.GREEN;
+		return null;
 	}
 }
