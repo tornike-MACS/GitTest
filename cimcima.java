@@ -16,7 +16,6 @@ public class cimcima extends GraphicsProgram {
 	private static final double SIZE = 40;
 	
 	public void run() {
-		cimcim();
 		addMouseListeners();
 	}
 	
@@ -29,6 +28,7 @@ public class cimcima extends GraphicsProgram {
 			add(ball, e.getX() - SIZE / 2, e.getY() - SIZE / 2);
 		}else {
 			daiwyo = true;
+			cimcim();
 		}
 	}
 	
