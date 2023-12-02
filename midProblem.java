@@ -10,7 +10,7 @@ public class midProblem extends ConsoleProgram {
 	private String getTransformed(String s) {
 		int count;
 		String ans = "";
-		for(int i = 0; i < s.length() - 1; i++) {
+		for(int i = 0; i < s.length(); i++) {
 			 char ch = s.charAt(i);
 			 count = getCount(s, ch, i);
 			 ans += "" + count + ch;
