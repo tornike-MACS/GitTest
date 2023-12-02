@@ -20,6 +20,7 @@ public class cimcima extends GraphicsProgram {
 		addMouseListeners();
 		
 		while(true) {
+			pause(300);
 			if(ball != null) {
 				ball.setColor(getColor());
 			}
