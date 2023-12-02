@@ -26,7 +26,7 @@ public class gankumshva extends ConsoleProgram{
 		String ans = "";
 		for(int i = 0; i < s.length() - 1; i++) {
 			if(isDigit(s.charAt(i))){
-				for(int j = 0; j < (int)s.charAt(i); j++) {
+				for(int j = 0; j < (int)s.charAt(i) - '0'; j++) {
 					ans += s.charAt(i + 1);
 				}
 				i += 1;
