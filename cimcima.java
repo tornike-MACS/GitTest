@@ -11,6 +11,8 @@ public class cimcima extends GraphicsProgram {
 	private GOval ball;
 	private RandomGenerator rg = RandomGenerator.getInstance();
 	
+	private boolean daiwyo = false;
+	
 	private static final double SIZE = 40;
 	
 	public void run() {
@@ -26,14 +28,17 @@ public class cimcima extends GraphicsProgram {
 			ball.setColor(rg.nextColor());
 			add(ball, e.getX() - SIZE / 2, e.getY() - SIZE / 2);
 		}else {
-			cimcim();
+			daiwyo = true;
 		}
 	}
 	
 	private void cimcim() {
-		while(true) {
+		while(daiwyo) {
 			ball.setColor(getColor());
-			if(ball.getColor() == Color.GREEN) break;
+			if(ball.getColor() == Color.GREEN) {
+				daiwyo = false;
+				break;
+			}
 			pause(300);
 		}
 	}
