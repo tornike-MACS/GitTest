@@ -22,7 +22,7 @@ public class mid2017 extends GraphicsProgram{
 		add(points, getWidth() / 2, getHeight() / 2);
 	}
 	public void mouseDragged(MouseEvent e) {
-		x2 = e.getY();
+		x2 = e.getX();
 	}
 	public void mousePressed(MouseEvent e) {
 		x1 = e.getX();
