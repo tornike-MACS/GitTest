@@ -21,7 +21,7 @@ public class randomBalls extends GraphicsProgram{
 		}
 		while(startMoving) {
 			ball.move(0, 3);
-			pause(10);
+			pause(1);
 		}
 	}
 	
