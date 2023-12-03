@@ -21,10 +21,6 @@ public class randomBalls extends GraphicsProgram{
 	
 	public void mouseClicked(MouseEvent e) {
 		System.out.println("sd");
-		if(getElementAt(e.getX(), e.getY()) != null) {
-			System.out.println("sd");
-			ball = (GOval)getElementAt(e.getX(), e.getY());
-			ball.setColor(rg.nextColor());
-		}
 	}
 }
+
