@@ -11,6 +11,7 @@ public class randomBalls extends GraphicsProgram{
 	
 	public void run() {
 		for(int i = 0; i < 20; i++) {
+			addMouseListeners();
 			double radius = rg.nextDouble(10, 30);
 			GOval oval = new GOval(2 * radius, 2 * radius);
 			oval.setFilled(true);
