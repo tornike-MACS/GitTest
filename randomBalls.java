@@ -20,6 +20,7 @@ public class randomBalls extends GraphicsProgram{
 			add(oval, rg.nextDouble(0, getWidth() - 2 * radius), rg.nextDouble(0, getHeight() - 2 * radius));
 		}
 		while(startMoving) {
+			System.out.println("daiwyo");
 			ball.move(0, 3);
 			pause(1);
 		}
