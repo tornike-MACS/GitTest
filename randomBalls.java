@@ -10,8 +10,8 @@ public class randomBalls extends GraphicsProgram{
 	private RandomGenerator rg = RandomGenerator.getInstance();
 	
 	public void run() {
+		addMouseListeners();
 		for(int i = 0; i < 20; i++) {
-			addMouseListeners();
 			double radius = rg.nextDouble(10, 30);
 			ball = new GOval(2 * radius, 2 * radius);
 			ball.setFilled(true);
