@@ -19,11 +19,11 @@ public class randomBalls extends GraphicsProgram{
 			oval.setFilled(true);
 			add(oval, rg.nextDouble(0, getWidth() - 2 * radius), rg.nextDouble(0, getHeight() - 2 * radius));
 		}
-		while(startMoving) {
-			System.out.println("daiwyo");
-			ball.move(0, 3);
-			pause(1);
-		}
+//		while(startMoving) {
+//			System.out.println("daiwyo");
+//			ball.move(0, 3);
+//			pause(1);
+//		}
 	}
 	
 	public void mouseClicked(MouseEvent e) {
@@ -32,7 +32,12 @@ public class randomBalls extends GraphicsProgram{
 			ball.setColor(rg.nextColor());
 		}else{
 			System.out.println("sdc");
-			startMoving = true;
+//			startMoving = true;
+			while(true) {
+				System.out.println("daiwyo");
+				ball.move(0, 3);
+				pause(1);
+			}
 		}
 	}
 }
