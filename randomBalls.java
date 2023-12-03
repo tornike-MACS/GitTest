@@ -9,6 +9,7 @@ public class randomBalls extends GraphicsProgram{
 	
 	private GOval ball;
 	private RandomGenerator rg = RandomGenerator.getInstance();
+	private boolean startMoving = false;
 	
 	public void run() {
 		addMouseListeners();
@@ -18,12 +19,18 @@ public class randomBalls extends GraphicsProgram{
 			oval.setFilled(true);
 			add(oval, rg.nextDouble(0, getWidth() - 2 * radius), rg.nextDouble(0, getHeight() - 2 * radius));
 		}
+		while(startMoving) {
+			ball.move(0, 3);
+			pause(10);
+		}
 	}
 	
 	public void mouseClicked(MouseEvent e) {
 		if(getElementAt(e.getX(), e.getY()) != null) {
 			ball = (GOval)getElementAt(e.getX(), e.getY());
 			ball.setColor(rg.nextColor());
+		}else{
+			startMoving = true;
 		}
 	}
 }
