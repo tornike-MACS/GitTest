@@ -32,6 +32,7 @@ public class randomBalls extends GraphicsProgram{
 		if(getElementAt(e.getX(), e.getY()) != null) {
 			ball = (GOval)getElementAt(e.getX(), e.getY());
 			ball.setColor(rg.nextColor());
+			startMoving = false;
 		}else{
 			System.out.println("sdc");
 			startMoving = true;
