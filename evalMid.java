@@ -8,6 +8,6 @@ public class evalMid extends ConsoleProgram{
 	
 	private int eval(String s) {
 		
-		return 0;
+		return 01;
 	}
 }
