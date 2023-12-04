@@ -19,10 +19,12 @@ public class evalMid extends ConsoleProgram{
 				continue;
 			}else{
 				if(plus) {
-					ans += Integer.parseInt(st.nextToken());
+					String a = st.nextToken();
+					ans += Integer.parseInt(a);
 					continue;
 				}else {
-					ans -= Integer.parseInt(st.nextToken());
+					String b  = st.nextToken();
+					ans -= Integer.parseInt(b);
 					continue;
 				}
 			}
