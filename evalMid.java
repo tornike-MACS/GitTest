@@ -11,24 +11,23 @@ public class evalMid extends ConsoleProgram{
 		String s = readLine();
 		StringTokenizer st = new StringTokenizer(s, " ");
 		while(st.hasMoreTokens()) {
-			println(st.nextToken());
-//			if(st.nextToken().equals("+")) {
-//				plus = true;
-//				continue;
-//			}else if(st.nextToken().equals("-")) {
-//				plus = false;
-//				continue;
-//			}else{
-//				if(plus) {
-//					String a = st.nextToken();
-//					ans += Integer.parseInt(a);
-//					continue;
-//				}else {
-//					String b  = st.nextToken();
-//					ans -= Integer.parseInt(b);
-//					continue;
-//				}
-//			}
+			if(st.nextToken().equals("+")) {
+				plus = true;
+				continue;
+			}else if(st.nextToken().equals("-")) {
+				plus = false;
+				continue;
+			}else{
+				if(plus) {
+					String a = st.nextToken();
+					ans += Integer.parseInt(a);
+					continue;
+				}else {
+					String b  = st.nextToken();
+					ans -= Integer.parseInt(b);
+					continue;
+				}
+			}
 		}
 		println(ans);
 	}
