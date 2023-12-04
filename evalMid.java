@@ -11,20 +11,19 @@ public class evalMid extends ConsoleProgram{
 		String s = readLine();
 		StringTokenizer st = new StringTokenizer(s, " ");
 		while(st.hasMoreTokens()) {
-			if(st.nextToken().equals("+")) {
+			String a = st.nextToken();
+			if(a.equals("+")) {
 				plus = true;
 				continue;
-			}else if(st.nextToken().equals("-")) {
+			}else if(a.equals("-")) {
 				plus = false;
 				continue;
 			}else{
 				if(plus) {
-					String a = st.nextToken();
 					ans += Integer.parseInt(a);
 					continue;
 				}else {
-					String b  = st.nextToken();
-					ans -= Integer.parseInt(b);
+					ans -= Integer.parseInt(a);
 					continue;
 				}
 			}
