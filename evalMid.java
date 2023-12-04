@@ -13,13 +13,17 @@ public class evalMid extends ConsoleProgram{
 		while(st.hasMoreTokens()) {
 			if(st.nextToken().equals("+")) {
 				plus = true;
+				continue;
 			}else if(st.nextToken().equals("-")) {
 				plus = false;
+				continue;
 			}else{
 				if(plus) {
 					ans += Integer.parseInt(st.nextToken());
+					continue;
 				}else {
 					ans -= Integer.parseInt(st.nextToken());
+					continue;
 				}
 			}
 		}
