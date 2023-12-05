@@ -10,7 +10,7 @@ public class Problem55 extends ConsoleProgram{
 			number[i] = readInt();
 		}
 		int[] copy = Arrays.copyOf(number, n);
-		if(Arrays.equals(Arrays.sort(number), copy)) {
+4		if(Arrays.equals(Arrays.sort(number), copy)) {
 			println("yes");
 		}else {
 			println("no");
