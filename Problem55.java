@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import acm.program.ConsoleProgram;
 
 public class Problem55 extends ConsoleProgram{
@@ -7,6 +9,11 @@ public class Problem55 extends ConsoleProgram{
 		for(int i = 1; i <= n; i ++) {
 			number[i] = readInt();
 		}
-		println(yes);
+		int[] copy = Arrays.copyOf(number, n);
+		if(Arrays.equals(Arrays.sort(number), copy)) {
+			println("yes");
+		}else {
+			println("no");
+		}
 	}
 }
