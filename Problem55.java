@@ -5,7 +5,7 @@ public class Problem55 extends ConsoleProgram{
 		boolean yes = true;
 		int n  = readInt();
 		int[] number = new int[n];
-		for(int i = 0; i < n - 1; i ++) {
+		for(int i = 0; i < n; i ++) {
 			number[i] = readInt();
 			if (number[i] > number[i + 1]) {
 				yes = false;
