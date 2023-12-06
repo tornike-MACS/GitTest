@@ -22,3 +22,4 @@ public class bufferedreader extends ConsoleProgram{
 		}
 	}
 }
+//close bolos
