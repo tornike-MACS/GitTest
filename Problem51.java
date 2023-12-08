@@ -18,5 +18,4 @@ public class Problem51 extends ConsoleProgram {
 		}
 		return letterSaver;
 	}
-	
 }
