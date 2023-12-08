@@ -14,9 +14,10 @@ public class Problem60 extends ConsoleProgram{
 			}
 			list.add(0, n);
 		}
-		for(int i = 0; i <= list.size(); i++) {
+		for(int i = 0; i < list.size(); i++) {
 			if(list.get(i) == 1) {
 				list.remove(i);
+				i--;
 			}
 		}
 		println(list);
