@@ -18,7 +18,6 @@ public class Problem53 extends ConsoleProgram{
 				if(a == -1) {
 					break;
 				}
-				println(a);
 				count++;
 			}
 		}catch(IOException e) {
