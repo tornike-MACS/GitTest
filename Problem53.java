@@ -14,11 +14,11 @@ public class Problem53 extends ConsoleProgram{
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader("Problem53.java"));
 			while(true) {
-				System.out.println("sd");
 				int a = reader.read();
 				if(a == 1) {
 					break;
 				}
+				println(a);
 				count++;
 			}
 		}catch(IOException e) {
