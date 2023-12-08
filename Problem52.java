@@ -13,6 +13,7 @@ public class Problem52 extends ConsoleProgram {
 				if(s == null) {
 					break;
 				}
+				println(s);
 			}
 			reader.close();
 		}catch(IOException e) {
