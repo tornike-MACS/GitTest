@@ -10,10 +10,11 @@ public class Problem60 extends ConsoleProgram{
 			if(n == -1) {
 				break;
 			}
-			list.add(n);
+			list.add(0, n);
 		}
-		for(int i = list.size() - 1; i >= 0; i --) {
-			println(list.get(i));
-		}
+//		for(int i = list.size() - 1; i >= 0; i --) {
+//			println(list.get(i));
+//		}
+		println(list);
 	}
 }
