@@ -15,7 +15,7 @@ public class Problem53 extends ConsoleProgram{
 			BufferedReader reader = new BufferedReader(new FileReader("Problem53.java"));
 			while(true) {
 				int a = reader.read();
-				if(a == 1) {
+				if(a == -1) {
 					break;
 				}
 				println(a);
