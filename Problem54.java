@@ -13,6 +13,6 @@ public class Problem54 extends ConsoleProgram{
 			numbers[i] = a;
 		}
 		Arrays.sort(numbers);
-		println("" + numbers[n - 1] + numbers[n]);
+		println("" + numbers[n - 2] + numbers[n - 1]);
 	}
 }
