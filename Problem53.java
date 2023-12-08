@@ -25,4 +25,4 @@ public class Problem53 extends ConsoleProgram{
 		}
 		println(count);
 	}
-}
+
