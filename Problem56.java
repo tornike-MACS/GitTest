@@ -11,8 +11,8 @@ public class Problem56 extends ConsoleProgram{
 			arr[i] = readInt();
 		}
 		Arrays.sort(arr);
-		for(int i : arr) {
-			println(arr[i - 1]);
+		for(int i = 0; i < n; i++) {
+			println(arr[i]);
 		}
 	}
 }	
