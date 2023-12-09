@@ -9,20 +9,24 @@ import acm.program.ConsoleProgram;
 //გამოყოფილია ერთმანეთისგან), წინადადებების რაოდენობა. რამდენი წინდადება მთავრდება
 //წერტილით, კითხვის ნიშნით და ძახილის ნიშნით?
 public class Problem53 extends ConsoleProgram{
+	int countWords = 0;
 	public void run() {
-		int count = 0;
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader("Problem53.java"));
+			BufferedReader reader = new BufferedReader(new FileReader("text.java"));
 			while(true) {
-				int a = reader.read();
-				if(a == -1) {
+				String s = reader.readLine();
+				if(s == null) {
 					break;
 				}
-				count++;
+				for(int i = 0; i < s.length(); i++) {
+					if(s.charAt(i) == ' ') {
+						countWords++;
+					}
+				}
 			}
 		}catch(IOException e) {
 			
 		}
-		println(count);
+		println(countWords);
 	}
-
+}
