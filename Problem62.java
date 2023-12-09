@@ -13,7 +13,7 @@ public class Problem62 extends ConsoleProgram{
 			list.add(s);
 		}
 		for(int i = 0; i < list.size(); i++) {
-			println(list.get(i) + countReapetedWords(list, list.get(i)));
+			println(list.get(i) + ": " + countReapetedWords(list, list.get(i)));
 		}
 	}
 	
