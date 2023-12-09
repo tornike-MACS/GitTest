@@ -9,7 +9,7 @@ public class Problem62 extends ConsoleProgram{
 		ArrayList<String> list = new ArrayList<String>();
 		while(true) {
 			String s = readLine();
-			if(s == "1")break;
+			if(s.equals(""))break;
 			list.add(s);
 		}
 		for(int i = 0; i < list.size(); i++) {
