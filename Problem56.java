@@ -12,7 +12,7 @@ public class Problem56 extends ConsoleProgram{
 		}
 		Arrays.sort(arr);
 		for(int i : arr) {
-			println(arr[i]);
+			println(arr[i - 1]);
 		}
 	}
 }	
