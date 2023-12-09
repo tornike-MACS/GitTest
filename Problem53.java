@@ -11,6 +11,10 @@ import acm.program.ConsoleProgram;
 public class Problem53 extends ConsoleProgram{
 	int countWords = 0;
 	int countSymbols = 0;
+	int countSentences = 0;
+	int countComas = 0;
+	int countQuestion = 0;
+	int countExclamation = 0;
 	public void run() {
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader("text.java"));
@@ -25,7 +29,18 @@ public class Problem53 extends ConsoleProgram{
 					}else { 
 						countSymbols++;
 					}
-//					if()
+					if(s.charAt(i) == '.') {
+						countSentences++;
+						countComas++;
+					}
+					if(s.charAt(i) == '?') {
+						countSentences++;
+						countQuestion++;
+					}
+					if(s.charAt(i) == '!') {
+						countExclamation++;
+						countSentences++;
+					}
 				}
 				
 			}
@@ -33,6 +48,10 @@ public class Problem53 extends ConsoleProgram{
 			
 		}
 		println("words: " + countWords);
-		println("Symbols" + countSymbols);
+		println("Symbols: " + countSymbols);
+		println("sentences: " + countSentences);
+		println("comas: " + countComas);
+		println("question marks: " + countQuestion);
+		println("Exclamation: " + countExclamation);
 	}
 }
