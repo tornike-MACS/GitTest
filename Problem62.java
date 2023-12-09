@@ -12,9 +12,10 @@ public class Problem62 extends ConsoleProgram{
 			if(s.equals(""))break;
 			list.add(s);
 		}
-		for(int i = 0; i < list.size(); i++) {
-			println(list.get(i) + ": " + countReapetedWords(list, list.get(i)));
-			i--;
+		ArrayList<String> filteredList = new ArrayList<String>();
+		filteredList = filteredList(list);
+		for(int i = 0; i < filteredList.size(); i++) {
+			println(filteredList.get(i) + ": " + countReapetedWords(list, filteredList.get(i)));
 		}
 	}
 	
@@ -23,9 +24,17 @@ public class Problem62 extends ConsoleProgram{
 		for(int i = 0; i < list.size(); i++) {
 			if(s.equals(list.get(i))) {
 				count++;
-				list.remove(i);
 			}
 		}
 		return count;
+	}
+	private ArrayList<String> filteredList(ArrayList<String> list) {
+		ArrayList<String> filtered = new ArrayList<String>();
+		for(int i = 0; i < list.size(); i++) {
+			if(filtered.contains(list.get(i)) == false) {
+				filtered.add(list.get(i));
+			}
+		}
+		return filtered;
 	}
 }
