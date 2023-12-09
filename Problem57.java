@@ -12,18 +12,21 @@ public class Problem57 extends ConsoleProgram{
 	public void run() {
 		String first = readLine();
 		String second = readLine();
-		println(isAnagram(first, second));
+		println(areAnagrams(first, second));
 	}
 	
-	private int[] getFrequencies(String string) {
-		int[] frequencies = new int[26];
-		for(int i = 0; i < string.length(); i++) {
-			frequencies[string.charAt(i) - 'a'] ++;
+	private boolean areAnagrams(String first, String second) {
+		if(Arrays.equals(getFrequencies(first), getFrequencies(second))) {
+			return true;
 		}
-		return frequencies;
+		return false;
 	}
 	
-	private boolean isAnagram(String first, String second) {
-		return Arrays.equals(getFrequencies(first), getFrequencies(second));
+	private int[] getFrequencies(String s) {
+		int[] arr = new int[26];
+		for(int i = 0; i < s.length(); i++) {
+			arr[s.charAt(i) - '0']++;
+		}
+		return arr;
 	}
 }
