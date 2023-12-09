@@ -22,6 +22,7 @@ public class Problem62 extends ConsoleProgram{
 		for(int i = 0; i < list.size(); i++) {
 			if(s.equals(list.get(i))) {
 				count++;
+				list.remove(i);
 			}
 		}
 		return count;
