@@ -10,6 +10,7 @@ import acm.program.ConsoleProgram;
 //წერტილით, კითხვის ნიშნით და ძახილის ნიშნით?
 public class Problem53 extends ConsoleProgram{
 	int countWords = 0;
+	int countSymbols = 0;
 	public void run() {
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader("text.java"));
@@ -21,12 +22,17 @@ public class Problem53 extends ConsoleProgram{
 				for(int i = 0; i < s.length(); i++) {
 					if(s.charAt(i) == ' ') {
 						countWords++;
+					}else { 
+						countSymbols++;
 					}
+//					if()
 				}
+				
 			}
 		}catch(IOException e) {
 			
 		}
-		println(countWords);
+		println("words: " + countWords);
+		println("Symbols" + countSymbols);
 	}
 }
