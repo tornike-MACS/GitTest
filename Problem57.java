@@ -25,7 +25,7 @@ public class Problem57 extends ConsoleProgram{
 	private int[] getFrequencies(String s) {
 		int[] arr = new int[26];
 		for(int i = 0; i < s.length(); i++) {
-			arr[s.charAt(i) - '0']++;
+			arr[s.charAt(i) - 'a']++;
 		}
 		return arr;
 	}
