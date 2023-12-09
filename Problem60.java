@@ -23,29 +23,6 @@ public class Problem60 extends ConsoleProgram{
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 //		while(list.remove((Integer)1));//1 ianebs shlis
 //		println(list);
 		
