@@ -12,8 +12,10 @@ public class Problem61 extends ConsoleProgram{
 		for(int i = 0; i < n; i++) {
 			int key = readInt();
 			hashMap.put(key, i);
-			if(hashMap.get(m - key) == 0) {
+			if(hashMap.get(m - key) != null) {
+				if(hashMap.get(m - key) == 0) {
 				println(hashMap.get(m - key) + "" + hashMap.get(key));
+				}
 			}
 		}
 		
