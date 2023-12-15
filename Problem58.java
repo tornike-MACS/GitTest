@@ -11,6 +11,13 @@ import acm.program.ConsoleProgram;
 public class Problem58 extends ConsoleProgram{
 	public void run() {
 		int[][] arr = new int[5][5];
+		int n = 1;
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = 0; j < arr.length; j++) {
+				arr[j][i] = n;
+				n++;
+			}
+		}
 		println(magicMatrix(arr));
 	}
 	
