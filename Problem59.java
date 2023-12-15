@@ -18,9 +18,9 @@ import acm.program.ConsoleProgram;
 //გადმოცემულ მატრიცაში ერთი უჯრა მაინც იქნება რომელშიც წერია 1
 public class Problem59 extends ConsoleProgram{
 	public void run() {
-		int[][] matrix = new int[3][4];
+		int[][] matrix = new int[3][3];
 		for(int i = 0; i < 3; i++) {
-			for(int j = 0; j < 4; j++) {
+			for(int j = 0; j < 3; j++) {
 				matrix[i][j] = 1;
 			}
 		}
