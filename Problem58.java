@@ -18,6 +18,7 @@ public class Problem58 extends ConsoleProgram{
 				n++;
 			}
 		}
+		println(arr);
 		println(magicMatrix(arr));
 	}
 	
