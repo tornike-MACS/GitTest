@@ -18,63 +18,31 @@ import acm.program.ConsoleProgram;
 //გადმოცემულ მატრიცაში ერთი უჯრა მაინც იქნება რომელშიც წერია 1
 public class Problem59 extends ConsoleProgram{
 	public void run() {
-		int[][] matrix = new int[4][5];
-		for(int i = 0; i < 4; i++) {
-			for(int j = 0; j < 5; j++) {
-				matrix[i][j] = 1;
-			}
-		}
-		matrix[2][4] = 0;
-		
-		println(biggestRect(matrix));
-		
-	}
-	
-	private int biggestRect(int[][] matrix) {
-		int maxArea = 0;
-		int n = matrix.length;
-		int m = matrix[0].length;
-		for(int i = 0; i < n; i++) {
-			for(int j = 0; j < m; j++) {
-				if(matrix[i][j] == 1) {
-					int width = countWidth(matrix, i, j);
-					int height = countHeight(matrix, i , j);
-					int area = width * height;
-					if(area > maxArea) {
-						maxArea = area;
+		int count = 0;
+		int max = 0;
+		int[][] matrix = new int[5][4];
+		for(int i = 0; i < matrix.length; i++) {
+			for(int j = 0; j < matrix.length; j++) {
+				for(int a = 0; a < matrix.length; a++) {
+					for(int b = 0; b < matrix.length; b++) {
+						if(isFull(matrix, i, j, a, b)) {
+							count = countArea(matrix, i, j, a, b);
+						}
 					}
 				}
 			}
 		}
-		return maxArea;
 	}
 	
-	private int countHeight(int[][] matrix, int x , int y) {
-		int count = 0;
-		while(true) {
-			if(matrix[x][y] == 1) {
-				count++;
-			}else break;
-			if(y == matrix[x].length - 1) {
-				break;
-			}
-			y++;
+	private boolean isFull(int[][] matrix, int x1, int y1, int x2, int y2) {
+		for(int i = 0; i < matrix.length; i++) {
+			
 		}
-		return count;
 	}
 	
-	private int countWidth(int[][] matrix, int x, int y) {
-		int count = 0;
-		while(true) {
-			if(matrix[x][y] == 1) {
-				count++;
-			}else break;
-			if(x == matrix.length - 1) {
-				break;
-			}
-			x++;
-		}
-		return count;
+	private int countArea(int[][] matrix, int x1, int y1, int x2, int y2) {
+		
+	}
 	
 	
 	
