@@ -18,7 +18,7 @@ public class Problem58 extends ConsoleProgram{
 				n++;
 			}
 		}
-		println(arr);
+		println(arr.toString());
 		println(magicMatrix(arr));
 	}
 	
