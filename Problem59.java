@@ -24,6 +24,7 @@ public class Problem59 extends ConsoleProgram{
 				matrix[i][j] = 1;
 			}
 		}
+		matrix[2][4] = 0;
 		
 		println(biggestRect(matrix));
 		
