@@ -19,8 +19,8 @@ import acm.program.ConsoleProgram;
 public class Problem59 extends ConsoleProgram{
 	public void run() {
 		int[][] matrix = new int[3][4];
-		for(int i = 0; i < 4; i++) {
-			for(int j = 0; j < 3; j++) {
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 4; j++) {
 				matrix[i][j] = 1;
 			}
 		}
@@ -54,10 +54,10 @@ public class Problem59 extends ConsoleProgram{
 			if(matrix[x][y] == 1) {
 				count++;
 			}else break;
-			if(x == matrix[x].length - 1) {
+			if(y == matrix[x].length - 1) {
 				break;
 			}
-			x++;
+			y++;
 		}
 		return count;
 	}
@@ -68,10 +68,10 @@ public class Problem59 extends ConsoleProgram{
 			if(matrix[x][y] == 1) {
 				count++;
 			}else break;
-			if(y == matrix.length - 1) {
+			if(x == matrix.length - 1) {
 				break;
 			}
-			y++;
+			x++;
 		}
 		return count;
 	}
