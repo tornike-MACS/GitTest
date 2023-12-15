@@ -54,10 +54,10 @@ public class Problem59 extends ConsoleProgram{
 			if(matrix[x][y] == 1) {
 				count++;
 			}else break;
-			x++;
-			if(x > matrix[x].length) {
+			if(x == matrix[x].length - 1) {
 				break;
 			}
+			x++;
 		}
 		return count;
 	}
@@ -68,7 +68,7 @@ public class Problem59 extends ConsoleProgram{
 			if(matrix[x][y] == 1) {
 				count++;
 			}else break;
-			if(y > matrix.length) {
+			if(y == matrix.length - 1) {
 				break;
 			}
 			y++;
