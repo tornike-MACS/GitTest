@@ -75,7 +75,7 @@ public class Problem59 extends ConsoleProgram{
 			x++;
 		}
 		return count;
-	}
+	
 	
 	
 	
