@@ -48,7 +48,7 @@ public class Problem59 extends ConsoleProgram{
 		return maxArea;
 	}
 	
-	private int countWidth(int[][] matrix, int x , int y) {
+	private int countHeight(int[][] matrix, int x , int y) {
 		int count = 0;
 		while(true) {
 			if(matrix[x][y] == 1) {
@@ -62,7 +62,7 @@ public class Problem59 extends ConsoleProgram{
 		return count;
 	}
 	
-	private int countHeight(int[][] matrix, int x, int y) {
+	private int countWidth(int[][] matrix, int x, int y) {
 		int count = 0;
 		while(true) {
 			if(matrix[x][y] == 1) {
