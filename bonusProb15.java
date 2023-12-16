@@ -15,6 +15,7 @@ import acm.program.ConsoleProgram;
 public class bonusProb15 extends ConsoleProgram{
 	public void run() {
 		String s = readLine();
+		
 		int count = 0;
 		int ans = 0;
 		for(int i = 0; i < s.length(); i++) {
@@ -28,6 +29,17 @@ public class bonusProb15 extends ConsoleProgram{
 				ans++;
 			}
 		}
-		println(ans);
+		if(countLetter(s, 'L') == countLetter(s, 'R')) {
+			println(ans);
+		}else println(1);
+	}
+	private int countLetter(String s, char c) {
+		int count = 0;
+		for(int i = 0; i < s.length(); i++) {
+			if(s.charAt(i) == c) {
+				count++;
+			}
+		}
+		return count;
 	}
 }
