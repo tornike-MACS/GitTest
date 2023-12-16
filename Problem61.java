@@ -10,15 +10,20 @@ public class Problem61 extends ConsoleProgram{
 		int n = readInt();
 		HashMap<Integer, Integer> hashMap = new HashMap<Integer, Integer>();
 		int key = 0;
+		int first = 0;
+		int second = 0;
 		for(int i = 0; i < n; i++) {
 			key = readInt();
 			hashMap.put(key, i);
-		}
-		if(hashMap.get(m - key) != null) {
-			if(hashMap.get(m - key) == 0) {
-			println(hashMap.get(m - key) + " " + hashMap.get(key));
+			if(hashMap.get(m - key) != null) {
+				if(hashMap.get(m - key) == 0) {
+				first = hashMap.get(m - key);
+				second = hashMap.get(key);
+				}
 			}
 		}
+		println(first + " " + second);
+		
 		
 		
 		
