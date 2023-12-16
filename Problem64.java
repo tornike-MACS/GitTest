@@ -20,9 +20,9 @@ public class Problem64 extends ConsoleProgram{
 				list.add(b);
 			}
 			if(map.containsKey(a) == false) {
-				map.put(a, b);
+				map.put(b, a);
 			}else {
-				map.put(a, map.get(a) + " , " + b);
+				map.put(b, map.get(b) + " , " + a);
 			}
 		}
 		
