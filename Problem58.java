@@ -15,7 +15,7 @@ public class Problem58 extends ConsoleProgram{
 		for(int i = 0; i < arr.length; i++) {
 			for(int j = 0; j < arr.length; j++) {
 				arr[j][i] = n;
-				n += 2;
+				n++;
 			}
 		}
 		println(magicMatrix(arr));
