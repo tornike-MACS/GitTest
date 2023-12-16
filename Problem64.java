@@ -11,10 +11,10 @@ public class Problem64 extends ConsoleProgram{
 		ArrayList<String> list = new ArrayList<String>();
 		while(true) {
 		String a = readLine("A: ");
+		if(a.length() == 0)break;
 		if(list.contains(a) == false) {
 			list.add(a);
 		}
-		if(a.length() == 0)break;
 		String b = readLine("B: ");
 		if(list.contains(b) == false) {
 			list.add(b);
