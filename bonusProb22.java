@@ -31,6 +31,6 @@ public class bonusProb22 extends ConsoleProgram{
 				n++;
 			}
 		}
-		println(matrix);
+		println(matrix.toString());
 	}
 }
