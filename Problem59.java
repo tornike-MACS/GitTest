@@ -35,7 +35,8 @@ public class Problem59 extends ConsoleProgram{
 				for(int a = 0; a < n; a++) {
 					for(int b = 0; b < m; b++) {
 						if(isFull(matrix, i, j, a, b)) {
-							count = countArea(matrix, i, j, a, b);
+//							count = countArea(matrix, i, j, a, b);
+							println("true");
 						}
 						if(count > max) {
 							max = count;
@@ -44,7 +45,7 @@ public class Problem59 extends ConsoleProgram{
 				}
 			}
 		}
-		println(max);
+//		println(max);
 	}
 	
 	private boolean isFull(int[][] matrix, int x1, int y1, int x2, int y2) {
