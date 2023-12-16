@@ -30,7 +30,7 @@ public class Problem64 extends ConsoleProgram{
 	private ArrayList<String> friendsList(String s, HashMap<String, String> map) {
 		ArrayList<String> ans = new ArrayList<String>();
 		for(String x : map.keySet()) {
-			if(map.get(x) == s) {
+			if(map.get(x).equals(s)) {
 				ans.add(map.get(x));
 			}
 		}
