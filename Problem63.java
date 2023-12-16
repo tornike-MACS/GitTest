@@ -15,7 +15,7 @@ public class Problem63 extends ConsoleProgram{
 			String a = readLine("A: ");
 			if(a.length() == 0)break;
 			String b = readLine("B: ");
-			map.put(b, a);
+			map.put(a, b);
 			count = countFriends(map, b);
 			if(count > max) {
 				max = count;
