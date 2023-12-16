@@ -24,6 +24,6 @@ public class bonusProb22_2 extends ConsoleProgram{
 				copy[i][j] = matrix[i][matrix[i].length - 1 - j]; 
 			}
 		}
-		return copy;
+		return matrix;
 	}
 }
