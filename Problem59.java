@@ -48,8 +48,8 @@ public class Problem59 extends ConsoleProgram{
 	}
 	
 	private boolean isFull(int[][] matrix, int x1, int y1, int x2, int y2) {
-		for(int i = x1; i < x2; i++) {
-			for(int j = y1; j < y2; j++) {
+		for(int i = x1; i <= x2; i++) {
+			for(int j = y1; j <= y2; j++) {
 				if(matrix[i][j] == 0)return false;
 			}
 		}
