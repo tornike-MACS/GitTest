@@ -9,13 +9,14 @@ public class Problem61 extends ConsoleProgram{
 		int m = readInt();
 		int n = readInt();
 		HashMap<Integer, Integer> hashMap = new HashMap<Integer, Integer>();
+		int key = 0;
 		for(int i = 0; i < n; i++) {
-			int key = readInt();
+			key = readInt();
 			hashMap.put(key, i);
-			if(hashMap.get(m - key) != null) {
-				if(hashMap.get(m - key) == 0) {
-				println(hashMap.get(m - key) + " " + hashMap.get(key));
-				}
+		}
+		if(hashMap.get(m - key) != null) {
+			if(hashMap.get(m - key) == 0) {
+			println(hashMap.get(m - key) + " " + hashMap.get(key));
 			}
 		}
 		
