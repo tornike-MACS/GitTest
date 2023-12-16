@@ -26,8 +26,9 @@ public class Problem64 extends ConsoleProgram{
 			}
 		}
 		
-			println(map);
-		
+		for(String x : map.keySet()) {
+			println(x + map.get(x));
+		}
 	}
 	
 	private ArrayList<String> friendsList(String s, HashMap<String, String> map) {
