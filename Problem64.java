@@ -31,7 +31,7 @@ public class Problem64 extends ConsoleProgram{
 		ArrayList<String> ans = new ArrayList<String>();
 		for(String x : map.keySet()) {
 			if(map.get(x).equals(s)) {
-				ans.add(map.get(x));
+				ans.add(x);
 			}
 		}
 		return ans;
