@@ -14,7 +14,7 @@ public class Problem61 extends ConsoleProgram{
 			hashMap.put(key, i);
 			if(hashMap.get(m - key) != null) {
 				if(hashMap.get(m - key) == 0) {
-				println(hashMap.get(m - key) + "" + hashMap.get(key));
+				println(hashMap.get(m - key) + " " + hashMap.get(key));
 				}
 			}
 		}
