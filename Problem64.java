@@ -26,9 +26,8 @@ public class Problem64 extends ConsoleProgram{
 			}
 		}
 		
-		for(int i = 0; i < list.size(); i++) {
 			println(map);
-		}
+		
 	}
 	
 	private ArrayList<String> friendsList(String s, HashMap<String, String> map) {
