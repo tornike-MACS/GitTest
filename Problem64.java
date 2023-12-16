@@ -10,20 +10,24 @@ public class Problem64 extends ConsoleProgram{
 		HashMap<String, String> map = new HashMap<String, String>();
 		ArrayList<String> list = new ArrayList<String>();
 		while(true) {
-		String a = readLine("A: ");
-		if(a.length() == 0)break;
-		if(list.contains(a) == false) {
-			list.add(a);
-		}
-		String b = readLine("B: ");
-		if(list.contains(b) == false) {
-			list.add(b);
-		}
-		map.put(a, b);
+			String a = readLine("A: ");
+			if(a.length() == 0)break;
+			if(list.contains(a) == false) {
+				list.add(a);
+			}
+			String b = readLine("B: ");
+			if(list.contains(b) == false) {
+				list.add(b);
+			}
+			if(map.containsKey(a) == false) {
+				map.put(a, b);
+			}else {
+				map.put(a, map.get(a) + " , " + b);
+			}
 		}
 		
 		for(int i = 0; i < list.size(); i++) {
-			println(list.get(i) + " " + friendsList(list.get(i), map));
+			println(map);
 		}
 	}
 	
