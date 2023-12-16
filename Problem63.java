@@ -19,7 +19,7 @@ public class Problem63 extends ConsoleProgram{
 			count = countFriends(map, a);
 			if(count > max) {
 				max = count;
-				ans = b;
+				ans = a;
 			}
 		}
 		println(ans);
