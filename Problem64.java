@@ -30,14 +30,4 @@ public class Problem64 extends ConsoleProgram{
 			println(x + " " + map.get(x));
 		}
 	}
-	
-	private ArrayList<String> friendsList(String s, HashMap<String, String> map) {
-		ArrayList<String> ans = new ArrayList<String>();
-		for(String x : map.keySet()) {
-			if(map.get(x).equals(s)) {
-				ans.add(x);
-			}
-		}
-		return ans;
-	}
 }		
