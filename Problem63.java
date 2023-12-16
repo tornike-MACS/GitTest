@@ -16,7 +16,7 @@ public class Problem63 extends ConsoleProgram{
 			if(a.length() == 0)break;
 			String b = readLine("B: ");
 			map.put(a, b);
-			count = countFriends(map, b);
+			count = countFriends(map, a);
 			if(count > max) {
 				max = count;
 				ans = b;
@@ -28,7 +28,7 @@ public class Problem63 extends ConsoleProgram{
 	private int countFriends(HashMap<String, String> map, String s) {
 		int count = 0;
 		for(String x : map.keySet()) {
-			if(map.get(x) == s) {
+			if(x == s) {
 				count++;
 			}
 		}
