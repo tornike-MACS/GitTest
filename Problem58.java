@@ -29,6 +29,7 @@ public class Problem58 extends ConsoleProgram{
 			}
 		}
 		int[] arr = new int[list.size()];
+		int n = arr.length;
 		for(int i = 0; i < list.size(); i++) {
 			arr[i] = list.get(i);
 		}
