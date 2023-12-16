@@ -23,7 +23,7 @@ public class Problem64 extends ConsoleProgram{
 		}
 		
 		for(int i = 0; i < list.size(); i++) {
-			println(list.get(i) + friendsList(list.get(i), map));
+			println(list.get(i) + " " + friendsList(list.get(i), map));
 		}
 	}
 	
