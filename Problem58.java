@@ -22,22 +22,20 @@ public class Problem58 extends ConsoleProgram{
 	}
 	
 	private boolean magicMatrix(int[][] array) {
-		int n = array.length;
 		ArrayList<Integer> list = new ArrayList<Integer>();
-		int[] arr = new int[n * n];
-		for(int i = 0; i < n; i++) {
-			for(int j = 0; j < n; j++) {
+		for(int i = 0; i < array.length; i++) {
+			for(int j = 0; j < array.length; j++) {
 				list.add(array[i][j]);
 			}
 		}
-		for(int i = 0; i < n * n; i++) {
+		int[] arr = new int[list.size()];
+		for(int i = 0; i < list.size(); i++) {
 			arr[i] = list.get(i);
 		}
 		Arrays.sort(arr);
-		if( arr[0] == 1 && arr[n * n - 1] == n * n) {
+		if(arr[arr.length - 1] == n * n && arr[0] == 1) {
 			return true;
-		}
-		return false;
+		}else return false;
 	}
 }
 
