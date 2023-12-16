@@ -34,7 +34,7 @@ public class Problem58 extends ConsoleProgram{
 			arr[i] = list.get(i);
 		}
 		Arrays.sort(arr);
-		if(arr[arr.length - 1] == n * n && arr[0] == 1) {
+		if(arr[n * n - 1] == n * n && arr[0] == 1) {
 			return true;
 		}else return false;
 	}
