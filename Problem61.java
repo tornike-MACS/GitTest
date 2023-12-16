@@ -18,7 +18,7 @@ public class Problem61 extends ConsoleProgram{
 			if(hashMap.get(m - key) == 0) {
 			println(hashMap.get(m - key) + " " + hashMap.get(key));
 			}
-		}
+		}else println("not found");
 		
 		
 		
