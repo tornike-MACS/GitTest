@@ -22,9 +22,9 @@ public class Problem59 extends ConsoleProgram{
 		int m = 4;
 		int count = 0;
 		int max = 0;
-		int[][] matrix = new int[3][4];
+		int[][] matrix = new int[4][4];
 		
-		for(int i = 0; i < 3; i++) {
+		for(int i = 0; i < 4; i++) {
 			for(int j = 0; j < 4; j++) {
 				matrix[i][j] = 0;
 			}
