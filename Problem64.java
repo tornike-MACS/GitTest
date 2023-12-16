@@ -27,7 +27,7 @@ public class Problem64 extends ConsoleProgram{
 		}
 		
 		for(String x : map.keySet()) {
-			println(x + map.get(x));
+			println(x + " " + map.get(x));
 		}
 	}
 	
