@@ -16,10 +16,8 @@ public class Problem61 extends ConsoleProgram{
 			key = readInt();
 			hashMap.put(key, i);
 			if(hashMap.get(m - key) != null) {
-				if(hashMap.get(m - key) == 0) {
 				first = hashMap.get(m - key);
 				second = hashMap.get(key);
-				}
 			}
 		}
 		println(first + " " + second);
