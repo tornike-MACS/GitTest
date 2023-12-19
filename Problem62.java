@@ -11,14 +11,10 @@ public class Problem62 extends ConsoleProgram{
 		
 		while(true) {
 			String name = readLine();
-			if(name.length() == 0)break;
-			if(map.containsKey(name)) {
-				map.put(name, map.get(name) + 1);
-			}else {
-				map.put(name, 1);
-			}
+			if(name.isEmpty())break;
+			map.putIfAbsent(name, 0);
+			map.put(name, map.get(name) + 1);
 		}
-		
 		
 		
 		
