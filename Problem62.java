@@ -8,15 +8,30 @@ import acm.program.ConsoleProgram;
 public class Problem62 extends ConsoleProgram{
 	public void run() {
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
+		
 		while(true) {
-			String name = readLine("enter names: ");
+			String name = readLine();
 			if(name.length() == 0)break;
 			if(map.containsKey(name)) {
 				map.put(name, map.get(name) + 1);
 			}else {
 				map.put(name, 1);
 			}
+			println(map);
 		}
+		
+		
+		
+		
+//		while(true) {
+//			String name = readLine("enter names: ");
+//			if(name.length() == 0)break;
+//			if(map.containsKey(name)) {
+//				map.put(name, map.get(name) + 1);
+//			}else {
+//				map.put(name, 1);
+//			}
+//		}
 		println(map);
 	}
 }
