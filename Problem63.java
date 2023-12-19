@@ -7,22 +7,31 @@ import acm.program.ConsoleProgram;
 //B-ს მეგობარი, მაგრამ B შეიძლება არ იყოს A-ს მეგობარი.
 public class Problem63 extends ConsoleProgram{
 	public void run() {
-		HashMap<String, String> map = new HashMap<String, String>();
-		int count = 0;
-		int max = 0;
-		String ans = "";
-		while(true) {
-			String a = readLine("A: ");
-			if(a.length() == 0)break;
-			String b = readLine("B: ");
-			map.put(a, b);
-			count = countFriends(map, a);
-			if(count > max) {
-				max = count;
-				ans = a;
-			}
-		}
-		println(ans);
+
+		
+		
+		
+		
+		
+		
+		
+		
+//		HashMap<String, String> map = new HashMap<String, String>();
+////		int count = 0;
+////		int max = 0;
+////		String ans = "";
+////		while(true) {
+////			String a = readLine("A: ");
+////			if(a.length() == 0)break;
+////			String b = readLine("B: ");
+////			map.put(a, b);
+////			count = countFriends(map, a);
+////			if(count > max) {
+////				max = count;
+////				ans = a;
+////			}
+////		}
+//		println(ans);
 	}
 	
 	private int countFriends(HashMap<String, String> map, String s) {
