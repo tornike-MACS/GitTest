@@ -17,8 +17,8 @@ public class Problem62 extends ConsoleProgram{
 			}else {
 				map.put(name, 1);
 			}
-			println(map);
 		}
+		
 		
 		
 		
