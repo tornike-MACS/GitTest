@@ -12,6 +12,7 @@ public class Problem57 extends ConsoleProgram{
 	public void run() {
 		String first = readLine();
 		String second = readLine();
+		Arrays.cop
 		println(areAnagrams(first, second));
 	}
 	
