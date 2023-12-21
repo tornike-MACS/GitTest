@@ -11,8 +11,8 @@ public class JcomponentExample extends ConsoleProgram{
 		JLabel label = new JLabel("name");
 		add(label, SOUTH);
 		
-		JTextField field = new JTextField(5);
-		field.setText("zd");
+		JTextField field = new JTextField(10);
+		field.setText("");
 		add(field, SOUTH);
 		field.addActionListener(this);
 		
