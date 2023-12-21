@@ -16,9 +16,9 @@ public class JcomponentExample extends ConsoleProgram{
 		add(field, SOUTH);
 		field.addActionListener(this);
 		
-		JButton button = new JButton("Press here!");
-		add(button, SOUTH);
-		
+//		JButton button = new JButton("Press here!");
+//		add(button, SOUTH);
+//		
 		
 	}
 	
