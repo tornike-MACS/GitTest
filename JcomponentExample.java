@@ -13,11 +13,10 @@ public class JcomponentExample extends ConsoleProgram{
 		
 		JTextField field = new JTextField(10);
 		field.setText("");
-		add(field, SOUTH);
 		field.addActionListener(this);
+		add(field, SOUTH);
 		
 		JButton button = new JButton("Press here!");
-		button.addActionListener(this);
 		add(button, SOUTH);
 		
 		
