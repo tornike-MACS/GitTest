@@ -16,13 +16,14 @@ public class JcomponentExample extends ConsoleProgram{
 		add(field, SOUTH);
 		field.addActionListener(this);
 		
-//		JButton button = new JButton("Press here!");
-//		add(button, SOUTH);
-//		
+		JButton button = new JButton("Press here!");
+		button.addActionListener(this);
+		add(button, SOUTH);
+		
 		
 	}
 	
-//	public void actionPerformed(ActionEvent e) {
-//		println(e.getActionCommand());
-//	}
+	public void actionPerformed(ActionEvent e) {
+		println(e.getActionCommand());
+	}
 }
