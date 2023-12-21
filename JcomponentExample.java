@@ -8,7 +8,7 @@ import acm.program.ConsoleProgram;
 
 public class JcomponentExample extends ConsoleProgram{
 	public void run() {
-		JLabel label = new JLabel("hi");
+		JLabel label = new JLabel("name");
 		add(label, SOUTH);
 		
 		JTextField field = new JTextField(5);
