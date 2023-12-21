@@ -8,7 +8,7 @@ import acm.graphics.GImage;
 import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
 
-public class JcomponentExample extends GraphicsProgram{
+public class JcomponentExample extends ConsoleProgram{
 	public void run() {
 //		JLabel label = new JLabel("name");
 //		add(label, SOUTH);
@@ -22,7 +22,7 @@ public class JcomponentExample extends GraphicsProgram{
 //		add(button, SOUTH);
 //		
 		GImage image = new GImage("Screenshot 2023-11-16 211117.png");
-		add(image);
+		add(image, CENTER);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
