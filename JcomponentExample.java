@@ -1,4 +1,7 @@
 import javax.swing.JLabel;
+
+import java.awt.event.ActionEvent;
+
 import javax.swing.*;
 
 import acm.program.ConsoleProgram;
@@ -15,5 +18,11 @@ public class JcomponentExample extends ConsoleProgram{
 		
 		JButton button = new JButton("Press here!");
 		add(button, SOUTH);
+		
+		
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		println(e.getActionCommand());
 	}
 }
