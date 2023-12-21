@@ -8,7 +8,7 @@ public class JcomponentExample extends ConsoleProgram{
 		JLabel label = new JLabel("hi");
 		add(label, SOUTH);
 		
-		JTextField field = new JTextField(15);
+		JTextField field = new JTextField(5);
 		add(field, SOUTH);
 	}
 }
