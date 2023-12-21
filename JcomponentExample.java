@@ -9,6 +9,9 @@ public class JcomponentExample extends ConsoleProgram{
 		add(label, SOUTH);
 		
 		JTextField field = new JTextField(5);
+		field.setText("zd");
 		add(field, SOUTH);
+		
+		
 	}
 }
