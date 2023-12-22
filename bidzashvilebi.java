@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
-
+//arasworiaa
 public class bidzashvilebi extends ConsoleProgram{
 	public void run() {
 		HashMap<String, ArrayList<String>> cousins = new HashMap<String, ArrayList<String>>();
@@ -35,7 +35,7 @@ public class bidzashvilebi extends ConsoleProgram{
 						cousins.get(n).add(m);
 						cousins.get(m).add(n);
 					}
-				}
+				
 			}
 		}
 		println(cousins);
