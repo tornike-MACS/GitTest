@@ -13,19 +13,19 @@ public class JcomponentExample extends ConsoleProgram{
 //		JLabel label = new JLabel("name");
 //		add(label, SOUTH);
 //		
-//		JTextField field = new JTextField(10);
-//		field.setText("");
-//		field.addActionListener(this);
-//		add(field, SOUTH);
+		JTextField field = new JTextField(10);
+		field.setText("");
+		field.addActionListener(this);
+		add(field, SOUTH);
 //		
-//		JButton button = new JButton("Press here!");
-//		add(button, SOUTH);
+		JButton button = new JButton("Press here!");
+		add(button, SOUTH);
 //		
 		GImage image = new GImage("Screenshot 2023-11-16 211117.png");
 		add(image, CENTER);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		println(e.getActionCommand());
+		
 	}
 }
