@@ -6,6 +6,7 @@ import acm.program.ConsoleProgram;
 
 public class bidzashvilebi extends ConsoleProgram{
 	public void run() {
+		System.out.println("asc");
 		HashMap<String, ArrayList<String>> cousins = new HashMap<String, ArrayList<String>>();
 		HashMap<String, String> map = new HashMap<String, String>();
 		while(true) {
@@ -28,7 +29,6 @@ public class bidzashvilebi extends ConsoleProgram{
 				String dad2 = map.get(m);
 				if(map.containsKey(dad1) && map.containsKey(dad2)) {
 					if(map.get(dad1).equals(map.get(dad2))) {
-						System.out.println("asc");
 						cousins.putIfAbsent(n, new ArrayList<String>());
 						cousins.putIfAbsent(m, new ArrayList<String>());
 						cousins.get(n).add(m);
