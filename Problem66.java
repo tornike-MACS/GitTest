@@ -6,18 +6,11 @@ import acm.program.ConsoleProgram;
 public class Problem66 extends ConsoleProgram{
 	public void run() {
 		HashMap<String, String> map = new HashMap<String, String>();
-		while(true) {
-			String ans1 = "";
-			String ans2 = "";
-			String a = readLine("A: ");
-			if(a.length() == 0)break;
-			String b = readLine("B: ");
-			if(map.containsKey(a) == false) {
-				map.put(a, b);
-			}else {
-				
-			}
-			
-		}
+		
 	}
 }
+//martiviaa
+
+
+// mamashvilebis sia
+//da adamiani da magis bidzashvilebis sia unda gamoitano
