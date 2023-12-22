@@ -28,6 +28,7 @@ public class bidzashvilebi extends ConsoleProgram{
 				String dad2 = map.get(m);
 				if(map.containsKey(dad1) && map.containsKey(dad2)) {
 					if(map.get(dad1).equals(map.get(dad2))) {
+						System.out.println("asc");
 						cousins.putIfAbsent(n, new ArrayList<String>());
 						cousins.putIfAbsent(m, new ArrayList<String>());
 						cousins.get(n).add(m);
