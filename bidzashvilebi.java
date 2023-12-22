@@ -22,6 +22,7 @@ public class bidzashvilebi extends ConsoleProgram{
 		for(String n : map.keySet()) {
 			for(String m : map.keySet()) {
 				if(map.get(n).equals(map.get(m))) {
+					System.out.println("asc");
 					continue;
 				}
 				String dad1 = map.get(n);
