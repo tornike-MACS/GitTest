@@ -16,10 +16,10 @@ public class Problem67 extends GraphicsProgram{
 		String photo = field.getText();
 		
 		GImage image = new GImage(photo);
-		add(image);
+		add(image, 100, 100);
 	}
 	
-//	public void actionPerformed(ActionEvent e) {
-//		println(e.getActionCommand());
-//	}
+	public void actionPerformed(ActionEvent e) {
+		println(e.getActionCommand());
+	}
 }
