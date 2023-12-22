@@ -11,7 +11,7 @@ import acm.program.GraphicsProgram;
 public class Problem67 extends GraphicsProgram{
 	public void run() {
 		
-		JTextField field = new JTextField();
+		JTextField field = new JTextField(10);
 		add(field, SOUTH);
 		String photo = field.getText();
 		
