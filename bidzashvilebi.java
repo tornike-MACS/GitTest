@@ -4,6 +4,7 @@ import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
 //arasworiaa
+// rogor amovshalot a ti dawyebuli vtqvat hashsetidan
 public class bidzashvilebi extends ConsoleProgram{
 	public void run() {
 		HashMap<String, ArrayList<String>> cousins = new HashMap<String, ArrayList<String>>();
