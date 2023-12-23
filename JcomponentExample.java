@@ -21,11 +21,11 @@ public class JcomponentExample extends ConsoleProgram{
 		JButton button = new JButton("Press here!");
 		add(button, SOUTH);
 //		
-		GImage image = new GImage("Screenshot 2023-11-16 211117.png");
-		add(image, CENTER);
+//		GImage image = new GImage("Screenshot 2023-11-16 211117.png");
+//		add(image, CENTER);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		
+		println(e.getActionCommand());
 	}
 }
