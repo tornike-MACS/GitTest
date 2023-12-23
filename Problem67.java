@@ -23,6 +23,6 @@ public class Problem67 extends GraphicsProgram{
 	public void actionPerformed(ActionEvent e) {
 		String address = field.getText();
 		GImage image = new GImage(address);
-		add(image, 100, 100);
+		add(image, 100,100);
 	}
 }
