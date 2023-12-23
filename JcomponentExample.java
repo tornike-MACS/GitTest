@@ -26,6 +26,6 @@ public class JcomponentExample extends ConsoleProgram{
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		println(e.getActionCommand());
+//		println(e.getActionCommand());
 	}
 }
