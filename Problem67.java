@@ -9,17 +9,20 @@ import acm.program.GraphicsProgram;
 //ფოტოს(ფაილის) მისამართის ჩაწერა. ენტერზე დაჭერის შემდეგ ეს ფოტო უნდა გამოჩნდეს
 //ფანჯრის ცენტრში.
 public class Problem67 extends GraphicsProgram{
+	JTextField field;
 	public void run() {
 		
-		JTextField field = new JTextField(10);
+		field = new JTextField(10);
 		add(field, SOUTH);
-		String photo = field.getText();
+		field.addActionListener(this);
 		
-//		GImage image = new GImage(photo);
-//		add(image, 100, 100);
+		
+		addActionListeners();
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		println(e.getActionCommand());
+		String address = field.getText();
+		GImage image = new GImage(address);
+		add(image, 100, 100);
 	}
 }
