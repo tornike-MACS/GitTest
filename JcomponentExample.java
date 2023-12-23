@@ -13,8 +13,8 @@ public class JcomponentExample extends ConsoleProgram{
 	JButton button;
 	
 	public void run() {
-//		JLabel label = new JLabel("name");
-//		add(label, SOUTH);
+		JLabel label = new JLabel("name");
+		add(label, SOUTH);
 //		
 		field = new JTextField(10);
 		field.setText("");
