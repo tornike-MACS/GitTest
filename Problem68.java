@@ -1,3 +1,4 @@
+import javax.swing.JButton;
 import javax.swing.JTextField;
 
 import acm.program.GraphicsProgram;
@@ -12,5 +13,8 @@ public class Problem68 extends GraphicsProgram{
 	public void run() {
 		JTextField field = new JTextField(10);
 		add(field, SOUTH);
+		
+		JButton button = new JButton("Enter");
+		add(button, SOUTH);
 	}
 }
