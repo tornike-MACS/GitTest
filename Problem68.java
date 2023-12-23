@@ -15,6 +15,7 @@ import acm.program.GraphicsProgram;
 public class Problem68 extends GraphicsProgram{
 	JLabel text;
 	JTextField field;
+	int y = 10;
 	public void run() {
 		field = new JTextField(10);
 		add(field, SOUTH);
@@ -29,7 +30,8 @@ public class Problem68 extends GraphicsProgram{
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals("Enter")) {
 			text = new JLabel(field.getText());
-			add(text, 10,10);
+			add(text, 10,y);
+			y += 10;	
 		}
 	}
 }
