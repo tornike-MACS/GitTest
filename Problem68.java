@@ -30,7 +30,6 @@ public class Problem68 extends GraphicsProgram{
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals("Enter")) {
 			text = new JLabel(field.getText());
-			text.setSize(20, 20);
 			add(text, 10,y);
 			field.setText(null);
 			y += 15;	
