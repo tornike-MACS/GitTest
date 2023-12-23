@@ -35,5 +35,6 @@ public class JcomponentExample extends ConsoleProgram{
 		if(e.getActionCommand().equals("Press here!")) {
 			println(text);
 		}
+		println(field.getText());
 	}
 }
