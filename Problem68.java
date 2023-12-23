@@ -1,4 +1,7 @@
+import java.awt.event.ActionEvent;
+
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import acm.program.GraphicsProgram;
@@ -10,11 +13,22 @@ import acm.program.GraphicsProgram;
 //ტექსტის შეყვანისას ახალი ტექსტი წინა ტექსტის ქვემოთ უნდა გამოცნდეს(როგორც ჩატში
 //ხდება ხოლმე. თუკი ტექსტი ჩაცდება ეკრანს არაუშავს.
 public class Problem68 extends GraphicsProgram{
+	JLabel text;
 	public void run() {
 		JTextField field = new JTextField(10);
 		add(field, SOUTH);
 		
+		text = new JLabel(field.getText());
+		
 		JButton button = new JButton("Enter");
 		add(button, SOUTH);
+		
+		addActionListeners();
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		if(e.getActionCommand().equals("Enter")) {
+			add(text, 10,10);
+		}
 	}
 }
