@@ -15,8 +15,8 @@ public class Problem67 extends GraphicsProgram{
 		add(field, SOUTH);
 		String photo = field.getText();
 		
-		GImage image = new GImage(photo);
-		add(image, 100, 100);
+//		GImage image = new GImage(photo);
+//		add(image, 100, 100);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
