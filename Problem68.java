@@ -13,7 +13,6 @@ import acm.program.GraphicsProgram;
 //ტექსტის შეყვანისას ახალი ტექსტი წინა ტექსტის ქვემოთ უნდა გამოცნდეს(როგორც ჩატში
 //ხდება ხოლმე. თუკი ტექსტი ჩაცდება ეკრანს არაუშავს.
 public class Problem68 extends GraphicsProgram{
-	JLabel text;
 	JTextField field;
 	public void run() {
 		field = new JTextField(10);
@@ -28,7 +27,7 @@ public class Problem68 extends GraphicsProgram{
 	
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals("Enter")) {
-			text = new JLabel(field.getText());
+			JLabel text = new JLabel(field.getText());
 			add(text, 10,10);
 		}
 	}
