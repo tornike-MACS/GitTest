@@ -14,10 +14,10 @@ public class Problem67 extends GraphicsProgram{
 		
 		field = new JTextField(10);
 		add(field, SOUTH);
-//		field.addActionListener(this);
+		field.addActionListener(this);
 		
 		
-		addActionListeners();
+//		addActionListeners();
 	}
 	
 	public void actionPerformed(ActionEvent e) {
