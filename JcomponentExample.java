@@ -18,7 +18,7 @@ public class JcomponentExample extends ConsoleProgram{
 //		
 		field = new JTextField(10);
 		field.setText("");
-		field.addActionListener(this);
+//		field.addActionListener(this);
 		add(field, SOUTH);
 //		
 		button = new JButton("Press here!");
@@ -35,6 +35,6 @@ public class JcomponentExample extends ConsoleProgram{
 		if(e.getActionCommand().equals("Press here!")) {
 			println(text);
 		}
-		println(field.getText());
+//		println(field.getText());
 	}
 }
