@@ -14,11 +14,11 @@ import acm.program.GraphicsProgram;
 //ხდება ხოლმე. თუკი ტექსტი ჩაცდება ეკრანს არაუშავს.
 public class Problem68 extends GraphicsProgram{
 	JLabel text;
+	JTextField field;
 	public void run() {
-		JTextField field = new JTextField(10);
+		field = new JTextField(10);
 		add(field, SOUTH);
 		
-		text = new JLabel(field.getText());
 		
 		JButton button = new JButton("Enter");
 		add(button, SOUTH);
@@ -28,6 +28,7 @@ public class Problem68 extends GraphicsProgram{
 	
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals("Enter")) {
+			text = new JLabel(field.getText());
 			add(text, 10,10);
 		}
 	}
