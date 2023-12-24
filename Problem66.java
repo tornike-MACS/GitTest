@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
@@ -8,16 +9,23 @@ public class Problem66 extends ConsoleProgram{
 	public void run() {
 		String a  = "";
 		String b = "";
-		HashMap<String, String> map = new HashMap<String, String>();
+		HashMap<String, HashSet<String>> map = new HashMap<String, HashSet<String>>();
 		while(true) {
 			String line = readLine();
 			if(line.isEmpty())break;
 			StringTokenizer tk = new StringTokenizer(line);
 			a = tk.nextToken();
 			b = tk.nextToken();
-			
+			if(map.containsKey(a) == false) {
+				map.put(a, new HashSet<String>());
+			}
+			if(map.containsKey(b) == false) {
+				map.put(b, new HashSet<String>());
+			}
+			map.get(a).add(b);
+			map.get(b).add(a);
 		}
-		println(a + b);
+		println(map);
 	}
 }
 //martiviaa
