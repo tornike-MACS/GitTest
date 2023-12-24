@@ -26,11 +26,13 @@ public class bidzashvilebi extends ConsoleProgram{
 				if(map.get(x).equals(map.get(y)))continue;;
 				String dad1 = map.get(x);
 				String dad2 = map.get(y);
-				if(map.get(dad1).equals(map.get(dad2))) {
-					cousins.putIfAbsent(x, new HashSet<String>());
-					cousins.putIfAbsent(y, new HashSet<String>());
-					cousins.get(x).add(y);
-					cousins.get(y).add(x);
+				if(map.get(dad1) != null && map.get(dad2) != null) {
+					if(map.get(dad1).equals(map.get(dad2))) {
+						cousins.putIfAbsent(x, new HashSet<String>());
+						cousins.putIfAbsent(y, new HashSet<String>());
+						cousins.get(x).add(y);
+						cousins.get(y).add(x);
+					}
 				}
 			}
 		}
