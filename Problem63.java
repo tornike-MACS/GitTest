@@ -25,6 +25,7 @@ public class Problem63 extends ConsoleProgram{
 		String ans = "";
 		for(String x : map.keySet()) {
 			if(map.get(x).size() > max) {
+				max = map.get(x).size();
 				ans = x;
 			}
 		}
