@@ -1,4 +1,6 @@
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
 //63. კონსოლიდან შეგვყავს წყვილ-წყვილად მეგობრების სახელები, მანამ სანამ არ შევიყვანთ
@@ -7,40 +9,25 @@ import acm.program.ConsoleProgram;
 //B-ს მეგობარი, მაგრამ B შეიძლება არ იყოს A-ს მეგობარი.
 public class Problem63 extends ConsoleProgram{
 	public void run() {
-
-		
-		
-		
-		
-		
-		
-		
-		
-//		HashMap<String, String> map = new HashMap<String, String>();
-////		int count = 0;
-////		int max = 0;
-////		String ans = "";
-////		while(true) {
-////			String a = readLine("A: ");
-////			if(a.length() == 0)break;
-////			String b = readLine("B: ");
-////			map.put(a, b);
-////			count = countFriends(map, a);
-////			if(count > max) {
-////				max = count;
-////				ans = a;
-////			}
-////		}
-//		println(ans);
-	}
-	
-	private int countFriends(HashMap<String, String> map, String s) {
-		int count = 0;
+		HashMap<String, HashSet<String>> map = new HashMap<String, HashSet<String>>();
+		String a = "";
+		String b = "";
+		while(true) {
+			String line = readLine();
+			if(line.isEmpty())break;
+			StringTokenizer tk = new StringTokenizer(line);
+			a = tk.nextToken();
+			b = tk.nextToken();
+			map.putIfAbsent(a, new HashSet<String>());
+			map.get(a).add(b);
+		}
+		int max = 0;
+		String ans = "";
 		for(String x : map.keySet()) {
-			if(x == s) {
-				count++;
+			if(map.get(x).size() > max) {
+				ans = x;
 			}
 		}
-		return count;
+		println(ans);
 	}
 }
