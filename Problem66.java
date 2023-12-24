@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
@@ -25,7 +26,30 @@ public class Problem66 extends ConsoleProgram{
 			map.get(a).add(b);
 			map.get(b).add(a);
 		}
-		println(map);
+		
+		String ans1 = "";
+		String ans2 = "";
+		boolean doNotHaveMutual = true;
+		for(String x : map.keySet()) {
+			for(String z : map.keySet()) {
+				Iterator it = map.get(x).iterator();
+				while(it.hasNext()) {
+					if(map.get(z).contains(it.next())) {
+						doNotHaveMutual = false;
+						break;
+					}
+				}
+				if(doNotHaveMutual) {
+					ans1 = x;
+					ans2 = z;
+					break;
+				}
+			}
+			if(doNotHaveMutual) {
+				println(ans1 + " " + ans2);
+				break;
+			}
+		}
 	}
 }
 //martiviaa
