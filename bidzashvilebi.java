@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
@@ -18,19 +19,21 @@ public class bidzashvilebi extends ConsoleProgram{
 			dad = tk.nextToken();
 			map.put(son, dad);
 		}
-		boolean found = false;
+		HashMap<String, HashSet<String>> cousins = new HashMap<String, HashSet<String>>();
+		
 		for(String x : map.keySet()) {
 			for(String y : map.keySet()) {
 				if(map.get(x).equals(map.get(y)))continue;;
 				String dad1 = map.get(x);
 				String dad2 = map.get(y);
 				if(map.get(dad1).equals(map.get(dad2))) {
-					println(x + " " + y);
-					found = true;
-					break;
+					cousins.putIfAbsent(x, new HashSet<String>());
+					cousins.putIfAbsent(y, new HashSet<String>());
+					cousins.get(x).add(y);
+					cousins.get(y).add(x);
 				}
 			}
-			if(found)break;
 		}
+		println(cousins);
 	}
 }	
