@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.StringTokenizer;
 
 import acm.program.ConsoleProgram;
-//arasworiaa
+//essaa bidzashvilebi
 // rogor amovshalot a ti dawyebuli vtqvat hashsetidan
 public class bidzashvilebi extends ConsoleProgram{
 	public void run() {
