@@ -19,6 +19,7 @@ public class Problem68 extends GraphicsProgram{
 	public void run() {
 		field = new JTextField(10);
 		add(field, SOUTH);
+		field.addActionListener(this);
 		
 		
 		JButton button = new JButton("Enter");
