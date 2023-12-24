@@ -34,7 +34,7 @@ public class Problem68 extends GraphicsProgram{
 			add(text, 10,y);
 			field.setText(null);
 			y += 15;	
-		}else {
+		}else {// es enterit
 			text = new JLabel(field.getText());
 			add(text, 10,y);
 			field.setText(null);
