@@ -1,3 +1,5 @@
+import java.awt.event.ActionEvent;
+
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -13,5 +15,10 @@ public class Problem69 extends GraphicsProgram{
 		
 		JButton butt = new JButton("Enter");
 		add(butt, SOUTH);
+		
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		
 	}
 }
