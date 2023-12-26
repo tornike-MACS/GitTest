@@ -12,5 +12,6 @@ public class Problem69 extends GraphicsProgram{
 		add(field, SOUTH);
 		
 		JButton butt = new JButton("Enter");
+		
 	}
 }
