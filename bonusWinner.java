@@ -24,4 +24,4 @@ public class bonusWinner extends ConsoleProgram{
 		return null;
 	}
 }
-//!!!
+//!!! modis esetebii
