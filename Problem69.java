@@ -1,3 +1,5 @@
+import javax.swing.JTextField;
+
 import acm.program.GraphicsProgram;
 
 //69. 68 ამოცანის გაგრძელება. დაამატეთ სქროლი. თუკი ტექსტი ჩაცდება ეკრანს მაშინ ახალი
@@ -5,6 +7,7 @@ import acm.program.GraphicsProgram;
 //ტექსტი გაქრება ეკრანიდან.
 public class Problem69 extends GraphicsProgram{
 	public void run() {
-		
+		JTextField field = new JTextField(15);
+		add(field);
 	}
 }
