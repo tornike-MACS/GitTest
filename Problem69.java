@@ -18,6 +18,7 @@ public class Problem69 extends GraphicsProgram{
 		JButton butt = new JButton("Enter");
 		add(butt, SOUTH);
 		
+		addActionListeners();
 	}
 	
 	public void actionPerformed(ActionEvent e) {
