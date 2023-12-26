@@ -10,11 +10,17 @@ import acm.program.GraphicsProgram;
 //ფანჯრის ცენტრში.
 public class Problem67 extends GraphicsProgram{
 	JTextField field;
-	public void run() {
-		
+	
+	public void init() {
 		field = new JTextField(10);
 		add(field, SOUTH);
 		field.addActionListener(this);
+	}
+	public void run() {
+		
+//		field = new JTextField(10);
+//		add(field, SOUTH);
+//		field.addActionListener(this);
 		
 		
 //		addActionListeners();
