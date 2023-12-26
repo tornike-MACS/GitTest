@@ -21,7 +21,7 @@ public class Problem69 extends GraphicsProgram{
 	
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals("Enter")) {
-			println(field.getText());
+			add(field.getText(), 10, 10);
 		}
 	}
 }
