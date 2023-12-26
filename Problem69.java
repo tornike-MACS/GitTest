@@ -8,7 +8,7 @@ import acm.program.GraphicsProgram;
 //ტექსტი გაქრება ეკრანიდან.
 public class Problem69 extends GraphicsProgram{
 	public void run() {
-		JTextField field = new JTextField(15);
+		JTextField field = new JTextField("sef");
 		add(field, SOUTH);
 		
 		JButton butt = new JButton("Enter");
