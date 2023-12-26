@@ -26,7 +26,7 @@ public class Problem69 extends GraphicsProgram{
 		if(e.getActionCommand().equals("Enter")) {
 			JLabel label = new JLabel(field.getText());
 			add(label, 10, y);
-			y+=10;
+			y+=14;
 		}
 	}
 }
