@@ -13,6 +13,7 @@ public class ConsoleProgrammSample extends ConsoleProgram {
 //	}
 //	
 	private boolean isDivisibleByThree(String number) {
+		
 		int sumOfDigits = 0;
 		for(int i = 0; i < number.length(); i++) {
 			sumOfDigits += number.charAt(i) - '0';
