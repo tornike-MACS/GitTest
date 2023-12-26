@@ -1,6 +1,7 @@
 import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import acm.program.GraphicsProgram;
@@ -21,7 +22,8 @@ public class Problem69 extends GraphicsProgram{
 	
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals("Enter")) {
-			add(field.getText(), 10, 10);
+			JLabel label = new JLabel(field.getText());
+			add(label, 10, 10);
 		}
 	}
 }
