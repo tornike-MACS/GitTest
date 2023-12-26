@@ -14,13 +14,13 @@ public class Problem67 extends GraphicsProgram{
 	public void init() {
 		field = new JTextField(10);
 		add(field, SOUTH);
-		field.addActionListener(this);
+
 	}
 	public void run() {
 		
 //		field = new JTextField(10);
 //		add(field, SOUTH);
-//		field.addActionListener(this);
+		field.addActionListener(this);
 		
 		
 //		addActionListeners();
