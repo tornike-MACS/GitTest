@@ -9,8 +9,9 @@ import acm.program.GraphicsProgram;
 //ტექსტი მაინც უნდა გამოჩნდეს ეკრანის ბოლოში, შესაბამისად სულ პირველად შეყვანილი
 //ტექსტი გაქრება ეკრანიდან.
 public class Problem69 extends GraphicsProgram{
+	JTextField field;
 	public void run() {
-		JTextField field = new JTextField(10);
+		field = new JTextField(10);
 		add(field, SOUTH);
 		
 		JButton butt = new JButton("Enter");
@@ -19,6 +20,8 @@ public class Problem69 extends GraphicsProgram{
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		
+		if(e.getActionCommand().equals("Enter")) {
+			println(field.getText());
+		}
 	}
 }
