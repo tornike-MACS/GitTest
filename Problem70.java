@@ -12,7 +12,7 @@ public class Problem70 extends GraphicsProgram{
 	}
 	
 	private void drawNet() {
-//		removeAll();
+		removeAll();
 		for(int i = 0; i < 10; i++) {
 			GLine vLine = new GLine(i * getWidth() / 10, 0, i * getWidth() / 10, getHeight());
 			add(vLine);
@@ -20,7 +20,9 @@ public class Problem70 extends GraphicsProgram{
 			add(hLine);
 		}
  	}
-	public void componentResized(ComponentEvent e) {
-		drawNet();
-	}
+	
+	public void componentHidden(ComponentEvent e) { }
+	public void componentMoved(ComponentEvent e) { }
+	public void componentResized(ComponentEvent e) { drawNet(); }
+	public void componentShown(ComponentEvent e) { }
 }
