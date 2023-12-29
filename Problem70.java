@@ -1,3 +1,5 @@
+import java.awt.event.ComponentEvent;
+
 import acm.graphics.GLine;
 import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
@@ -17,4 +19,8 @@ public class Problem70 extends GraphicsProgram{
 			add(hLine);
 		}
  	}
+	
+	public void componentsResized(ComponentEvent e) {
+		drawNet();
+	}
 }
