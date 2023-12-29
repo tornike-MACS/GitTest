@@ -1,4 +1,5 @@
 import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 
 import acm.graphics.GLine;
 import acm.program.ConsoleProgram;
@@ -8,6 +9,7 @@ import acm.program.GraphicsProgram;
 public class Problem70 extends GraphicsProgram{
 	public void run() {
 		drawNet();
+		addComponentListener((ComponentListener) this);
 	}
 	
 	private void drawNet() {
@@ -19,7 +21,6 @@ public class Problem70 extends GraphicsProgram{
 			add(hLine);
 		}
  	}
-	
 	public void componentResized(ComponentEvent e) {
 		drawNet();
 	}
