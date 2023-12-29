@@ -9,11 +9,11 @@ import acm.program.GraphicsProgram;
 public class Problem70 extends GraphicsProgram{
 	public void run() {
 		drawNet();
-		addComponentListener((ComponentListener) this);
+		addComponentListener(this);
 	}
 	
 	private void drawNet() {
-		removeAll();
+//		removeAll();
 		for(int i = 0; i < 10; i++) {
 			GLine vLine = new GLine(i * getWidth() / 10, 0, i * getWidth() / 10, getHeight());
 			add(vLine);
