@@ -20,7 +20,7 @@ public class Problem70 extends GraphicsProgram{
 		}
  	}
 	
-	public void componentsResized(ComponentEvent e) {
+	public void componentResized(ComponentEvent e) {
 		drawNet();
 	}
 }
