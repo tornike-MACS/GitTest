@@ -8,7 +8,6 @@ import acm.program.GraphicsProgram;
 public class Problem70 extends GraphicsProgram{
 	public void run() {
 		drawNet();
-		addComponentListener((ComponentListener) this);
 	}
 	
 	private void drawNet() {
